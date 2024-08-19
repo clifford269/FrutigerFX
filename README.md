@@ -4,11 +4,11 @@ Aims to fully build the Windows/Frutiger Aero coolness into the Mozilla Firefox 
 Disclaimer: 
             1. This theme was build to look best with the Windows 7 Aero user interface.
             
-            2. You might encounter bugs/issues. 
+            2. You might encounter bugs/issues.
                You are encouraged to discover them and they might get corrected with time.
                
 ->Put the defaults folder and config.js file in C:\Program Files\Mozilla Firefox
-->And the chrome folder in %appdata%/Mozilla/Firefox/Profiles/<Your default Firefox profile>
+->And the chrome folder in %appdata%/Mozilla/Firefox/Profiles/(Your default Firefox profile)
 
 ![firefox-frutiger-aero-theme-frutigerfx-v0-996mfuxytnjd1](https://github.com/user-attachments/assets/a843b3a3-af96-4ca6-b2f5-5387ada28149)
 
