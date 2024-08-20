@@ -1,0 +1,91 @@
+#downloads-indicator-anchor {
+    list-style-image: url("../image/icons_fx3/downloads.png") !important;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 40%, rgba(255, 255, 255, 0.8) 0%, rgba(207, 207, 207, 0.1)) !important;
+    box-shadow: 0 -2px 6px 0px skyblue inset !important;
+    border-radius: 3px !important;
+}
+
+
+#downloads-button[attention] #downloads-indicator-anchor {
+    list-style-image: url("../image/download-glow.png") !important;
+}
+
+#downloads-indicator-finish-box, #downloads-indicator-start-box {
+    display: none !important;
+}
+
+#downloads-button:not([progress]) > .toolbarbutton-badge-stack > #downloads-indicator-anchor > #downloads-indicator-icon {
+    visibility: visible !important;
+}
+
+#downloads-button > .toolbarbutton-badge-stack > #downloads-indicator-progress-outer {
+    visibility: visible !important;
+    border: 0 !important;
+}
+
+#downloads-button:not([progress]) > .toolbarbutton-badge-stack > #downloads-indicator-progress-outer {
+    visibility: hidden !important;
+}
+
+#downloads-indicator-progress-inner {
+    width: 18px !important;
+    height: 5px !important;
+    border-radius: 100px !important;
+    background: linear-gradient(to bottom, #515151, #555555) !important;
+    border: 1px solid #313131 !important;
+    border-top: 1px solid #222222 !important;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+    position: relative !important;
+}
+
+#downloads-indicator-progress-inner::before {
+    content: "";
+    display: inline-block;
+    width: var(--download-progress-pcent);
+    height: 100%;
+    background-image: linear-gradient(to bottom, #5AC942 0%, #9CDF8E 50%, #5AC942 100%) !important;
+    border-radius: 100px !important;
+    border: green !important;
+    position: absolute !important;
+    top: -1px !important;
+    left: -1px !important;
+    border: 1px solid #368A4A !important;
+    border-top: 1px solid #246A4E !important;
+}
+
+:root {
+    --arrowpanel-border-color: hsla(210, 4%, 10%, .2) !important;
+}
+
+:is(panel, menupopup):not(#PlacesChevronPopup, #OtherBookmarksPopup)[type=arrow] {
+    --panel-shadow: 0 0 0 1px var(--arrowpanel-border-color), 0 0 5px rgba(0, 0, 0, .65) !important;
+    --panel-shadow-margin: 5px !important;
+}
+
+:is(panel, menupopup):not(#PlacesChevronPopup, #OtherBookmarksPopup)[type=arrow]:not([animate=false]) {
+    opacity: 0 !important;
+    transform: translateY(-20px) !important;
+    transition-property: transform, opacity !important;
+    transition-duration: 150ms !important;
+    transition-timing-function: ease-out !important;
+    will-change: transition, opacity !important;
+}
+
+
+:is(panel, menupopup):not(#PlacesChevronPopup, #OtherBookmarksPopup)[type=arrow]:not([animate=false])[animate=open], :is(panel, menupopup):not(#PlacesChevronPopup, #OtherBookmarksPopup)[type=arrow]:not([animate=false])[animate=cancel] {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+
+#downloadsPanel-mainView {
+    min-width: unset !important;
+}
+
+
+#emptyDownloads, #downloadsFooter toolbarseparator {
+    display: none !important;
+}
+
+
+

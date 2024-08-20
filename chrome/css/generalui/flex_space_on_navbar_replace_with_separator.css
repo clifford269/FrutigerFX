@@ -1,0 +1,8 @@
+
+#main-window:not([customizing]) #nav-bar toolbarspring {
+    appearance: auto !important;
+    -moz-default-appearance: separator !important;
+    min-width: 1px !important;
+    max-width: 1px !important;
+    margin-inline-start: 1px !important;
+}

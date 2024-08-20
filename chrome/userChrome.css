@@ -1,0 +1,645 @@
+@import "./config/general_variables.css";
+@import "./css/toolbars/general_toolbar_colors.css";
+@import "./config/color_variables_aeroglass.css";
+@import "./css/locationbar/identitybox_colors.css";
+@import "./css/generalui/popup_items_hover_appearance_aero.css";
+@import "./css/buttons/buttons_on_navbar_glass_appearance.css";
+@import "./css/locationbar/ac_popup_megabar_result_highlighting_aero.css";
+
+@import "./css/tabs/tab_throbber_blue_fx56.css";
+@import "./css/generalui/classic_drop_indicator.css";
+@import "./css/buttons/icons_custom_icons_fx3.css";
+@import "./css/locationbar/starbutton_alternative_icon.css";
+@import "./css/buttons/custom_backforward_large_ie8.css";
+@import "./css/locationbar/identitybox_padlock_icon_classic.css";
+
+@import "./css/buttons/classic_button_padding.css";
+@import "./css/generalui/notification_old_size.css";
+@import "./css/generalui/popup_compact_menus.css";
+@import "./css/generalui/popup_compact_menus_squared.css";
+@import "./css/locationbar/ac_popup_megabar_compact_results.css";
+
+@import "./css/tabs/classic_squared_tabs.css";
+@import "./css/tabs/tabs_below_navigation_toolbar.css";
+@import "./css/generalui/flex_space_on_navbar_replace_with_separator.css";
+@import "./css/locationbar/ac_popup_megabar_title_and_url_50percent_width.css";
+@import "./css/generalui/close_icon_firefox3.css";
+@import "./css/download_indicator.css";
+
+:root {
+    --focus-outline: none !important;
+    --focus-outline-inset: none !important;
+    --focus-outline-offset: none !important;
+    --focus-outline-width: none !important;
+    --results_font_size: 10pt !important;
+    --toolbarbutton-border-radius: 2px !important;
+    --toolbarButton-menuArrow-icon: url('') !important;
+    --toolbar-field-background-color: rgba(255, 255, 255, 0.3) !important;
+    --btn-bg: linear-gradient(180deg, #f2f2f2 45%, #ebebeb 0, #cfcfcf) !important;
+    --btn-hover: linear-gradient(180deg, #eaf6fd 45%, #bee6fd 0, #a7d9f5) !important;
+    --btn-active: linear-gradient(180deg, #e5f4fc, #c4e5f6 30% 50%, #98d1ef 50%, #68b3db) !important;
+    --btn-border: 1px solid #8e8f8f;
+    --btn-border-hover: 1px solid #3c7fb1;
+    --btn-border-active: 1px solid #18598A;
+    --btn-border-radius: 3px;
+    --btn-box-shadow: inset 0 0 0 1px #fffc;
+    --btn-active-box-shadow: inset 1px 1px 0 #0003, inset -1px 1px 0 #0001;
+    --balloon-bg: linear-gradient(180deg, #fff, #ebebeb) !important;
+    --balloon-border: 1px solid rgba(0, 0, 0, .4) !important;
+    --balloon-box-shadow: 5px 5px 3px -3px rgba(0, 0, 0, .4) !important;
+    --balloon-padding: 1em 1em 1em 2.5em !important;
+    --input-bgcolor: green !important;
+}
+
+#main-window #main-menubar {
+    background: none !important;
+}
+
+#urlbar:not(.searchButton) > #urlbar-input-container > #identity-box[pageproxystate="invalid"] #identity-icon {
+    list-style-image: url('./image/globe.png') !important;
+    opacity: 1.0 !important;
+}
+
+#main-window[uidensity="compact"] :is(.searchbar-textbox, #urlbar,#searchbar) {
+    font-size: 12px !important;
+}
+
+#urlbar-results :is(.urlbarView-tags, .urlbarView-action, .urlbarView-title) {
+    font-size: var(--results_font_size);
+}
+
+.urlbarView-url {
+    font-size: 8pt !important;
+}
+
+#urlbar-search-mode-indicator-close, #alltabs-button,
+#scrollbutton-up, #scrollbutton-down,
+#editBookmarkPanelImage,
+#editBookmarkPanelFaviconContainer,
+#editBookmarkSeparator,
+#editBookmarkHeaderSeparator, #urlbar[focused="true"]:not([usertyping]) .urlbarView, #PanelUI-button #whats-new-menu-button, #firefox-view-button, #urlbar .search-one-offs, #PopupSearchAutoComplete .search-one-offs,
+#PopupSearchAutoComplete .search-panel-header, :is(#urlbar,.megabar) .urlbarView-row:is([type=search],[type=remotetab],[type=switchtab],[type=dynamic],[type=autofill_origin],[rich-suggestion]),
+:is(#urlbar,.megabar) .urlbarView-row:not([has-url]), .urlbarView-row[dynamicType="onboardTabToSearch"], #reader-mode-button, #unified-extensions-view > .panel-header, #identity-permission-box, #tracking-protection-icon-container, #blocked-permissions-container, :root[inFullscreen="true"] #statuspanel, #PlacesToolbarItems > toolbarseparator, #unified-extensions-view > toolbarseparator {
+    display: none !important;
+}
+
+
+#urlbar #urlbar-results {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+:is(#urlbar,.megabar) .urlbarView-row[label] {
+    margin-block-start: 0px !important;
+}
+
+#TabsToolbar {
+    background-image: none !important;
+}
+
+#main-window[sizemode="maximized"][tabsintitlebar] #titlebar {
+    margin-bottom: 0 !important;
+}
+
+.chromeclass-toolbar-additional:hover > .toolbarbutton-icon,
+#reload-button:hover > .toolbarbutton-icon, #navigator-toolbox, #urlbar[focused="true"]:not([usertyping]) #urlbar-input-container, #urlbar-input-container {
+    border: none !important;
+
+}
+
+#urlbar-background {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+#back-button > image,
+#forward-button > image {
+    outline: none !important;
+}
+
+#urlbar[breakout][breakout-extend] > #urlbar-background {
+    animation-name: unset !important;
+}
+
+#urlbar[breakout][breakout-extend] > #urlbar-input-container {
+    padding-block: 0px !important;
+    padding-inline: 0px !important;
+}
+
+#urlbar[breakout] .urlbarView-row-inner {
+    border-radius: 4px !important;
+}
+
+#urlbar[breakout],
+#urlbar[breakout] * {
+    animation: unset !important;
+    animation-duration: 0s !important;
+}
+
+#urlbar[breakout][breakout-extend] {
+    left: 0px !important;
+}
+
+#back-button,
+#forward-button {
+    appearance: auto !important;
+}
+
+
+.unified-extensions-item-menu-button.subviewbutton:hover, .unified-extensions-item-menu-button:hover, .unified-extensions-item-menu-button.subviewbutton {
+    background: transparent !important;
+}
+
+#identity-box *:hover, .identity-box-button[open="true"], .unified-extensions-item-menu-button.subviewbutton:hover > .toolbarbutton-icon {
+    background: unset !important;
+}
+
+toolbaritem#unified-extensions-panel .unified-extensions-item {
+    margin: 0 !important;
+}
+
+/*----------------------*/
+
+/*Size and positioning adjustments*/
+
+#PanelUI-button,
+#PanelUI-menu-button {
+    min-width: 0.1px !important;
+    width: 0.1px !important;
+    max-width: 0.1px !important;
+    opacity: 0 !important;
+}
+
+#urlbar-background, #urlbar,
+#searchbar, #urlbar-container, #identity-icon-box, #urlbar-input-container {
+    border-radius: 10px !important;
+}
+
+#urlbar[breakout][breakout-extend] #urlbar-input-container {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+#identity-box {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#nav-bar {
+    margin-bottom: 5px;
+}
+
+#urlbar-container[breakout] {
+    min-height: 24px !important;
+    margin-top: -2px !important;
+}
+
+#urlbar[breakout][breakout-extend] {
+    left: 0px !important;
+    width: calc(100% - 0px) !important;
+
+}
+
+#urlbar[breakout][breakout-extend] > #urlbar-input-container {
+    height: 24px !important;
+    width: 100%;
+}
+
+#urlbar {
+    --urlbar-height: 24px !important;
+}
+
+#urlbar,
+#urlbar[breakout],
+#urlbar[breakout][breakout-extend] {
+    top: calc(
+            (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
+    ) !important;
+}
+
+panel {
+    padding-block: 0 !important;
+    margin-top: 5px !important;
+}
+
+#downloadsPanel-mainView, .unified-extensions-item-menu-button, .unified-extensions-item-menu-button > image, unified-extensions-item-action-button {
+    padding: 0 !important;
+}
+
+#downloadsHistory > hbox, #unified-extensions-manage-extensions > label {
+    margin-left: 10px !important;
+}
+
+.unified-extensions-item {
+    margin-left: 2px !important;
+}
+
+.unified-extensions-item-menu-button > image {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.identity-box-button {
+    padding-inline: 2px !important;
+}
+
+/*----------------------*/
+/*Colours, gradients, shadows*/
+
+#urlbar {
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 0 2px 0 #f2f2f2, inset 0 0 0 1px #fffc !important
+}
+
+#BMB_bookmarksPopup, panel[type="arrow"] {
+    transition-duration: 0.01ms !important;
+}
+
+.urlbarView, #downloadsPanel-mainView, #unified-extensions-view {
+    background: #b2d5ee !important;
+    box-shadow: inset 0 0 0 1px #fffc !important;
+    border: var();
+}
+
+.urlbarView-body-inner {
+    border-top: 1px solid #8eaebd !important;
+}
+
+#urlbar #urlbar-background {
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.40) 45%, rgba(255, 255, 255, 0.30) 0%, rgba(207, 207, 207, 0.1)) !important;
+}
+
+#urlbar > #urlbar-background {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+#urlbar:hover > #urlbar-background {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+#urlbar:is([focused="true"], [open]) > #urlbar-background {
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.40) 45%, rgba(255, 255, 255, 0.30) 0%, rgba(207, 207, 207, 0.1)) !important;
+
+    /*background-color: rgba(255, 255, 255, 0.6) !important;*/
+}
+
+#urlbar:is([focused="true"]) #urlbar-input-container {
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.40) 45%, rgba(255, 255, 255, 0.30) 0%, rgba(207, 207, 207, 0.1)) !important;
+}
+
+#urlbar:is([focused="true"]) {
+    background: transparent !important;
+}
+
+.urlbarView-button.urlbarView-button-menu:hover {
+    background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzMzMztzdG9wLW9wYWNpdHk6MSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2FhYTtzdG9wLW9wYWNpdHk6MSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGQ9Ik0xMSA2SDR2MWgxdjFoMXYxaDF2MWgxVjloMVY4aDFWN2gxVjZaIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+"), var(--btn-hover) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    outline: var(--btn-border-hover) !important;
+
+}
+
+.urlbarView-button.urlbarView-button-menu:active {
+    background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzMzMztzdG9wLW9wYWNpdHk6MSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2FhYTtzdG9wLW9wYWNpdHk6MSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGQ9Ik0xMSA2SDR2MWgxdjFoMXYxaDF2MWgxVjloMVY4aDFWN2gxVjZaIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+"), var(--btn-active) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    outline: var(--btn-border-active) !important;
+    box-shadow: var(--btn-active-box-shadow) !important;
+}
+
+#urlbar-input::placeholder {
+    opacity: 0.8 !important;
+    color: #555 !important;
+}
+
+#urlbar[usertyping="true"] #urlbar-input, .unified-extensions-item, #downloadsListBox {
+    color: rgb(51, 122, 208) !important;
+}
+
+*[part="content"] {
+    border: 1px solid rgba(0, 0, 0, 0.3) !important;
+}
+
+#downloadsHistory > hbox, #unified-extensions-manage-extensions > label {
+    color: #3566CC !important;
+}
+
+/*----------------------*/
+
+.urlbarView-button.urlbarView-button-menu, #alltabs-button {
+    border-radius: 3px !important;
+    background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzMzMztzdG9wLW9wYWNpdHk6MSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2FhYTtzdG9wLW9wYWNpdHk6MSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGQ9Ik0xMSA2SDR2MWgxdjFoMXYxaDF2MWgxVjloMVY4aDFWN2gxVjZaIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+"), var(--btn-bg) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    outline: var(--btn-border) !important;
+    box-shadow: var(--btn-box-shadow) !important;
+    width: 16px !important;
+    height: 16px !important;
+    min-width: unset !important;
+    min-height: unset !important;
+}
+
+
+#urlbar-go-button {
+    list-style-image: unset !important;
+    background: url("image/icons_fx3/Go-arrow.png") no-repeat, linear-gradient(180deg, #f2f2f2 10%, #ebebeb 40%) !important;
+    background-position: center !important;
+    background-position-y: 3px !important;
+    border-radius: 100% !important;
+    border: var(--btn-border) !important;
+    transform: translateY(1px);
+    box-shadow: var(--btn-box-shadow) !important;
+}
+
+#urlbar-go-button:hover {
+    background: url("image/icons_fx3/Go-arrow.png") no-repeat, linear-gradient(180deg, #eaf6fd 0%, #bee6fd 40%) !important;
+    background-position: center !important;
+    background-position-y: 3px !important;
+    border: var(--btn-border-hover) !important;
+
+}
+
+#urlbar-go-button:active {
+    background: url("image/icons_fx3/Go-arrow.png") no-repeat, var(--btn-active) !important;
+    background-position: center !important;
+    background-position-y: 3px !important;
+    border: var(--btn-border-active) !important;
+    box-shadow: var(--btn-active-box-shadow) !important;
+}
+
+/*Icons*/
+
+.unified-extensions-item-menu-button.subviewbutton {
+    list-style-image: url("./image/settings.png") !important;
+}
+
+.tab-icon-image[src="chrome://branding/content/icon32.png"] {
+    content: url("./image/globe.png") !important;
+}
+
+.tab-icon-image[src="chrome://global/skin/icons/settings.svg"] {
+    content: url("./image/settings.png") !important;
+}
+
+.tab-icon-image[src="chrome://mozapps/skin/extensions/extension.svg"] {
+    content: url("./image/icons_fx3/addons.png") !important;
+}
+
+.tab-icon-image[src="chrome://global/skin/icons/info.svg"] {
+    content: url("./image/icons_fx3/alerticon-error.png") !important;
+}
+
+#identity-box.unknownIdentity #identity-icon {
+    list-style-image: url("./image/icons_fx3/alerticon-error.png") !important;
+    transform: scale(0.85) !important;
+}
+
+#identity-box.unknownIdentity #favimginurlbar {
+    display: none !important;
+}
+
+/*----------------------*/
+.unified-extensions-item-contents {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+#TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon, #tabbrowser-tabs:not([noshadowfortests]) .tab-background:is([selected], [multiselected]) {
+    box-shadow: none !important;
+    border: 1px solid #8e8f8f !important;
+    border-bottom: none !important;
+}
+
+.tab-background {
+    border-radius: 0 !important;
+}
+
+.downloadIconShow > .button-box > .button-icon {
+    list-style-image: url("image/folder-item.png") !important;
+}
+
+#home-button image, #preferences-button .toolbarbutton-icon {
+    transform: translateY(1px);
+}
+
+
+#urlbar-search-mode-indicator, .dialog-button-box button, popupnotification button, .edit-topsites button, #editBookmarkPanelRemoveButton, #editBookmarkPanelDoneButton {
+    background: var(--btn-bg) !important;
+    border: 1px solid #8e8f8f !important;
+    border-radius: 3px !important;
+    box-shadow: var(--btn-box-shadow) !important;
+    box-sizing: border-box !important;
+    color: #222 !important;
+    font: 10pt Segoe UI, SegoeUI, Noto Sans, sans-serif !important;
+    min-height: 23px !important;
+    min-width: 90px !important;
+    padding: 3px 12px !important;
+    position: relative !important;
+    text-align: center !important;
+}
+
+#urlbar-search-mode-indicator:hover, .dialog-button-box button:hover, popupnotification button:hover, .edit-topsites button:hover {
+    background: var(--btn-hover) !important;
+    border-radius: 3px !important;
+    box-shadow: inset 0 0 0 1px #fffc !important;
+    transition: opacity .3s;
+    border: var(--btn-border-hover) !important;
+
+}
+
+#urlbar-search-mode-indicator:active, .dialog-button-box button:active, popupnotification button:active, .edit-topsites button:active {
+    background: var(--btn-active) !important;
+    border-radius: 2px !important;
+    box-shadow: var(--btn-active-box-shadow) !important;
+    transition: opacity .3s;
+    border: var(--btn-border-active) !important;
+
+}
+
+.dialogBox {
+    border-radius: 3px !important;
+}
+
+.checkbox-check {
+    background: #f6f6f6 !important;
+    border: 1px solid #8e8f8f !important;
+    box-shadow: inset 0 0 0 1px #f4f4f4, inset 1px 1px 0 1px #aeaeae, inset -1px -1px 0 1px #ddd, inset 3px 3px 6px #ccc !important;
+    box-sizing: border-box !important;
+    display: inline-block !important;
+    height: 14px !important;
+    margin-right: 6px !important;
+    transition: .4s !important;
+    width: 14px !important;
+
+}
+
+.checkbox-check:hover {
+    background: #e9f7fe !important;
+    border-color: #3c7fb1 !important;
+    box-shadow: inset 0 0 0 1px #def9fa, inset 1px 1px 0 1px #79c6f9, inset -1px -1px 0 1px #c6e9fc, inset 3px 3px 6px #b1dffd !important
+}
+
+#checkbox {
+    position: relative;
+}
+
+#checkbox[checked=true]:after {
+    color: #4a5f97 !important;
+    content: "\2714" !important;
+    display: block !important;
+    font-weight: 700 !important;
+    left: 2px !important;
+    position: absolute !important;
+    top: 0 !important;
+}
+
+#dialogGrid #titleText {
+    font-size: 1.24rem !important;
+    font-weight: unset !important;
+}
+
+.checkbox-label {
+    color: #222 !important;
+}
+
+#checkboxContainer {
+    margin-left: 2px !important;
+}
+
+#commonDialog, popupnotification {
+    background: var(--balloon-bg);
+    border: var(--balloon-border);
+    border-radius: 3px !important;
+    box-shadow: var(--balloon-box-shadow);
+    padding: var(--balloon-padding);
+    position: relative !important;
+}
+
+#urlbar-zoom-button {
+    background: var(--btn-bg);
+    border-radius: 3px !important;
+    box-shadow: var(--btn-box-shadow);
+    color: #222 !important;
+    border: var(--btn-border) !important;
+}
+
+#urlbar-zoom-button:before {
+    content: "" !important;
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-image: url('image/icons_fx3/search.png') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    margin-right: 5px !important;
+    margin-left: -4px !important;
+
+}
+
+#urlbar-zoom-button:hover {
+    background: var(--btn-hover);
+    border: var(--btn-border-hover) !important;
+
+}
+
+#urlbar-zoom-button:active {
+    background: var(--btn-active) !important;
+    box-shadow: var(--btn-active-box-shadow);
+    border: var(--btn-border-active) !important;
+}
+
+#new-window-button image, #preferences-button image, #privatebrowsing-button image, #unified-extensions-button image {
+    width: 32px !important
+}
+
+
+#privatebrowsing-button image {
+    height: 30px !important;
+    width: 30px !important;
+}
+
+#TabsToolbar :is(.tabs-newtab-button, #tabs-newtab-button) .toolbarbutton-icon {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+
+#unified-extensions-button image {
+    height: 32px !important;
+}
+
+.tabbrowser-tab[label="Settings"] .tab-label {
+
+    transform: translateY(100px);
+}
+
+.tabbrowser-tab[label="Settings"] .tab-label:after {
+    color: rgb(139, 186, 243) !important;
+    text-shadow: none;
+    content: "Preferences" !important;
+    display: block !important;
+    left: 0 !important;
+    position: absolute !important;
+    top: -99px !important;
+}
+
+.tab-icon-image[src="chrome://browser/skin/privatebrowsing/favicon.svg"] {
+    content: url("./image/icons_fx3/privatebrowsing.png") !important;
+
+}
+
+.downloadProgress {
+    background: radial-gradient(circle at 0 50%, #0000001f 10px, transparent 30px), radial-gradient(circle at 100% 50%, #0000001f 10px, transparent 30px), linear-gradient(180deg, #f3f3f3af, #fcfcfcaf 3px, #dbdbdbaf 6px, #cacacaaf 0, #d5d5d5af), #ddd !important;
+    border: 1px solid #8e8f8f !important;
+    border-radius: 3px !important;
+    box-shadow: inset 0 0 0 1px #f3f3f388, 0 0 0 1px #eaeaea88 !important;
+    height: 15px !important;
+    margin: 2px 0 !important;
+    overflow: hidden !important
+}
+
+.downloadProgress::-moz-progress-bar {
+    background-color: #0bd82c !important;
+    background-image: linear-gradient(180deg, #f3f3f3af, #fcfcfcaf 3px, #dbdbdbaf 6px, transparent 0), radial-gradient(circle at 0 50%, #0000002f 10px, transparent 30px), radial-gradient(circle at 100% 50%, #0000002f 10px, transparent 30px), linear-gradient(180deg, transparent 65%, #ffffff55), linear-gradient(180deg, transparent 6px, #cacaca33 0, #d5d5d533) !important;
+    box-shadow: inset 0 0 0 1px #ffffff1f !important;
+    height: 100% !important;
+    overflow: hidden !important
+}
+
+.downloadProgress[paused]::-moz-progress-bar {
+    background-color: #e6df1b !important;
+}
+
+.downloadProgress:indeterminate::-moz-progress-bar {
+    animation: progressbar 3s linear infinite !important;
+    background: linear-gradient(90deg, transparent, #ffffff80, transparent 40%) !important;
+    content: "" !important;
+    display: block !important;
+    height: 100% !important
+}
+
+@keyframes progressbar {
+    0% {
+        transform: translateX(-40%)
+    }
+    60% {
+        transform: translateX(100%)
+    }
+    to {
+        transform: translateX(100%)
+    }
+}
+
+.downloadIconCancel > .button-box > .button-icon {
+    list-style-image: url("image/error-16.png") !important;
+}
+
+.downloadIconRetry > .button-box > .button-icon {
+    list-style-image: url("image/icons_fx3/reload.png") !important;
+
+}
+
+.downloadButton .button-box {
+    background-color: transparent !important;
+}
+

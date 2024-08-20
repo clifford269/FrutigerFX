@@ -1,0 +1,48 @@
+
+:root {
+
+    --photon_tabs_tab_height: 28px !important;
+
+    --classic_squared_tabs_tab_height: 26px !important;
+
+    --classic_squared_tabs-border-radius: 3px !important;
+
+    --default_tab_border_roundness: 5px !important;
+
+    --classic_squared_tabs_tab_default_loading_icon_color: #0A84FF !important;
+    --tab_close_icons_size: 16px !important;
+
+    --tab_min_width: 50px !important;
+    --tab_max_width: 250px !important;
+
+    --tab_min_width_mlt: 100px !important;
+    --tab_max_width_mlt: 200px !important;
+    --tabs-lines: 3 !important;
+
+    --bookmark_items_height: 22px !important;
+    --bookmark_items_lines: 3 !important;
+
+    --general_ui_font_size: 10pt !important;
+
+    --search-one-offs_labels_height: 100px !important;
+
+    --addonbar_height: 25px !important;
+
+    --results_font_size: var(--general_ui_font_size, 10pt) !important; /* 10pt */
+
+    --megabar_border_roundness: 20px !important;
+
+    --top_toolbars_background: hsl(235, 33%, 19%) !important;
+    --top_toolbars_background_inactive: hsl(235, 13%, 9%) !important;
+    --top_toolbars_text: hsl(240, 9%, 98%) !important;
+    --top_toolbars_text_inactive: #999999 !important;
+
+    --urlbar_background_color: white !important;
+    --urlbar_text_color: black !important;
+
+    --custom_border-radius: 3px !important;
+}
+
+:root[uidensity="touch"] {
+    --classic_squared_tabs_tab_height: 36px !important;
+}

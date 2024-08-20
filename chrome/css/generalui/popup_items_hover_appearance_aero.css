@@ -1,0 +1,51 @@
+#context-navigation :is(#context-back,#context-forward,#context-reload,#context-stop,#context-bookmarkpage):hover {
+    background-color: unset !important;
+    outline: none !important;
+}
+
+
+:is(popup,menupopup,panel,panelmultiview,.panel-subview-body) :is(menuitem,menu,.subviewbutton,toolbarbutton):not(#appMenu-fxa-status2) {
+    border-radius: 3px !important;
+
+}
+
+:is(popup,menupopup,panel,panelmultiview,.panel-subview-body) :is(menuitem,menu,.subviewbutton,toolbarbutton):not(#appMenu-fxa-status2):hover, #downloadsListBox .download-state:hover, #downloadsListBox .downloadButton:hover {
+    color: inherit !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.4) 0px, transparent 0px),
+    linear-gradient(to left, rgba(255, 255, 255, 0.4) 0px, transparent 0px),
+    linear-gradient(to top, rgba(255, 255, 255, 0.3) 0px, transparent 0px),
+    linear-gradient(to bottom, rgba(163, 196, 247, 0.2), rgba(122, 180, 246, 0.2)) !important;
+    border-radius: 3px !important;
+    outline: 1px solid rgba(124, 163, 206, 0.7) !important;
+    outline-radius: 3px !important;
+    outline-offset: -1px !important;
+}
+
+:is(popup,menupopup,panel,panelmultiview,.panel-subview-body) :is(menuitem,menu,.subviewbutton,toolbarbutton):not(#appMenu-fxa-status2):hover .unified-extensions-item-contents {
+    border-bottom: 1px solid transparent !important;
+
+}
+
+#contentAreaContextMenu :is(#context-savelink, #context-openlinkintab,#context-openlinkprivate,#context-openlink, #context-searchselect-private, #context-searchselect, #context-bookmarklink,#context-copylink,#context-sendimage, #context-take-screenshot,#context-viewimage,#context-viewsource,#context-inspect-a11y, #context-savepage,#context-copyimage, #ublock0_raymondhill_net-menuitem-_uBlock0-blockElement,#context-inspect, #context-sendimage, #context-selectall, #context-delete,#context-paste-no-formatting, #context-paste, #context-cut, #context-copy, #context-undo, #manage-saved-logins), #toolbar-context-menu :is(#toolbar-context-reloadSelectedTab,#toolbar-context-bookmarkSelectedTab,#toolbar-context-openANewTab,.viewCustomizeToolbar, #toolbar-context-undoCloseTab, #toggle_toolbar-menubar,#toggle_PersonalToolbar, #toggle_toolbar-menubar,#context_selectAllTabs) {
+    outline: none !important;
+}
+
+#downloadsListBox .download-state {
+    border: 1px solid #ccc !important;
+    /*border-radius: 0 !important;*/
+    box-shadow: inset 0 0 0 1px solid #fffc;
+}
+
+#downloadsListBox {
+    /*border-radius: 0 !important;*/
+    margin-bottom: 5px !important;
+    padding-bottom: 2px !important;
+}
+
+#downloadsListBox .download-state {
+    margin: 5px !important;
+    margin-bottom: 1px !important;
+    /*transform: translateX(-0.5rem) !important;*/
+}

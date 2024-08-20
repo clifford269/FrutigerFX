@@ -1,0 +1,18 @@
+@-moz-document url-prefix(about:addons),
+url-prefix(chrome://mozapps/content/extensions/aboutaddons.html),
+url-prefix(chrome://mozapps/content/extensions/aboutaddons.xhtml) {
+
+
+    .addon-name-link[title]::after {
+        display: block !important;
+        content: attr(title) !important;
+        margin-top: -22px !important;
+    }
+
+    div[current-view="updates"] .addon-name-link[title]::after {
+        display: none !important;
+        visibility: collapse !important;
+        opacity: 0 !important;
+    }
+
+}

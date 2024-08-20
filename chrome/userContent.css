@@ -1,0 +1,565 @@
+@import "./css/aboutpreferences/preferences_alternative_appearance_aero.css";
+@import "./css/aboutaddons/addons_manager_alternative_appearance_aero.css";
+@import "./css/aboutlogins/aboutlogins_alternative_appearance_aero.css";
+
+@import "./css/aboutaddons/addonlists_compact.css";
+@import "./css/aboutconfig/aboutconfig_compact_appearance.css";
+
+@import "./css/aboutaddons/addonlists_hide_report_button.css";
+@import "./css/aboutaddons/addonlists_show_addon_version_number.css";
+
+@import "./css/aboutnewtab/custom_newtabpage.css";
+
+:root {
+    --btn-bg: linear-gradient(180deg, #f2f2f2 45%, #ebebeb 0, #cfcfcf) !important;
+    --btn-hover: linear-gradient(180deg, #eaf6fd 45%, #bee6fd 0, #a7d9f5) !important;
+    --btn-active: linear-gradient(180deg, #e5f4fc, #c4e5f6 30% 50%, #98d1ef 50%, #68b3db) !important;
+    --btn-border: 1px solid #8e8f8f;
+    --btn-border-radius: 3px;
+    --btn-box-shadow: inset 0 0 0 1px #fffc;
+    --btn-active-box-shadow: inset 1px 1px 0 #0003, inset -1px 1px 0 #0001;
+    --btn-border-hover: 1px solid #3c7fb1;
+    --btn-border-active: 1px solid #18598A;
+    --in-content-page-background: transparent !important;
+    --balloon-border: 1px solid rgba(0, 0, 0, .4);
+    --balloon-bg: linear-gradient(180deg, #fff, #ebebeb);
+    --balloon-box-shadow: 5px 5px 3px -3px rgba(0, 0, 0, .4);
+    --balloon-padding: 1em 1em 1em 2.5em;
+}
+
+html.private body {
+    background-image: linear-gradient(#cbdcec 40%, #a2cfec) !important;
+
+}
+
+#search-handoff-button {
+    box-shadow: unset !important;
+    border: var(--btn-border) !important;
+    background: var(--balloon-bg) !important;
+    padding: 0 !important;
+    padding-left: 5px !important;
+}
+
+#search-handoff-button.focused:not(.disabled) {
+    border: var(--btn-border-active) !important;
+    box-shadow: unset !important;
+}
+
+.showPrivate :is(.wordmark, .info) {
+    display: none !important;
+
+}
+
+.showPrivate {
+    transform: translateY(-50px);
+}
+
+.showPrivate .search-inner-wrapper {
+    padding: 0 !important;
+    width: 400px !important;
+    min-width: unset !important;
+    height: 30px !important;
+}
+
+.showPrivate #about-private-browsing-logo {
+    background: url("image/explorer.png") no-repeat center center !important;
+    background-size: cover !important;
+}
+
+:autofill {
+    filter: unset !important;
+    background-image: unset !important;
+}
+
+
+.neterror {
+    font: 10pt Segoe UI, SegoeUI, Noto Sans, sans-serif !important;
+}
+
+.neterror #errorShortDesc::before {
+    content: "" !important;
+    display: inline-block !important;
+    width: 64px !important;
+    height: 64px !important;
+    background-image: url('image/error-64.png') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    margin-right: 10px !important;
+}
+
+.neterror #errorShortDesc {
+    display: flex !important;
+    align-items: center !important;
+    font-size: 1.5em !important;
+    margin-left: -2em !important;
+}
+
+.neterror #errorLongDesc {
+    padding-left: 2.2em !important;
+}
+
+.neterror #errorLongDesc span {
+    padding-left: 0.8em !important;
+    font: 12pt Segoe UI, SegoeUI, Noto Sans, sans-serif !important;
+
+}
+
+#neterrorTryAgainButton, #preferences-root button, #profiles button {
+    background: var(--btn-bg) !important;
+    border: var(--btn-border) !important;
+    border-radius: 3px !important;
+    box-shadow: var(--btn-box-shadow) !important;
+    box-sizing: border-box !important;
+    color: #222 !important;
+    font: 10pt Segoe UI, SegoeUI, Noto Sans, sans-serif !important;
+    min-height: 23px !important;
+    min-width: 90px !important;
+    padding: 3px 12px !important;
+    position: relative !important;
+    text-align: center !important;
+}
+
+.modal .actions button {
+    padding: 3px 12px !important;
+    min-width: 50px !important;
+}
+
+.modal .actions {
+    padding-top: 10px !important;
+}
+
+#neterrorTryAgainButton:hover, #preferences-root button:hover, #profiles button:hover {
+    background: var(--btn-hover) !important;
+    border-radius: 3px !important;
+    box-shadow: var(--btn-box-shadow) !important;
+    transition: opacity .3s;
+    border: var(--btn-border-hover) !important;
+
+}
+
+#neterrorTryAgainButton:active, #preferences-root button:active, #profiles button:active {
+    background: var(--btn-active) !important;
+    border-radius: 2px !important;
+    box-shadow: var(--btn-active-box-shadow) !important;
+    transition: opacity .3s;
+    border: var(--btn-border-active) !important;
+}
+
+#neterrorTryAgainButton:focus-visible, #preferences-root button:focus-visible {
+    box-shadow: inset 0 0 0 2px #98d1ef !important;
+    outline: 1px dotted #000 !important;
+    outline-offset: -4px !important;
+}
+
+#neterrorTryAgainButton.focused, #preferences-root button.focused {
+    box-shadow: inset 0 0 0 2px #98d1ef !important;
+    outline: 1px dotted #000 !important;
+    outline-offset: -4px !important
+}
+
+.face-smile:before {
+    content: "" !important;
+}
+
+.checkbox-check {
+    background: #f6f6f6 !important;
+    border: var(--btn-border) !important;
+    box-shadow: inset 0 0 0 1px #f4f4f4, inset 1px 1px 0 1px #aeaeae, inset -1px -1px 0 1px #ddd, inset 3px 3px 6px #ccc !important;
+    box-sizing: border-box !important;
+    display: inline-block !important;
+    height: 14px !important;
+    margin-right: 6px !important;
+    transition: .4s !important;
+    width: 14px !important;
+
+}
+
+.checkbox-check:hover {
+    background: #e9f7fe !important;
+    border-color: #3c7fb1 !important;
+    box-shadow: inset 0 0 0 1px #def9fa, inset 1px 1px 0 1px #79c6f9, inset -1px -1px 0 1px #c6e9fc, inset 3px 3px 6px #b1dffd !important
+}
+
+#preferences-root checkbox {
+    position: relative;
+}
+
+#preferences-root checkbox[checked=true]:after {
+    color: #4a5f97 !important;
+    content: "\2714" !important;
+    display: block !important;
+    font-weight: 700 !important;
+    left: 2px !important;
+    position: absolute !important;
+    top: 5px !important;
+}
+
+#dialogGrid #titleText {
+    font-size: 1.24rem !important;
+    font-weight: unset !important;
+}
+
+.checkbox-label {
+    color: #222 !important;
+}
+
+menulist {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzMzMztzdG9wLW9wYWNpdHk6MSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2FhYTtzdG9wLW9wYWNpdHk6MSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGQ9Ik0xMSA2SDR2MWgxdjFoMXYxaDF2MWgxVjloMVY4aDFWN2gxVjZaIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+"), linear-gradient(180deg, #f2f2f2 45%, #ebebeb 0, #cfcfcf) !important;
+    background-position: 100% !important;
+    background-repeat: no-repeat !important;
+    border: var(--btn-border) !important;
+    border-radius: 3px !important;
+    box-shadow: var(--btn-box-shadow) !important;
+    box-sizing: border-box !important;
+    color: #222 !important;
+    font: 9pt Segoe UI, SegoeUI, Noto Sans, sans-serif !important;
+    padding: 2px 30px 2px 3px !important;
+    position: relative !important
+}
+
+menulist:after {
+    background: linear-gradient(180deg, #f2f2f2 45%, #ebebeb 0, #cfcfcf) !important;
+    border: transparent;
+    box-sizing: border-box;
+    content: "";
+    display: inline-block;
+    height: 95%;
+    margin-right: 6px;
+    width: 14px;
+    position: absolute;
+    right: 25px;
+    top: 0;
+}
+
+select:not([multiple]):hover {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzMzMztzdG9wLW9wYWNpdHk6MSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2FhYTtzdG9wLW9wYWNpdHk6MSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGQ9Ik0xMSA2SDR2MWgxdjFoMXYxaDF2MWgxVjloMVY4aDFWN2gxVjZaIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+"), linear-gradient(180deg, #eaf6fd 45%, #bee6fd 0, #a7d9f5);
+    border-color: #3c7fb1
+}
+
+select:not([multiple]):active {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzMzMztzdG9wLW9wYWNpdHk6MSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2FhYTtzdG9wLW9wYWNpdHk6MSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGQ9Ik0xMSA2SDR2MWgxdjFoMXYxaDF2MWgxVjloMVY4aDFWN2gxVjZaIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+"), linear-gradient(180deg, #e5f4fc, #c4e5f6 30% 50%, #98d1ef 50%, #68b3db);
+    border-color: #6d91ab;
+    box-shadow: inset 1px 1px 0 #0003, inset -1px 1px 0 #0001;
+    outline: none
+}
+
+select:not([multiple]):focus {
+    box-shadow: inset 0 0 0 2px #98d1ef;
+    outline: 1px dotted #000;
+    outline-offset: -4px
+}
+
+.dialog-button-box button, .topsite-form .actions button {
+    border: var(--btn-border) !important;
+    border-radius: 3px !important;
+    box-shadow: var(--btn-box-shadow) !important;
+    box-sizing: border-box !important;
+    color: #222 !important;
+    font: 10pt Segoe UI, SegoeUI, Noto Sans, sans-serif !important;
+    min-height: 23px !important;
+    min-width: 90px !important;
+    padding: 3px 12px !important;
+    position: relative !important;
+    text-align: center !important;
+
+}
+
+.topsite-form .actions .done:after, .topsite-form .actions .cancel:after {
+    background: linear-gradient(180deg, #f2f2f2 45%, #ebebeb 0, #cfcfcf) !important;
+    border: transparent;
+    box-sizing: border-box;
+    content: "Save";
+    display: inline-block;
+    min-height: 23px !important;
+    min-width: 88px !important;
+    padding: 3px 12px !important;
+    position: absolute;
+    right: 0px;
+    top: 0;
+
+}
+
+.topsite-form .actions .cancel:after {
+    content: "Cancel";
+
+}
+
+.topsite-form .actions .done:hover:after, .topsite-form .actions .cancel:hover:after {
+    background: linear-gradient(180deg, #eaf6fd 45%, #bee6fd 0, #a7d9f5) !important;
+    border: transparent;
+    box-sizing: border-box;
+    content: "Save";
+    display: inline-block;
+    min-height: 23px !important;
+    min-width: 88px !important;
+    padding: 3px 12px !important;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    transition: opacity .3s;
+
+}
+
+.topsite-form .actions .cancel:hover:after {
+    content: 'Cancel'
+}
+
+.topsite-form .actions .done:active:after, .topsite-form .actions .cancel:active:after {
+    background: linear-gradient(180deg, #e5f4fc, #c4e5f6 30% 50%, #98d1ef 50%, #68b3db) !important;
+    box-shadow: inset 1px 1px 0 #0003, inset -1px 1px 0 #0001 !important;
+    transition: opacity .3s;
+    border: transparent;
+    box-sizing: border-box;
+    content: "Save";
+    display: inline-block;
+    min-height: 23px !important;
+    min-width: 88px !important;
+    padding: 3px 12px !important;
+    position: absolute;
+    right: 0px;
+    top: 0;
+}
+
+.topsite-form .actions .cancel:active:after {
+    content: 'Cancel'
+
+}
+
+.topsite-form, .confirmation-dialog .modal {
+    background: var(--balloon-bg) !important;
+    border: var(--balloon-border) !important;
+    border-radius: 3px !important;
+    box-shadow: var(--balloon-box-shadow) !important;
+    position: relative !important;
+    padding-bottom: 0 !important;
+}
+
+.topsite-form {
+    padding: 1em 1em 1em 2.5em !important;
+
+}
+
+.topsite-form .actions {
+    margin: 0 !important;
+}
+
+.topsite-form .icon.icon-clear-input {
+    background-image: url("image/close_alt_h.png") !important;
+
+}
+
+.topsite-form .icon.icon-clear-input:hover {
+    background-image: url("image/close_alt_a.png") !important;
+}
+
+.form-input-container h3 {
+    font-weight: normal !important;
+    margin-left: -0.5rem !important;
+    font-size: 20px !important;
+    margin-top: -1rem !important;
+}
+
+.dialog-button-box button:hover {
+    background: linear-gradient(180deg, #eaf6fd 45%, #bee6fd 0, #a7d9f5) !important;
+    border-radius: 3px !important;
+    box-shadow: inset 0 0 0 1px #fffc !important;
+    transition: opacity .3s;
+}
+
+.dialog-button-box button:active {
+    background: linear-gradient(180deg, #e5f4fc, #c4e5f6 30% 50%, #98d1ef 50%, #68b3db) !important;
+    border-radius: 2px !important;
+    box-shadow: inset 1px 1px 0 #0003, inset -1px 1px 0 #0001 !important;
+    transition: opacity .3s;
+}
+
+#addonsButton:hover, #preferences-stack richlistitem:hover {
+    background: linear-gradient(180deg, #e5f4fc, #c4e5f6 30% 50%, #98d1ef 50%, #68b3db) !important;
+    color: #555 !important;
+}
+
+#preferences-stack richlistitem {
+    min-width: 36px !important;
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+
+}
+
+
+.sidebar-footer-icon {
+    list-style-image: url("image/icons_fx3/addons.png") !important;
+}
+
+.category[name="extension"] {
+    background-image: url("image/icons_fx3/addons.png") !important;
+}
+
+.category[name="theme"] {
+    background-image: url("image/icons_fx3/theme.png") !important;
+
+}
+
+#categories > .category[selected]:not(:hover), #categories .category[selected] {
+    background: linear-gradient(180deg, #e5f4fc, #c4e5f6 30% 50%, #98d1ef 50%, #68b3db) !important;
+    color: #666 !important;
+}
+
+#categories .category:not([selected]):hover {
+    color: #555 !important;
+}
+
+.edit-topsites .actions, .edit-topsites-wrapper .tile {
+    border: none !important;
+}
+
+.edit-topsites .actions .done {
+    order: 1 !important;
+}
+
+.edit-topsites .actions .cancel {
+    order: 2 !important;
+}
+
+@media (min-width: 866px) {
+    .edit-topsites-wrapper .modal {
+        width: 550px !important
+    }
+}
+
+#updateAllowDescription, #updateSettingsContainer, .top-sites-list .icon-pin-small, .top-site-outer .title .icon, .sidebar-footer-list #help-button, .neterror .title-text, #webAppearanceGroup {
+    display: none !important;
+}
+
+.page-options-menu > .more-options-button, .page-options-menu > .more-options-button:is(:hover, :active) {
+    background-image: url("image/winarrow.svg") !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.more-options-button, .modal .actions button {
+    background: url("image/winarrow.svg") no-repeat, var(--btn-bg) !important;
+    background-position: center !important;
+    border: var(--btn-border) !important;
+    box-shadow: var(--btn-box-shadow) !important;
+    color: #222 !important;
+    position: relative !important;
+}
+
+.more-options-button:hover, .modal button:hover {
+    background: url("image/winarrow.svg") no-repeat, var(--btn-hover) !important;
+    border: var(--btn-border-hover) !important;
+    background-position: center !important;
+}
+
+.more-options-button:active, .modal button:active {
+    background: url("image/winarrow.svg") no-repeat, var(--btn-active) !important;
+    box-shadow: var(--btn-active-box-shadow) !important;
+    border: var(--btn-border-active) !important;
+    background-position: center !important;
+}
+
+.modal .actions button {
+    background: var(--btn-bg) !important;
+
+}
+
+.modal button:hover {
+    background: var(--btn-hover) !important;
+
+}
+
+.modal button:active {
+    background: var(--btn-active) !important;
+
+}
+
+.icon-modal-delete {
+    background: url("image/error-64.png") !important;
+    background-position: center !important;
+    width: 64px !important;
+    height: 64px !important;
+}
+
+#preferencesButton .sidebar-footer-icon[src="chrome://global/skin/icons/settings.svg"] {
+    display: none !important;
+}
+
+#moz-toggle-button {
+    border-radius: 3px !important;
+    background-color: #0bd82c !important;
+    background-image: linear-gradient(180deg, #f3f3f3af, #fcfcfcaf 3px, #dbdbdbaf 6px, transparent 0), radial-gradient(circle at 0 50%, #0000002f 10px, transparent 30px), radial-gradient(circle at 100% 50%, #0000002f 10px, transparent 30px), linear-gradient(180deg, transparent 65%, #ffffff55), linear-gradient(180deg, transparent 6px, #cacaca33 0, #d5d5d533) !important;
+    box-shadow: inset 0 0 0 1px #ffffff1f !important;
+    height: 100% !important;
+    overflow: hidden !important;
+}
+
+.toggle-button[aria-pressed="true"]::before {
+    border-radius: 2px !important;
+    background: var(--btn-active) !important;
+    border: var(--btn-border-active);
+    box-shadow: var(--btn-box-shadow);
+}
+
+.toggle-button::before {
+    border-radius: 2px !important;
+    background: var(--btn-bg) !important;
+    border: var(--btn-border);
+    box-shadow: var(--btn-box-shadow);
+
+}
+
+
+.textbox-search-sign {
+    list-style-image: unset !important;
+    background: url("image/icons_fx3/search.png") no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    width: 20px !important;
+    margin-inline-end: 2px !important;
+}
+
+#filter .textbox-search-sign {
+    display: none !important;
+}
+
+search-textbox {
+    padding-left: 3px !important;
+}
+
+#preferences-root #standardArrow, #preferences-root #customArrow, #preferences-root #strictArrow, #dohCategories button {
+    padding: 0 !important;
+    width: 20px !important;
+    min-width: unset !important;
+}
+
+.category[name="plugin"] {
+    background-image: url("image/icons_fx3/plugins.png") !important;
+
+}
+
+#categories .category[name="extension"], #categories .category[name="plugin"], #categories .category[name="theme"] {
+    /*background: url("image/icons_fx3/addons.png"), green !important;*/
+
+}
+
+#categories .category[name="extension"] {
+    position: relative !important;
+}
+
+#categories .category[name="extension"][selected]:before {
+    content: "" !important;
+    display: inline-block !important;
+    position: absolute;
+    left: 10px;
+    width: 20px !important;
+    height: 20px !important;
+    background-image: url('image/icons_fx3/addons.png') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    /*margin-right: 10px !important;*/
+}
