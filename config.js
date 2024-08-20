@@ -15,3 +15,4 @@ try {
 defaultPref("ui.systemUsesDarkMode", 0);
 defaultPref("browser.theme.dark-private-windows", false);
 defaultPref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+defaultPref("browser.compactmode.show", true);
