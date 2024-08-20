@@ -3,16 +3,18 @@ Aims to fully build the Windows/Frutiger Aero coolness into the Mozilla Firefox 
 
 **Disclaimer**: 
 
-            1. This theme was build to look best with the Windows 7 Aero user interface.
+            1. This theme was built to look best with the Windows 7 Aero user interface.
             
             2. You might encounter bugs/issues.
                You are encouraged to discover them and they might get corrected with time.
                
 ->Put the defaults folder and config.js file in C:\Program Files\Mozilla Firefox
 
-->And the chrome folder in %appdata%/Mozilla/Firefox/Profiles/(Your default Firefox profile)
+->And the chrome folder in %appdata%\Mozilla\Firefox\Profiles\(Your default Firefox profile)
 
 ->DON'T forget to delete startupCache folder under C:\Users\(username)\AppData\Local\Mozilla\Firefox\Profiles\(Your default Firefox profile)
+
+->Enable 'compact mode' under toolbar density
 
 ![1](https://github.com/user-attachments/assets/c38b2882-e71a-4513-8dd5-c35ba5c9f7a8)
 
