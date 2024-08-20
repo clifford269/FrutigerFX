@@ -14,9 +14,15 @@ Aims to fully build the Windows/Frutiger Aero coolness into the Mozilla Firefox 
 
 ->DON'T forget to delete startupCache folder under C:\Users\(username)\AppData\Local\Mozilla\Firefox\Profiles\(Your default Firefox profile)
 
-![firefox-frutiger-aero-theme-frutigerfx-v0-996mfuxytnjd1](https://github.com/user-attachments/assets/a843b3a3-af96-4ca6-b2f5-5387ada28149)
+![1](https://github.com/user-attachments/assets/c38b2882-e71a-4513-8dd5-c35ba5c9f7a8)
 
-![firefox-frutiger-aero-theme-frutigerfx-v0-hdg0nrxytnjd1](https://github.com/user-attachments/assets/8be71df6-dedf-45d5-9add-aa056c20b7db)
+![2](https://github.com/user-attachments/assets/0df36700-24f8-4479-80a2-946fbb4717c0)
+
+![3](https://github.com/user-attachments/assets/01b3ee23-0fb2-4085-8b3c-d2d674815520)
+
+![4](https://github.com/user-attachments/assets/5c717b5b-7d92-4d60-bd61-c575dc0ebd9a)
+
+![5](https://github.com/user-attachments/assets/0023b7b6-7350-432b-99cb-ddc10966bad1)
 
 
 **Acknowledgements**:
