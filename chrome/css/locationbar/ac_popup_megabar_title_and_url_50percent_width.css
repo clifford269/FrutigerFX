@@ -86,12 +86,11 @@
 .urlbarView-row[label] {
   margin-block-start: 0 !important;
 
-  &::before {
-    content: unset !important;
-    display: none !important;
-  }
 }
-
+.urlbarView-row[label]::before{
+  content: unset !important;
+  display: none !important;
+}
 #urlbar .urlbarView-button-menu {
   z-index: 1 !important;
 }

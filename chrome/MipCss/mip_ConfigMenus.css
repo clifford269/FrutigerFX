@@ -1,0 +1,27 @@
+@-moz-document	url("chrome://browser/content/browser.xhtml"),
+		url("chrome://browser/content/places/places.xhtml"),
+		url("chrome://browser/content/places/historySidebar.xhtml"),
+		url("chrome://browser/content/places/bookmarksSidebar.xhtml"),
+		url("chrome://browser/content/syncedtabs/sidebar.xhtml") {
+
+
+	:root {
+		--mip-menu-icon-margin: 0px;
+		--mip-menu-label-margin: -16px;
+		--mip-checkmark-icon-margin: 0px;
+		--mip-checkmark-label-margin: -16px;
+		--mip-bmb-icon-margin: 0px;
+		--mip-bmb-label-margin: -16px;
+		--mip-iconreplace-label: 0px;
+		}
+
+
+	menupopup[needsgutter] menu:not([icon], .menu-iconic), menupopup[needsgutter] menuitem:not([checked="true"], [icon], .menuitem-iconic) {
+
+		--mip-menu-icon-margin: -24px;
+		--mip-menu-label-margin: 4px;
+		}
+
+
+	}
+

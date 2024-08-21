@@ -1,4 +1,4 @@
-#context-navigation :is(#context-back,#context-forward,#context-reload,#context-stop,#context-bookmarkpage):hover {
+ #context-navigation :is(#context-back,#context-forward,#context-reload,#context-stop,#context-bookmarkpage):hover {
     background-color: unset !important;
     outline: none !important;
 }
@@ -28,12 +28,12 @@
 
 }
 
-#contentAreaContextMenu :is(#context-savelink, #context-openlinkintab,#context-openlinkprivate,#context-openlink, #context-searchselect-private, #context-searchselect, #context-bookmarklink,#context-copylink,#context-sendimage, #context-take-screenshot,#context-viewimage,#context-viewsource,#context-inspect-a11y, #context-savepage,#context-copyimage, #ublock0_raymondhill_net-menuitem-_uBlock0-blockElement,#context-inspect, #context-sendimage, #context-selectall, #context-delete,#context-paste-no-formatting, #context-paste, #context-cut, #context-copy, #context-undo, #manage-saved-logins), #toolbar-context-menu :is(#toolbar-context-reloadSelectedTab,#toolbar-context-bookmarkSelectedTab,#toolbar-context-openANewTab,.viewCustomizeToolbar, #toolbar-context-undoCloseTab, #toggle_toolbar-menubar,#toggle_PersonalToolbar, #toggle_toolbar-menubar,#context_selectAllTabs) {
+ #textbox-contextmenu:is(#text-action-select-all, #paste-and-go,#text-action-paste,#text-action-copy,#text-action-cut), #toolbar-context-menu #toolbar-context-selectAllTabs, #tabContextMenu #context_selectAllTabs, #contentAreaContextMenu :is(#context-print-selection,#context-viewpartialsource-selection, #context-savelink, #context-openlinkintab,#context-openlinkprivate,#context-openlink, #context-searchselect-private, #context-searchselect, #context-bookmarklink,#context-copylink,#context-sendimage, #context-take-screenshot,#context-viewimage,#context-viewsource,#context-inspect-a11y, #context-savepage,#context-copyimage, #ublock0_raymondhill_net-menuitem-_uBlock0-blockElement,#context-inspect, #context-sendimage, #context-selectall, #context-delete,#context-paste-no-formatting, #context-paste, #context-cut, #context-copy, #context-undo, #manage-saved-logins), #toolbar-context-menu :is(#toolbar-context-reloadSelectedTab,#toolbar-context-bookmarkSelectedTab,#toolbar-context-openANewTab,.viewCustomizeToolbar, #toolbar-context-undoCloseTab, #toggle_toolbar-menubar,#toggle_PersonalToolbar, #toggle_toolbar-menubar) {
     outline: none !important;
 }
 
 #downloadsListBox .download-state {
-    border: 1px solid #ccc !important;
+    border: 1px solid rgba(229, 244, 252, 0.65) !important;
     /*border-radius: 0 !important;*/
     box-shadow: inset 0 0 0 1px solid #fffc;
 }

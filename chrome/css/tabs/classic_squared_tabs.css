@@ -101,10 +101,10 @@
 }
 
 #TabsToolbar:not(:-moz-lwtheme) :is(.tabs-newtab-button,#tabs-newtab-button) {
-    transform: translateX(2px) translateY(1px);
+    transform: translateY(1px);
     height: 24px !important;
     border-radius: 5px !important;
-
+    margin-left: 2px !important;
 }
 
 /* unloaded/pending tabs color */

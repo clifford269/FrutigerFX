@@ -42,9 +42,9 @@
 }
 
 #urlbar-results .urlbarView-row[selected] .urlbarView-action {
-    color: hsl(178, 100%, 28%) !important;
+    color: rgb(31, 88, 159) !important;
 }
 
-.urlbarView-url {
+.urlbarView-url, .urlbarView-action {
     color: #039bce !important;
 }

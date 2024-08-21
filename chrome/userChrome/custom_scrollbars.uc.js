@@ -1,43 +1,5 @@
 "use strict";
 
-/* Firefox userChrome.js tweaks - 'Custom Scrollbars' for Firefox
-   https://github.com/Aris-t2/CustomJSforFx/blob/master/scripts/custom_scrollbars.uc.js
-
-   Version: 2.0.5 for Firefox 115+
-   
-   NOTE: 'non-compatible options' from earlier versions were removed
-
-   README
-  
-   about:config >
-       widget.windows.overlay-scrollbars.enabled > false (Windows)
-       widget.gtk.overlay-scrollbars.enabled > false (Linux)
-   [!] The above preferences have to be set to 'false' for this code to work
- 
-   [!] STARTUP CACHE HAS TO BE DELETED AFTER EVERY CHANGE!
-   -> finding 'startupCache' folder: address bar > about:profiles > Local Directory > Open Folder > startupCache
-   -> close Firefox
-   -> delete 'startupCache' folders content
- 
-   Modifying appearance > change values
-   - enable/disable options: true <-> false
-   - color
-     - name: red, blue, transparent 
-     - hex code: #33CCFF, #FFF
-     - rgb(a): rgba(0,0,255,0.8)
-     - hsl(a): hsla(240,100%,50%,0.8)
-   - numbers: 1, 2, 3 ... 10, 11, 12 ...
-   - opacity: 0.0 to 1.0 e.g. 1.4, 1,75
-   - gradients: linear-gradient(direction, color, color, color)
-   - gradients example: linear-gradient(to right, blue, #33CCFF, rgba(0,0,255,0.8))
-   - predefined gradients: transparent,rgba(255,255,255,0.5),transparent -> transparent,rgba(255,255,255,0.0),transparent
-   - no color or no color value -> use "unset"
-   - arrow icons
-	  - files have to be downloaded from https://github.com/Aris-t2/CustomJSforFx/tree/master/icons
-	  - files have to be placed inside 'icons' (sub)folder --> 'chrome\icons'
-	  - own svg files can also be used, if they are named up.svg, down.svg, left.svg, right.svg
- 
-*/
 
 (function () {
 

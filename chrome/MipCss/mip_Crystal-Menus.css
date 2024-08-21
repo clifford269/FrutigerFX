@@ -1,0 +1,3924 @@
+/********************************************************************************
+ * Menu Icon Plus CSS v2.9.1 (MIP/CSS)
+ * Add Icons To Firefox Menus/Context-Menus
+ *
+ * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
+ *   Project Homepage https://github.com/B00ze64/FF-Menu-Icon-Plus-CSS
+ *   Released under Creative Commons Attribution 4.0 License.
+ *   https://creativecommons.org/licenses/by/4.0/
+ *
+ * - The Original MIP Firefox Extension (c) Justin Rodes http://www.codedawn.com/menu-icons-plus.php
+ * - MOST OF THE PANELS CODE (c) Black7375 (https://github.com/black7375/Firefox-UI-Fix)
+ *
+ * + The icons come from ->
+ *
+ * - Crystal Project	http://www.everaldo.com/
+ *			https://commons.wikimedia.org/wiki/Category:Crystal_Project
+ *			LGPL
+ *
+ * - Fugue Icons	http://p.yusukekamiyamane.com/
+ *			by Yusuke Kamiyamane,
+ *			Creative Commons Attribution 3.0 License.
+ *
+ * - Oxygen Icons	http://www.oxygen-icons.org/ [use Wayback Machine]
+ *			https://github.com/pasnox/oxygen-icons-png
+ *			https://techbase.kde.org/Projects/Oxygen/Licensing
+ *
+ * - Silk Icons		http://www.famfamfam.com/
+ *			Mark James, Birmingham (UK),
+ *			Creative Commons Attribution 2.5 License.
+ *
+ * - Tango Icons	http://tango-project.org/
+ *			Public Domain
+ *
+ * + Contributors ->
+ *
+ *	Aris-t2 (https://github.com/Aris-t2) Figured out how to add icons to the Firefox menus
+ *	Acid-Crash Discovered bug with the Responsive Design SVG icon and suggested the fix for it
+ *	Devtools/Help Menu SVG icons and Panels code by Black7375 (https://github.com/black7375/Firefox-UI-Fix)
+ *
+ * + NOTES:
+ * - TabSize=8
+ *
+ */
+
+/********************************************************************************
+ * STANDARD MENUS: CRYSTAL PROJECT
+ ********************************************************************************
+ *
+ * This is the main skinning file for the Firefox menus. This one uses icons
+ * from the Crystal Project when they are available - missing icons are taken
+ * from the other themes.
+ *
+ */
+
+@-moz-document	url("chrome://browser/content/browser.xhtml"),
+		url("chrome://browser/content/places/places.xhtml"),
+		url("chrome://browser/content/places/historySidebar.xhtml"),
+		url("chrome://browser/content/places/bookmarksSidebar.xhtml"),
+		url("chrome://browser/content/syncedtabs/sidebar.xhtml") {
+
+/********************************************************************************
+ *
+ * FILE MENU
+ *
+ ********************************************************************************/
+
+/* New Window (Open In) *********************************************************/
+
+#menu_newNavigator::Before,
+#context-openlink::Before,
+#context-openframe::Before,
+#context_openTabInWindow::Before,
+#placesContext_open\:newwindow::Before,
+#historyUndoWindowPopup menuitem.restoreallitem::Before,
+#syncedTabsOpenSelectedInWindow::Before,
+#_testpilot-containers-menuitem-_move-to-new-window-container::Before {
+
+	content: url("../MipImages/Crystal/crystal_WindowNew.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_newNavigator > label,
+#context-openlink > label,
+#context-openframe > label,
+#context_openTabInWindow > label,
+#placesContext_open\:newwindow > label,
+#historyUndoWindowPopup menuitem.restoreallitem > label,
+#syncedTabsOpenSelectedInWindow > label,
+#_testpilot-containers-menuitem-_move-to-new-window-container > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Private Browsing *************************************************************/
+
+#menu_newPrivateWindow::Before,
+#context-openlinkprivate::Before,
+#placesContext_open\:newprivatewindow::Before,
+#syncedTabsOpenSelectedInPrivateWindow::Before {
+
+/*	content: url("../MipImages/Crystal/crystal_PrivateBrowsing-darker.png"); */
+	content: url("../MipImages/Crystal/crystal_PrivateBrowsing.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_newPrivateWindow > label,
+#context-openlinkprivate > label,
+#placesContext_open\:newprivatewindow > label,
+#syncedTabsOpenSelectedInPrivateWindow > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Location-Open ****************************************************************/
+
+#menu_openLocation::Before,
+#placesContext_open::Before,
+#context-openlinkincurrent::Before,
+#syncedTabsOpenSelected::Before {
+
+/*	content: url("../MipImages/Crystal/crystal_OpenLocation.png"); */
+	content: url("../MipImages/Crystal/crystal_Globe.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_openLocation > label,
+#placesContext_open > label,
+#context-openlinkincurrent > label,
+#syncedTabsOpenSelected > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* File-Open ********************************************************************/
+
+#menu_openFile::Before {
+
+	content: url("../MipImages/Crystal/crystal_FileOpen.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_openFile > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Close Window *****************************************************************/
+
+#menu_closeWindow::Before,
+#orgClose::Before {
+
+	content: url("../MipImages/Crystal/crystal_ClearAll.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_closeWindow > label,
+#orgClose > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Email ************************************************************************/
+
+#menu_sendLink::Before,
+#context-sendimage::Before,
+#context-sendvideo::Before,
+#context-sendaudio::Before {
+
+	content: url("../MipImages/Crystal/crystal_Mail.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_sendLink > label,
+#context-sendimage > label,
+#context-sendvideo > label,
+#context-sendaudio > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Print Page Setup *************************************************************/
+
+#menu_printSetup::Before {
+
+	content: url("../MipImages/Crystal/crystal_PrintPageSetup.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+/* Print Preview ****************************************************************/
+
+#menu_printPreview::Before {
+
+	content: url("../MipImages/Crystal/crystal_PrintPreview.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+/* Print ************************************************************************/
+
+#menu_print::Before,
+#context-printframe::Before,
+#context-print-selection::Before {
+
+	content: url("../MipImages/Crystal/crystal_Print.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_printSetup > label,
+#menu_printPreview > label,
+#menu_print > label,
+#context-printframe > label,
+#context-print-selection > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Import from another browser **************************************************/
+
+#menu_importFromAnotherBrowser::Before,
+#help_importFromAnotherBrowser::Before,
+#browserImport::Before {
+
+/*	content: url("../MipImages/Crystal/crystal_ImportWindow.png"); */
+	content: url("../MipImages/Crystal/crystal_ImportWindow-green.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_importFromAnotherBrowser > label,
+#help_importFromAnotherBrowser > label,
+#browserImport > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Offline (Work Offline) *******************************************************/
+
+#goOfflineMenuitem:not([checked=true])::Before {
+
+/*	content: url("../MipImages/Crystal/crystal_Offline.png"); */
+	content: url("../MipImages/Crystal/crystal_Offline-darker.png"); /* Darker prongs */
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#goOfflineMenuitem:not([checked=true]) > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Exit/Quit/Shutdown ***********************************************************/
+
+#menu_FileQuitItem::Before {
+
+/*	content: url("../MipImages/Crystal/crystal_PowerDown.png"); */
+	content: url("../MipImages/Crystal/crystal_Quit.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_FileQuitItem > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/********************************************************************************
+ *
+ * EDIT MENU (and Everywhere)
+ *
+ ********************************************************************************/
+
+/* Undo *************************************************************************/
+
+#menu_undo::Before,
+#orgUndo::Before,
+#context-undo::Before,
+#context_undoCloseTab::Before,
+#toolbar-context-undoCloseTab::Before,
+#spell-undo-add-to-dictionary::Before,
+menuitem[cmd="cmd_undo"]::Before,
+#textbox-contextmenu menuitem[command="cmd_undo"]::Before {
+
+	content: url("../MipImages/Crystal/crystal_Undo.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_undo[disabled=true]::Before,
+#orgUndo[disabled=true]::Before,
+#context-undo[disabled=true]::Before,
+#context_undoCloseTab[disabled=true]::Before,
+#toolbar-context-undoCloseTab[disabled=true]::Before,
+#spell-undo-add-to-dictionary[disabled=true]::Before,
+menuitem[cmd="cmd_undo"][disabled=true]::Before,
+#textbox-contextmenu menuitem[command="cmd_undo"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_undo > label,
+#orgUndo > label,
+#context-undo > label,
+#context_undoCloseTab > label,
+#toolbar-context-undoCloseTab > label,
+#spell-undo-add-to-dictionary > label,
+menuitem[cmd="cmd_undo"] > label,
+#textbox-contextmenu menuitem[command="cmd_undo"] > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+#allTabsMenu-undoCloseTab {
+
+	list-style-image: url("../MipImages/Crystal/crystal_Undo.png");
+	}
+
+#allTabsMenu-undoCloseTab > label { padding-inline-start: 8px !important; }
+
+/* Redo *************************************************************************/
+
+menuitem[data-l10n-id="text-action-redo"]::Before,
+#menu_redo::Before,
+#orgRedo::Before {
+
+	content: url("../MipImages/Crystal/crystal_Redo.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+menuitem[data-l10n-id="text-action-redo"][disabled=true]::Before,
+#menu_redo[disabled=true]::Before,
+#orgRedo[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+menuitem[data-l10n-id="text-action-redo"] > label,
+#menu_redo > label,
+#orgRedo > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Cut **************************************************************************/
+
+#menu_cut::Before,
+#context-cut::Before,
+#orgCut::Before,
+#placesContext_cut::Before,
+menuitem[cmd="cmd_cut"]::Before,
+#textbox-contextmenu menuitem[command="cmd_cut"]::Before {
+
+	content: url("../MipImages/Crystal/crystal_Cut.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_cut[disabled=true]::Before,
+#context-cut[disabled=true]::Before,
+#orgCut[disabled=true]::Before,
+#placesContext_cut[disabled=true]::Before,
+menuitem[cmd="cmd_cut"][disabled=true]::Before,
+#textbox-contextmenu menuitem[command="cmd_cut"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_cut > label,
+#context-cut > label,
+#orgCut > label,
+#placesContext_cut > label,
+menuitem[cmd="cmd_cut"] > label,
+#textbox-contextmenu menuitem[command="cmd_cut"] > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Copy *************************************************************************/
+
+#menu_copy::Before,
+#context-copy::Before,
+#context-copyimage-contents::Before,
+#orgCopy::Before,
+#placesContext_copy::Before,
+menuitem[cmd="cmd_copy"]::Before,
+#textbox-contextmenu menuitem[command="cmd_copy"]::Before {
+
+	content: url("../MipImages/Crystal/crystal_Copy.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+/* Copy Link ********************************************************************/
+
+#context-copyaudiourl::Before,
+#context-copyemail::Before,
+#context-copyimage::Before,
+#context-copylink::Before,
+#context-copyvideourl::Before,
+#downloadsContextMenu menuitem[command="cmd_copy"]::Before,
+menuitem[command="downloadsCmd_copyLocation"]::Before,
+#syncedTabsCopySelected::Before {
+
+	content: url("../MipImages/Crystal/crystal_CopyLink.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_copy[disabled=true]::Before,
+#orgCopy[disabled=true]::Before,
+#placesContext_copy[disabled=true]::Before,
+menuitem[cmd="cmd_copy"][disabled=true]::Before,
+#textbox-contextmenu menuitem[command="cmd_copy"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_copy > label,
+#context-copy > label,
+#context-copyaudiourl > label,
+#context-copyemail > label,
+#context-copyimage > label,
+#context-copyimage-contents > label,
+#context-copylink > label,
+#context-copyvideourl > label,
+#orgCopy > label,
+#placesContext_copy > label,
+menuitem[cmd="cmd_copy"] > label,
+#textbox-contextmenu menuitem[command="cmd_copy"] > label,
+#downloadsContextMenu menuitem[command="cmd_copy"] > label,
+menuitem[command="downloadsCmd_copyLocation"] > label,
+#syncedTabsCopySelected > label,
+#context-stripOnShareLink > label,
+#strip-on-share > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Paste ************************************************************************/
+
+#menu_paste::Before,
+#context-paste::Before,
+#orgPaste::Before,
+#placesContext_paste::Before,
+#placesContext_paste_group::Before,
+menuitem[cmd="cmd_paste"]::Before,
+#textbox-contextmenu menuitem[command="cmd_paste"]::Before {
+
+	content: url("../MipImages/Crystal/crystal_Paste.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_paste[disabled=true]::Before,
+#context-paste[disabled=true]::Before,
+#orgPaste[disabled=true]::Before,
+#placesContext_paste[disabled=true]::Before,
+#placesContext_paste_group[disabled=true]::Before,
+menuitem[cmd="cmd_paste"][disabled=true]::Before,
+#textbox-contextmenu menuitem[command="cmd_paste"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_paste > label,
+#context-paste > label,
+#orgPaste > label,
+#placesContext_paste > label,
+#placesContext_paste_group > label,
+menuitem[cmd="cmd_paste"] > label,
+#textbox-contextmenu menuitem[command="cmd_paste"] > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Paste and Go *****************************************************************/
+
+#paste-and-go::Before,
+menuitem.searchbar-paste-and-search::Before {
+
+	content: url("../MipImages/Crystal/crystal_Go.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#paste-and-go[disabled=true]::Before,
+menuitem.searchbar-paste-and-search[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#paste-and-go > label,
+menuitem.searchbar-paste-and-search > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Delete ***********************************************************************/
+
+#menu_delete::Before,
+#context-delete::Before,
+#orgDelete::Before,
+#placesContext_delete::Before,
+#placesContext_delete_history::Before,
+#placesContext_deleteBookmark::Before,
+#placesContext_deleteFolder::Before,
+menuitem[cmd="cmd_delete"]::Before,
+menuitem.downloadDeleteFileMenuItem::Before,
+#textbox-contextmenu menuitem[command="cmd_delete"]::Before {
+
+	content: url("../MipImages/Crystal/crystal_Recycle.png");
+	content: url("../MipImages/Crystal/crystal_Delete.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_delete[disabled=true]::Before,
+#context-delete[disabled=true]::Before,
+#orgDelete[disabled=true]::Before,
+#placesContext_delete[disabled=true]::Before,
+#placesContext_delete_history[disabled=true]::Before,
+#placesContext_deleteBookmark[disabled=true]::Before,
+#placesContext_deleteFolder[disabled=true]::Before,
+menuitem[cmd="cmd_delete"][disabled=true]::Before,
+menuitem.downloadDeleteFileMenuItem[disabled=true]::Before,
+#textbox-contextmenu menuitem[command="cmd_delete"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_delete > label,
+#context-delete > label,
+#orgDelete > label,
+#placesContext_delete > label,
+#placesContext_delete_history > label,
+#placesContext_deleteBookmark > label,
+#placesContext_deleteFolder > label,
+menuitem[cmd="cmd_delete"] > label,
+menuitem.downloadDeleteFileMenuItem > label,
+#textbox-contextmenu menuitem[command="cmd_delete"] > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Select All - Must be BEFORE TABS *********************************************/
+
+#menu_selectAll::Before,
+#menu_showAllTabs::Before,
+#menu_bookmarkAllTabs::Before,
+#orgSelectAll::Before,
+#context-selectall::Before,
+#context_selectAllTabs::Before,
+#toolbar-context-selectAllTabs::Before,
+menuitem[cmd="cmd_selectAll"]::Before,
+#textbox-contextmenu menuitem[command="cmd_selectAll"]::Before {
+
+	content: url("../MipImages/Crystal/crystal_SelectAll.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_selectAll[disabled=true]::Before,
+#orgSelectAll[disabled=true]::Before,
+#context-selectall[disabled=true]::Before,
+#context_selectAllTabs[disabled=true]::Before,
+#toolbar-context-selectAllTabs[disabled=true]::Before,
+menuitem[cmd="cmd_selectAll"][disabled=true]::Before,
+#textbox-contextmenu menuitem[command="cmd_selectAll"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_selectAll > label,
+#menu_showAllTabs > label,
+#menu_bookmarkAllTabs > label,
+#orgSelectAll > label,
+#context-selectall > label,
+#context_selectAllTabs > label,
+#toolbar-context-selectAllTabs > label,
+menuitem[cmd="cmd_selectAll"] > label,
+#textbox-contextmenu menuitem[command="cmd_selectAll"] > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Find (In this page...) *******************************************************/
+
+#menu_find::Before,
+#menu_searchHistory::Before,
+#menu_searchBookmarks::Before,
+#context-searchselect::Before,
+#context-searchselect-private::Before {
+
+	content: url("../MipImages/Crystal/crystal_Find.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_findAgain::Before {
+
+	content: url("../MipImages/Crystal/crystal_Find.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_find[disabled=true]::Before,
+#menu_findAgain[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_find > label,
+#menu_findAgain > label,
+#menu_searchHistory > label,
+#menu_searchBookmarks > label,
+#context-searchselect > label,
+#context-searchselect-private > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Find Tabs (TABS PANEL) *******************************************************/
+
+#allTabsMenu-searchTabs > image {
+
+	list-style-image: url("../MipImages/Crystal/crystal_Find.png");
+	}
+
+#allTabsMenu-searchTabs > label { padding-inline-start: 8px !important; }
+
+/********************************************************************************
+ *
+ * VIEW MENU
+ *
+ ********************************************************************************/
+
+/* Toolbars *********************************************************************/
+
+menu#viewToolbarsMenu::Before {
+
+	content: url("../MipImages/FF/application-XP-light.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#toggle_toolbar-menubar:not([checked=true])::Before {
+
+	content: url("../MipImages/FF/bookmarksMenu.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#toggle_PersonalToolbar:not([checked=true])::Before {
+
+	content: url("../MipImages/FF/bookmarksToolbar.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_viewPopup menu#viewToolbarsMenu > label,
+#toggle_toolbar-menubar:not([checked=true]) > label,
+#toggle_PersonalToolbar:not([checked=true]) > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Sidebars *********************************************************************/
+
+#viewSidebarMenuMenu::Before { /* Note that individual Sidebars are in their respective sections (e.g. History) */
+
+	content: url("../MipImages/Crystal/crystal_Sidebar.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#viewSidebarMenuMenu > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Zoom/Zoom-In/Zoom-Out/Zoom-Reset**********************************************/
+
+#viewFullZoomMenu::Before {
+
+	content: url("../MipImages/Crystal/crystal_Zoom.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_zoomEnlarge::Before {
+
+	content: url("../MipImages/Crystal/crystal_ZoomPlus.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_zoomReduce::Before {
+
+	content: url("../MipImages/Crystal/crystal_ZoomMinus.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_zoomReset::Before {
+
+	content: url("../MipImages/Crystal/crystal_ZoomReset.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#toggle_zoom:not([checked=true])::Before {
+
+	content: url("../MipImages/Crystal/crystal_TextSize.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#viewFullZoomMenu > label,
+#menu_zoomEnlarge > label,
+#menu_zoomReduce > label,
+#menu_zoomReset > label,
+#toggle_zoom:not([checked=true]) > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Page Style *******************************************************************/
+
+#pageStyleMenu::Before {
+
+	content: url("../MipImages/Crystal/crystal_PageStyle.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#pageStyleMenu > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Char Encoding ****************************************************************/
+
+#repair-text-encoding::Before,
+#charsetMenu::Before {
+
+	content: url("../MipImages/Fugue/fugue_Encoding.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#repair-text-encoding[disabled=true]::Before,
+#charsetMenu[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#repair-text-encoding > label,
+#charsetMenu > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* FullScreen *******************************************************************/
+
+#context-video-fullscreen::Before,
+#fullScreenItem:not([checked=true])::Before {
+
+/*	content: url("../MipImages/Tango/tango_FullScreen(crystal).png"); */
+	content: url("../MipImages/Crystal/crystal_FullScreen.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context-leave-dom-fullscreen::Before,
+#autohide-context menuitem[data-l10n-id="full-screen-exit"]::Before {
+
+/*	content: url("../MipImages/Tango/tango_FullScreenExit(crystal).png"); */
+	content: url("../MipImages/Crystal/crystal_FullScreen.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context-video-fullscreen > label,
+#context-leave-dom-fullscreen > label,
+#fullScreenItem:not([checked=true]) > label,
+#autohide-context menuitem[data-l10n-id="full-screen-exit"] > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Reader Mode ******************************************************************/
+
+#menu_readerModeItem::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_ReaderView.png"); */
+	content: url("../MipImages/Crystal/crystal_Script.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_readerModeItem > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Bidi Switch Text Direction ***************************************************/
+
+#documentDirection-swap::Before,
+#textfieldDirection-swap::Before,
+#context-bidi-text-direction-toggle::Before,
+#context-bidi-page-direction-toggle::Before {
+
+	content: url("../MipImages/Crystal/crystal_Sync.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#documentDirection-swap > label,
+#textfieldDirection-swap > label,
+#context-bidi-text-direction-toggle > label,
+#context-bidi-page-direction-toggle > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/********************************************************************************
+ *
+ * HISTORY MENU (And Context)
+ *
+ ********************************************************************************/
+
+/* History (Show All) ***********************************************************/
+
+#menu_showAllHistory::Before,
+#menu_historySidebar:not([checked=true])::Before {
+
+	content: url("../MipImages/Crystal/crystal_History.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_showAllHistory > label,
+#menu_historySidebar:not([checked=true]) > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* History Clear Recent / Forget Site *******************************************/
+
+#sanitizeItem::Before {
+
+/*	content: url("../MipImages/Crystal/crystal_HistoryDelete.png"); */
+	content: url("../MipImages/Crystal/crystal_Eraser.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#sanitizeItem[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#placesContext_deleteHost::Before,
+menuitem.downloadRemoveFromHistoryMenuItem::Before {
+
+/*	content: url("../MipImages/Crystal/crystal_HistoryDelete.png"); */
+	content: url("../MipImages/Crystal/crystal_Eraser.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#sanitizeItem > label,
+#placesContext_deleteHost > label,
+menuitem.downloadRemoveFromHistoryMenuItem > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* History Clear All (Downloads/Search) *****************************************/
+
+menuitem[command="downloadsCmd_clearList"]::Before,
+menuitem[command="downloadsCmd_clearDownloads"]::Before,
+menuitem.searchbar-clear-history::Before {
+
+/*	content: url("../MipImages/Crystal/crystal_ClearAll.png"); */
+	content: url("../MipImages/Crystal/crystal_Recycle.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+menuitem[command="downloadsCmd_clearList"][disabled=true]::Before,
+menuitem[command="downloadsCmd_clearDownloads"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+menuitem[command="downloadsCmd_clearList"] > label,
+menuitem[command="downloadsCmd_clearDownloads"] > label,
+menuitem.searchbar-clear-history > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* History Restore Previous Session *********************************************/
+
+#historyRestoreLastSession::Before {
+
+	content: url("../MipImages/Crystal/crystal_Session.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#historyRestoreLastSession[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#historyRestoreLastSession > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* History Recently Closed Windows **********************************************/
+
+#historyUndoWindowMenu::Before {
+
+	content: url("../MipImages/Crystal/crystal_Window.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#historyUndoWindowMenu[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#historyUndoWindowMenu > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/********************************************************************************
+ *
+ * BOOKMARKS
+ *
+ ********************************************************************************/
+
+/* Bookmarks Show All/Sidebar ***************************************************/
+
+#placesContext_showAllBookmarks::Before,
+#bookmarksShowAll::Before {
+
+	content: url("../MipImages/Crystal/crystal_Bookmarks.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_bookmarksSidebar:not([checked=true])::Before {
+
+	content: url("../MipImages/Crystal/crystal_Bookmarks.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#bookmarksShowAll > label,
+#placesContext_showAllBookmarks > label,
+#menu_bookmarksSidebar:not([checked=true]) > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Bookmarks toolbar Button PANEL
+ * NOTE that this (and > tab-Overflow) are the only panels included in MIP/CSS's Standard Menus file
+ * The reason this is here is because Aris's bookmark-folders CSS already skins some of the BMB and because we skin containers here */
+
+#BMB_viewBookmarksSidebar::Before {
+
+	content: url("../MipImages/Crystal/crystal_Bookmarks.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-bmb-icon-margin);
+	}
+
+#BMB_searchBookmarks::Before {
+	
+	content: url("../MipImages/Crystal/crystal_Find.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-bmb-icon-margin);
+	}
+
+#BMB_bookmarksShowAllTop::Before {
+
+	content: url("../MipImages/Crystal/crystal_Bookmarks.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-bmb-icon-margin);
+	}
+
+#BMB_bookmarksShowAll::Before {
+
+	content: url("../MipImages/Crystal/crystal_Bookmarks.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-bmb-icon-margin);
+	}
+
+#BMB_viewBookmarksSidebar > label,
+#BMB_searchBookmarks > label,
+#BMB_bookmarksShowAllTop > label,
+#BMB_bookmarksShowAll > label {
+
+	margin-inline-start: var(--mip-bmb-label-margin) !important;
+	}
+
+/* Open All In Tabs in the BMB Folder Footer */
+
+#BMB_bookmarksPopup menuseparator.bookmarks-actions-menuseparator + menuitem.openintabs-menuitem.subviewbutton::Before {
+/* menuitem.openintabs-menuitem.subviewbutton.panel-subview-footer::Before { */
+
+	content: url("../MipImages/Crystal/crystal_TabPlus.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-bmb-icon-margin);
+	}
+
+#BMB_bookmarksPopup menuseparator.bookmarks-actions-menuseparator + menuitem.openintabs-menuitem.subviewbutton > label {
+/* menuitem.openintabs-menuitem.subviewbutton.panel-subview-footer > label { */
+
+	margin-inline-start: var(--mip-bmb-label-margin) !important;
+	}
+
+/* Bookmarks Toolbar Sub-Menu */
+
+#BMB_viewBookmarksToolbar[label^="Hide"]::Before {
+
+	content: url("../MipImages/FF/container-hide.svg")
+/*	content: url("../MipImages/FF/container-hide-black.svg"); */
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-bmb-icon-margin);
+	}
+
+#BMB_viewBookmarksToolbar[label^="View"]::Before {
+
+	content: url("../MipImages/FF/container-unhide.svg")
+/*	content: url("../MipImages/FF/container-unhide-black.svg"); */
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-bmb-icon-margin);
+	}
+
+#BMB_viewBookmarksToolbar > label {
+
+	margin-inline-start: var(--mip-bmb-label-margin) !important;
+	}
+
+/* Bookmark This Page Link Tab or Frame + Bookmark-New **************************/
+
+#menu_bookmarkThisPage::Before,
+#context-bookmarkframe::Before,
+#context-bookmarklink::Before,
+#context_bookmarkTab::Before,
+#context_bookmarkSelectedTabs::Before,
+#toolbar-context-bookmarkSelectedTab::Before,
+#toolbar-context-bookmarkSelectedTabs::Before,
+#placesContext_new\:bookmark::Before,
+#placesContext_createBookmark::Before, /* In the history context menu */
+#syncedTabsBookmarkSelected::Before,
+#newbookmark::Before {
+
+	content: url("../MipImages/Crystal/crystal_Bookmark-New.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_bookmarkThisPage[data-l10n-id="menu-bookmark-edit"]::Before { /* Edit This Bookmark */
+
+	content: url("../MipImages/Crystal/crystal_Bookmark.png");
+	}
+
+#placesContext_new\:bookmark[disabled=true]::Before,
+#newbookmark[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_bookmarkThisPage > label,
+#context-bookmarkframe > label,
+#context-bookmarklink > label,
+#context_bookmarkTab > label,
+#context_bookmarkSelectedTabs > label,
+#toolbar-context-bookmarkSelectedTab > label,
+#toolbar-context-bookmarkSelectedTabs > label,
+#placesContext_new\:bookmark > label,
+#placesContext_createBookmark > label,
+#syncedTabsBookmarkSelected > label,
+#newbookmark > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Bookmark Folder-New **********************************************************/
+
+#placesContext_new\:folder::Before,
+#newfolder::Before {
+
+	content: url("../MipImages/Crystal/crystal_Bookmark-NewFolder.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#placesContext_new\:folder[disabled=true]::Before,
+#newfolder[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#placesContext_new\:folder > label,
+#newfolder > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Bookmark Separator-New *******************************************************/
+
+#placesContext_new\:separator::Before,
+#newseparator::Before {
+
+	content: url("../MipImages/Crystal/crystal_Bookmark-NewSeparator.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#placesContext_new\:separator[disabled=true]::Before,
+#newseparator[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#placesContext_new\:separator > label,
+#newseparator > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Bookmark/Folder Properties ***************************************************/
+
+#placesContext_show_bookmark\:info::Before,
+#placesContext_show_folder\:info::Before,
+#placesContext_show\:info::Before {
+
+	content: url("../MipImages/Crystal/crystal_ViewSource.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#placesContext_show_bookmark\:info[disabled=true]::Before,
+#placesContext_show_folder\:info[disabled=true]::Before,
+#placesContext_show\:info[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#placesContext_show_bookmark\:info > label,
+#placesContext_show_folder\:info > label,
+#placesContext_show\:info > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Show Recently Bookmarks In Folder (ie Open Containing Folder) ****************/
+
+#placesContext_showInFolder::Before {
+
+	content: url("../MipImages/Crystal/crystal_FolderOpened.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#placesContext_showInFolder > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* FF85 Show Other Bookmarks ****************************************************/
+
+#show-other-bookmarks_PersonalToolbar[checked=false]::Before {
+
+/*	content: url("../MipImages/FF/unfiledBookmarks.svg"); */
+	content: url("../MipImages/FF/unsortedBookmarks.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-always-show-2"][checked=false]::Before {
+
+	content: url("../MipImages/FF/container-unhide.svg");
+/*	content: url("../MipImages/FF/container-unhide-black.svg"); */
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#show-other-bookmarks_PersonalToolbar[checked=false] > label,
+#toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-always-show-2"][checked=false] > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+#PlacesToolbar #OtherBookmarks {
+	list-style-image: url("../MipImages/FF/unsortedBookmarks.png") !important;
+	-moz-image-region: auto !important;
+}
+
+/********************************************************************************
+ *
+ * LIBRARY (Toolbar)
+ *
+ ********************************************************************************/
+
+/* Columns Chooser based on Fugue Table *****************************************/
+
+#viewColumns::Before {
+
+	content: url("../MipImages/Fugue/fugue_Columns-blue.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#viewColumns > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Sort Ascending/Descending ****************************************************/
+
+#viewSort::Before {
+
+	content: url("../MipImages/Crystal/crystal_Sort-AZ.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#viewSortAscending:not([checked=true])::Before,
+#placesContext_sortBy\:name::Before {
+
+	content: url("../MipImages/Crystal/crystal_Sort-AZ.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#viewSortDescending:not([checked=true])::Before {
+
+	content: url("../MipImages/Crystal/crystal_Sort-ZA.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#viewSort > label,
+#viewSortAscending:not([checked=true]) > label,
+#viewSortDescending:not([checked=true]) > label,
+#placesContext_sortBy\:name > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Backup/Restore Bookmarks *****************************************************/
+
+#backupBookmarks::Before {
+
+	content: url("../MipImages/Crystal/crystal_Save.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#fileRestoreMenu::Before {
+
+	content: url("../MipImages/Crystal/crystal_FileOpen.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#restoreFromFile::Before {
+
+	content: url("../MipImages/Crystal/crystal_FileOpen.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#fileRestorePopup menuitem[oncommand="PlacesOrganizer.onRestoreMenuItemClick(this);"]::Before { /* The File Chooser Saved Backups */
+
+	content: url("../MipImages/Crystal/crystal_Bookmark.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#backupBookmarks > label,
+#fileRestoreMenu > label,
+#restoreFromFile > label,
+#fileRestorePopup menuitem > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Import/Export Bookmarks to HTML **********************************************/
+
+#fileImport::Before {
+
+	content: url("../MipImages/Crystal/crystal_Import.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#fileExport::Before {
+
+	content: url("../MipImages/Crystal/crystal_Export.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#fileImport > label,
+#fileExport > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/********************************************************************************
+ *
+ * LIBRARY TREE
+ *
+ ********************************************************************************/
+
+/* Bookmarks Folders copied from Aris-t2 bookmark_icons_colorized */
+/* You must import bookmark_icons_colorized FIRST */
+
+treechildren::-moz-tree-image(title, container),
+treechildren::-moz-tree-image(title, query, hostContainer),
+#editBMPanel_chooseFolderMenuItem .menu-iconic-icon,
+menuitem.folder-icon {
+
+	list-style-image: url("../MipImages/Crystal/crystal_FolderClosed.png") !important;
+	-moz-image-region: auto !important;
+	}
+
+treechildren::-moz-tree-image(title, open) {
+
+	list-style-image: url("../MipImages/Crystal/crystal_FolderOpened.png") !important;
+	-moz-image-region: auto !important;
+	}
+
+.bookmark-item[container]:not([query]):not([livemark]),
+.bookmark-item[container]:not([query]):not([livemark]) > .menu-iconic-left > .menu-iconic-icon {
+
+	list-style-image: url("../MipImages/Crystal/crystal_FolderClosed.png") !important;
+	-moz-image-region: auto !important;
+	}
+
+.bookmark-item[container]:not([query]):not([livemark])[open],
+.bookmark-item[container]:not([query]):not([livemark])[open] > .menu-iconic-left > .menu-iconic-icon {
+
+	list-style-image: url("../MipImages/Crystal/crystal_FolderOpened.png") !important;
+	-moz-image-region: auto !important;
+	}
+
+.bookmark-item[query][hostContainer] {
+
+	list-style-image: url("../MipImages/Crystal/crystal_FolderClosed.png") !important;
+	-moz-image-region: auto !important;
+	}
+
+.bookmark-item[query][hostContainer][open] {
+
+	list-style-image: url("../MipImages/Crystal/crystal_FolderOpened.png") !important;
+	-moz-image-region: auto !important;
+	}
+
+#editBMPanel_folderMenuList:-moz-any([label="Bookmarks Toolbar"],[label="Lesezeichen-Symbolleiste"]) .menulist-icon,
+#editBMPanel_toolbarFolderItem .menu-iconic-icon,
+treechildren::-moz-tree-image(container, OrganizerQuery_BookmarksToolbar),
+treechildren::-moz-tree-image(container, queryFolder_toolbar_____) {
+ list-style-image: url("../MipImages/FF/bookmarksToolbar.png") !important;
+ -moz-image-region: auto !important;
+}
+
+#editBMPanel_folderMenuList:-moz-any([label="Bookmarks Menu"],[label="Lesezeichen-Menü"]) .menulist-icon,
+#editBMPanel_bmRootItem .menu-iconic-icon,
+treechildren::-moz-tree-image(container, OrganizerQuery_BookmarksMenu),
+treechildren::-moz-tree-image(container, queryFolder_menu________) {
+ list-style-image: url("../MipImages/FF/bookmarksMenu.png") !important;
+ -moz-image-region: auto !important;
+}
+
+#editBMPanel_folderMenuList:-moz-any([label="Other Bookmarks"],[label="Weitere Lesezeichen"]) .menulist-icon,
+#editBMPanel_unfiledRootItem .menu-iconic-icon,
+treechildren::-moz-tree-image(container, OrganizerQuery_UnfiledBookmarks),
+treechildren::-moz-tree-image(container, queryFolder_unfiled_____) {
+ list-style-image: url("../MipImages/FF/unsortedBookmarks.png") !important;
+ -moz-image-region: auto !important;
+}
+
+/* Mobile Bookmarks *************************************************************/
+
+#menu_mobileBookmarks,
+#BMB_mobileBookmarks {
+
+	list-style-image: url("../MipImages/PublicDomain/Icon-Mobile-Phone.png") !important;
+	-moz-image-region: auto !important;
+	}
+
+/********************************************************************************
+ *
+ * DOWNLOADS (TOOLS MENU AND LIBRARY)
+ *
+ ********************************************************************************/
+
+/* Downloads in Tools Menu ******************************************************/
+
+#menu_openDownloads::Before {
+
+	content: url("../MipImages/Crystal/crystal_Download.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_openDownloads > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Downloads Pause/Resume *******************************************************/
+
+menuitem[data-l10n-id="downloads-cmd-pause"]::Before {
+
+	content: url("../MipImages/Crystal/crystal_Player-Pause.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+menuitem[data-l10n-id="downloads-cmd-resume"]::Before {
+
+	content: url("../MipImages/Crystal/crystal_Player-Play.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+	
+menuitem[data-l10n-id="downloads-cmd-unblock"]::Before {
+
+	content: url("../MipImages/Fugue/fugue_TrafficLightGreen.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+menuitem[data-l10n-id="downloads-cmd-use-system-default"]::Before {
+
+	content: url("../MipImages/Fugue/fugue_Application.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+menuitem[data-l10n-id="downloads-cmd-always-use-system-default"]:not([checked=true])::Before,
+menuitem[data-l10n-id="downloads-cmd-always-open-similar-files"]:not([checked=true])::Before {
+
+	content: url("../MipImages/Fugue/fugue_ApplicationRun.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+menuitem[data-l10n-id="downloads-cmd-pause"] > label,
+menuitem[data-l10n-id="downloads-cmd-resume"] > label,
+menuitem[data-l10n-id="downloads-cmd-unblock"] > label,
+menuitem[data-l10n-id="downloads-cmd-use-system-default"] > label,
+menuitem[data-l10n-id="downloads-cmd-always-use-system-default"]:not([checked=true]) > label,
+menuitem[data-l10n-id="downloads-cmd-always-open-similar-files"]:not([checked=true]) > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Downloads Open Containing Folder *********************************************/
+
+menuitem.downloadShowMenuItem::Before { /* [command="downloadsCmd_show"] */
+
+	content: url("../MipImages/Crystal/crystal_FolderOpened.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+menuitem.downloadShowMenuItem > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Downloads Goto ***************************************************************/
+
+menuitem[command="downloadsCmd_openReferrer"]::Before {
+
+	content: url("../MipImages/Crystal/crystal_GoTo.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+menuitem[command="downloadsCmd_openReferrer"] > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/********************************************************************************
+ *
+ * TOOLS MENU
+ *
+ ********************************************************************************/
+
+/* Firefox View FF106 ***********************************************************/
+
+#menu_openFirefoxView::Before {
+
+	content: url("../MipImages/FF/FIREFOX-78-icon16.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_openFirefoxView > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* AddOns ***********************************************************************/
+
+#menu_openAddons::Before,
+#getMoreDevtools::Before,
+#extensionsForDevelopers::Before,
+menuitem[data-l10n-id="page-action-manage-extension"]::Before,
+menuitem[data-l10n-id="toolbar-context-menu-manage-extension"]::Before {
+
+	content: url("../MipImages/Crystal/crystal_AddOn.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_openAddons > label,
+#getMoreDevtools > label,
+#extensionsForDevelopers > label,
+menuitem[data-l10n-id="page-action-manage-extension"] > label,
+menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* AddOns Remove ****************************************************************/
+
+menuitem[data-l10n-id="page-action-remove-extension"]::Before,
+menuitem[data-l10n-id="toolbar-context-menu-remove-extension"]::Before {
+
+	content: url("../MipImages/Crystal/crystal_Delete.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+menuitem[data-l10n-id="page-action-remove-extension"][disabled=true]::Before,
+menuitem[data-l10n-id="toolbar-context-menu-remove-extension"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+menuitem[data-l10n-id="page-action-remove-extension"] > label,
+menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Page Information (frame/image/page) ******************************************/
+
+#menu_pageInfo::Before,
+#context-menu_pageInfo::before,
+#context-viewinfo::Before,
+#context-viewframeinfo::Before,
+#context-viewimageinfo::Before,
+#context-viewimagedesc::Before {
+
+	content: url("../MipImages/Crystal/crystal_PageInfo.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_pageInfo > label,
+#context-menu_pageInfo > label,
+#context-viewinfo > label,
+#context-viewframeinfo > label,
+#context-viewimageinfo > label,
+#context-viewimagedesc > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Options **********************************************************************/
+
+#menu_preferences::Before,
+#syncedTabsManageDevices::Before,
+#blockedPopupOptions menuitem[oncommand="gPopupBlockerObserver.editPopupSettings();"]::Before {
+
+	content: url("../MipImages/Crystal/crystal_Options.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_preferences > label,
+#syncedTabsManageDevices > label,
+#blockedPopupOptions menuitem[oncommand="gPopupBlockerObserver.editPopupSettings();"] > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/********************************************************************************
+ *
+ * SYNC / DEVICES
+ *
+ ********************************************************************************/
+
+/* Help Menu Switch Device ******************************************************/
+
+#helpSwitchDevice::Before {
+
+	content: url("../MipImages/PublicDomain/Icon-Mobile-Phone.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+		}
+
+#helpSwitchDevice > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Sync Setup *******************************************************************/
+
+#sync-setup::Before,
+#sync-unverifieditem::Before,
+#sync-reauthitem::Before {
+
+	content: url("../MipImages/Crystal/crystal_UserSingle.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#sync-setup > label,
+#sync-unverifieditem > label,
+#sync-reauthitem > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Sync Now *********************************************************************/
+
+#sync-enable::Before,
+#sync-syncnowitem::Before,
+#syncedTabsRefresh::Before,
+#syncedTabsRefreshFilter::Before,
+#sync-tabs-menuitem::Before,
+#menu_tabsSidebar:not([checked=true])::Before {
+
+	content: url("../MipImages/Crystal/crystal_Sync.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#sync-enable::Before {
+
+	filter: grayscale(100%);
+	}
+
+#sync-enable > label,
+#sync-syncnowitem > label,
+#syncedTabsRefresh > label,
+#syncedTabsRefreshFilter > label,
+#sync-tabs-menuitem > label,
+#menu_tabsSidebar:not([checked=true]) > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ * % TEMPORARY FIX FOR MISSING LABEL FOR THIS SYNC-TAB-SIDEBAR-TEXTBOX CONTEXT MENU ITEM %
+ * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+#syncedTabsRefreshFilter > label { display: none !important; }
+
+#syncedTabsRefreshFilter::After {
+
+	content: "Sync Now";
+	margin-inline-start: -16px;
+	padding-inline-end: 2px;
+	}
+
+/* Manage Devices ***************************************************************/
+/* Moved to OPTIONS/SETTINGS
+
+	#syncedTabsManageDevices::Before {
+
+		content: url("../MipImages/PublicDomain/Icon-Mobile-Phone.png");
+
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: var(--mip-menu-icon-margin);
+		vertical-align: middle;
+		}
+
+	#syncedTabsManageDevices > label {
+
+		margin-inline-start: var(--mip-menu-label-margin) !important;
+		} */
+
+/* Send To Device ***************************************************************/
+
+#context_sendTabToDevice::Before,
+#context-sendpagetodevice::Before,
+#context-sendlinktodevice::Before {
+
+	content: url("../MipImages/PublicDomain/Icon-Mobile-Phone-SendTo(crystal).png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context_sendTabToDevice[disabled=true]::Before,
+#context-sendpagetodevice[disabled=true]::Before,
+#context-sendlinktodevice[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#context_sendTabToDevice > label,
+#context-sendpagetodevice > label,
+#context-sendlinktodevice > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Send To Device: Device List **************************************************/
+
+#context_sendTabToDevicePopupMenu menuitem.sendtab-target::Before,
+#context-sendpagetodevice-popup menuitem.sendtab-target::Before,
+#context-sendlinktodevice-popup menuitem.sendtab-target::Before {
+
+	content: url("../MipImages/Crystal/crystal_ConnectedBrowser.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context_sendTabToDevicePopupMenu menuitem[label^="Send to All Devices"]::Before,
+#context-sendpagetodevice-popup menuitem[label^="Send to All Devices"]::Before,
+#context-sendlinktodevice-popup menuitem[label^="Send to All Devices"]::Before {
+
+	content: url("../MipImages/PublicDomain/Icon-Mobile-Phone-SendTo(crystal).png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context_sendTabToDevicePopupMenu menuitem[label^="Manage Devices"]::Before,
+#context-sendpagetodevice-popup menuitem[label^="Manage Devices"]::Before,
+#context-sendlinktodevice-popup menuitem[label^="Manage Devices"]::Before {
+
+	content: url("../MipImages/Crystal/crystal_Options.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+/* #context_sendTabToDevicePopupMenu menuitem[label^="Learn About Sending Tabs"]::Before,
+   #context-sendpagetodevice-popup   menuitem[label^="Learn About Sending Tabs"]::Before,
+   #context-sendlinktodevice-popup   menuitem[label^="Learn About Sending Tabs"]::Before, /* See Firefox Tour/Tips */
+
+#context_sendTabToDevicePopupMenu menuitem.sendtab-target > label,
+#context-sendpagetodevice-popup menuitem.sendtab-target > label,
+#context-sendlinktodevice-popup menuitem.sendtab-target > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/********************************************************************************
+ *
+ * DEV TOOLS / WEB DEVELOPER
+ *
+ ********************************************************************************/
+
+/* Web Developer Tools Menu *****************************************************/
+
+#browserToolsMenu::Before,
+#webDeveloperMenu::Before {
+
+/*	content: url("../MipImages/Crystal/crystal_WebDeveloper.png"); */
+	content: url("../MipImages/Crystal/crystal_Wrench.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+/* Get More Tools ***************************************************************/
+/* Merged with the AddOns icon
+
+	#getMoreDevtools::Before,
+	#extensionsForDevelopers::Before {
+
+		content: url("../MipImages/Crystal/crystal_Tools.png");
+
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: var(--mip-menu-icon-margin);
+		vertical-align: middle;
+		} */
+
+/* Toggle Tools *****************************************************************/
+
+#menu_devToolbox:not([checked=true])::Before {
+
+	content: url("../MipImages/Tango/tango_PowerDown.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#browserToolsMenu > label,
+#webDeveloperMenu > label,
+#menu_devToolbox:not([checked=true]) > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Dom Inspector ****************************************************************/
+
+#menuitem_inspector::Before {
+
+	content: url("../MipImages/Crystal/crystal_Dev-Inspect.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+/* Web Console ******************************************************************/
+
+#menuitem_webconsole::Before {
+
+	content: url("../MipImages/Crystal/crystal_Dev-WebConsole.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+/* Debug ************************************************************************/
+
+#menuitem_jsdebugger::Before {
+
+	content: url("../MipImages/Crystal/crystal_Dev-Debugger.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+/* Network Monitor **************************************************************/
+
+#menuitem_netmonitor::Before {
+
+	content: url("../MipImages/Crystal/crystal_Dev-NetMonitor.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+/* Style Editor *****************************************************************/
+
+#menuitem_styleeditor::Before {
+
+	content: url("../MipImages/Crystal/crystal_Dev-CSS.png");
+	content: url("../MipImages/Crystal/crystal_PageStyle.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+/* Performance Profiler *********************************************************/
+/* Re-use this for Task Manager FF87+ */
+
+#menuitem_performance::Before,
+#menu_taskManager::Before,
+#help_taskManager::Before {
+
+	content: url("../MipImages/Crystal/crystal_Dev-Profiler.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+/* Storage (Explorer) ***********************************************************/
+
+#menuitem_storage::Before {
+
+	content: url("../MipImages/Fugue/fugue_Database-inspect.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	/*
+	-moz-context-properties: fill;
+	 fill: DimGrey;
+	 */
+	}
+
+/* Accessibility ****************************************************************/
+
+#menuitem_accessibility::Before {
+
+	content: url("chrome://devtools/skin/images/tool-accessibility.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	-moz-context-properties: fill;
+	 fill: SlateGrey;
+	}
+
+/* Application ******************************************************************/
+
+#menuitem_application::Before {
+
+	content: url("chrome://devtools/skin/images/tool-application.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	-moz-context-properties: fill;
+	 fill: SlateGrey;
+	}
+
+/* DOM **************************************************************************/
+
+#menuitem_dom::Before {
+
+	content: url("chrome://devtools/skin/images/tool-dom.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	-moz-context-properties: fill;
+	 fill: SlateGrey;
+	}
+
+/* Remote Debugging *************************************************************/
+
+#menu_devtools_remotedebugging::Before {
+
+	content: url("../MipImages/Crystal/crystal_Dev-Debugger.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+/* Toolbox'es *******************************************************************/
+
+#menu_browserToolbox::Before {
+
+	content: url("../MipImages/Crystal/crystal_WebDeveloper.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_browserContentToolbox::Before {
+
+	content: url("../MipImages/FF/tilt.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+/* Error Console ****************************************************************/
+
+#menu_browserConsole::Before {
+
+	content: url("../MipImages/Crystal/crystal_Dev-Console.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+/* Responsive Design ************************************************************/
+
+#menu_responsiveUI:not([checked=true])::Before {
+
+	content: url("../MipImages/Crystal/crystal_Dev-Responsive.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+/* Eyedropper *******************************************************************/
+
+#menu_eyedropper::Before {
+
+	content: url("../MipImages/Crystal/crystal_Eyedropper.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+/* Labels ***********************************************************************/
+
+#menuitem_inspector > label,
+#menuitem_webconsole > label,
+#menu_browserConsole > label,
+#menuitem_jsdebugger > label,
+#menuitem_netmonitor > label,
+#menuitem_styleeditor > label,
+#menuitem_performance > label,
+#menu_taskManager > label,
+#help_taskManager > label,
+#menuitem_storage > label,
+#menuitem_accessibility > label,
+#menuitem_application > label,
+#menuitem_dom > label,
+#menu_devtools_remotedebugging > label,
+#menu_browserToolbox > label,
+#menu_browserContentToolbox > label,
+#menu_responsiveUI:not([checked=true]) > label,
+#menu_eyedropper > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/********************************************************************************
+ *
+ * HELP MENU
+ *
+ ********************************************************************************/
+
+/* Firefox Help *****************************************************************/
+
+#menu_openHelp::Before,
+#helpPolicySupport::Before {
+
+	content: url("../MipImages/Crystal/crystal_Help.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_openHelp > label,
+#helpPolicySupport > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Firefox Tour/Tips ************************************************************/
+
+#menu_openTour::Before,
+#context-media-eme-learnmore::Before,
+#context_sendTabToDevicePopupMenu menuitem[label^="Learn About Sending Tabs"]::Before,
+#context-sendpagetodevice-popup menuitem[label^="Learn About Sending Tabs"]::Before,
+#context-sendlinktodevice-popup menuitem[label^="Learn About Sending Tabs"]::Before {
+
+	content: url("../MipImages/Tango/tango_Information.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_openTour > label,
+#context-media-eme-learnmore > label,
+#context_sendTabToDevicePopupMenu menuitem[label^="Learn About Sending Tabs"] > label,
+#context-sendpagetodevice-popup menuitem[label^="Learn About Sending Tabs"] > label,
+#context-sendlinktodevice-popup menuitem[label^="Learn About Sending Tabs"] > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Keyboard Shortcuts ***********************************************************/
+
+#menu_keyboardShortcuts::Before {
+
+	content: url("../MipImages/Crystal/crystal_KeyboardShortcut.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_keyboardShortcuts > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Troubleshooting Information **************************************************/
+
+#troubleShooting::Before {
+
+	content: url("../MipImages/Crystal/crystal_Information.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#troubleShooting > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Submit Feedback **************************************************************/
+
+#feedbackPage::Before {
+
+	content: url("../MipImages/Crystal/crystal_Smiley.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#feedbackPage > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* RESTART (in Safe Mode) *******************************************************/
+
+#helpSafeMode::Before {
+
+	content: url("../MipImages/Crystal/crystal_Restart.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#helpSafeMode > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* RESTART (Aris Restart Script Menu Entry) *************************************/
+
+#fileMenu-restart-item .menu-iconic-icon {
+
+	list-style-image: url("../MipImages/Crystal/crystal_Restart.png");
+
+	-moz-image-region: auto;
+	 transform: none !important;
+	 fill: none !important;
+	 margin-inline-start: 0 !important;
+	}
+
+@media (-moz-platform: windows-win10),(-moz-platform: windows-win11) {
+
+	#fileMenu-restart-item .menu-iconic-icon {
+
+		margin-inline-start: 0px
+		}
+	}
+
+/* Report Phishing Website/Addon ************************************************/
+
+#help_reportSiteIssue::Before,
+#menu_HelpPopup_reportPhishingtoolmenu::Before,
+menuitem[data-l10n-id="toolbar-context-menu-report-extension"]::Before {
+
+	content: url("../MipImages/Crystal/crystal_Warning.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#help_reportSiteIssue[disabled=true]::Before,
+#menu_HelpPopup_reportPhishingtoolmenu[disabled=true]::Before,
+menuitem[data-l10n-id="toolbar-context-menu-report-extension"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#help_reportSiteIssue > label,
+#menu_HelpPopup_reportPhishingtoolmenu > label,
+menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* About Firefox ****************************************************************/
+
+#aboutName::Before {
+
+/*	content: url("../MipImages/FF/FIREFOX-icon16.png"); */
+	content: url("../MipImages/FF/FIREFOX-78-icon16.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#aboutName > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/********************************************************************************
+ *
+ * TABS
+ *
+ ********************************************************************************/
+
+/* Tab-New **********************************************************************/
+
+#toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-on-new-tab-2"][checked=false]::Before,	/* FF85 Bookmarks Toolbar Sub-Menu */
+#placesContext_openBookmarkContainer\:tabs::Before,										/* FF89 New Open All Bookmarks Menu Item (Bookmarks Toolbar and Library Folders) */
+#placesContext_openBookmarkLinks\:tabs::Before,											/* FF89 New Open All Selected Bookmarks context menu item */
+
+#context_openANewTab::Before,
+#toolbar-context-openANewTab::Before,
+#menu_newNavigatorTab::Before,
+#context-openlinkintab::Before,
+#context-openframeintab::Before,
+#placesContext_open\:newtab::Before,
+#placesContext_openLinks\:tabs::Before,
+#placesContext_openContainer\:tabs::Before,
+menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer)::Before,
+#historyUndoPopup menuitem.restoreallitem::Before,
+#syncedTabsOpenSelectedInTab::Before,
+#syncedTabsOpenAllInTabs::Before {
+
+	content: url("../MipImages/Crystal/crystal_TabPlus.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_newNavigatorTab[disabled=true]::Before,
+#context-openlinkintab[disabled=true]::Before,
+#context-openframeintab[disabled=true]::Before,
+#placesContext_openBookmarkContainer\:tabs[disabled=true]::Before,
+#placesContext_open\:newtab[disabled=true]::Before,
+#placesContext_openLinks\:tabs[disabled=true]::Before,
+#placesContext_openContainer\:tabs[disabled=true]::Before,
+#placesContext_openBookmarkLinks\:tabs[disabled=true]::Before,
+menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer)[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-on-new-tab-2"][checked=false] > label,
+#context_openANewTab > label,
+#toolbar-context-openANewTab > label,
+#menu_newNavigatorTab > label,
+#context-openlinkintab > label,
+#context-openframeintab > label,
+#placesContext_openBookmarkContainer\:tabs > label,
+#placesContext_open\:newtab > label,
+#placesContext_openLinks\:tabs > label,
+#placesContext_openContainer\:tabs > label,
+#placesContext_openBookmarkLinks\:tabs > label,
+menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer) > label,
+#historyUndoPopup menuitem.restoreallitem > label,
+#syncedTabsOpenSelectedInTab > label,
+#syncedTabsOpenAllInTabs > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Reload (Tab,Frame,Image) *****************************************************/
+
+#context_reloadTab::Before,
+#context_reloadSelectedTabs::Before,
+#toolbar-context-reloadSelectedTab::Before,
+#toolbar-context-reloadSelectedTabs::Before,
+#context-reloadframe::Before,
+#context-reloadimage::Before {
+
+	content: url("../MipImages/Crystal/crystal_Reload.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context_reloadTab > label,
+#context_reloadSelectedTabs > label,
+#toolbar-context-reloadSelectedTab > label,
+#toolbar-context-reloadSelectedTabs > label,
+#context-reloadframe > label,
+#context-reloadimage > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Tab-Audio Muting *************************************************************/
+
+#context_toggleMuteTab::Before,
+#context_toggleMuteSelectedTabs::Before,
+#context-media-mute::Before {
+
+	content: url("../MipImages/Crystal/crystal_AudioPlaying.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context-media-mute[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#context_toggleMuteTab[muted=true]::Before,
+#context_toggleMuteSelectedTabs[muted=true]::Before,
+#context-media-unmute::Before {
+
+	content: url("../MipImages/Crystal/crystal_AudioMuted.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context_toggleMuteTab > label,
+#context_toggleMuteSelectedTabs > label,
+#context-media-mute > label,
+#context-media-unmute > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Tab-Pin (and other PIN items) ************************************************/
+
+#context_pinTab::Before,
+#context_pinSelectedTabs::Before,
+menuitem[data-l10n-id="toolbar-context-menu-pin-to-overflow-menu"]::Before,
+#customizationPanelItemContextMenuPin::Before,
+menuitem.customize-context-addToPanel::Before {
+
+	content: url("../MipImages/Fugue/fugue_Pin-Blue.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context_unpinTab::Before,
+#context_unpinSelectedTabs::Before,
+#customizationPanelItemContextMenuUnpin::Before {
+
+	content: url("../MipImages/Fugue/fugue_Pin-Blue.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+menuitem[data-l10n-id="toolbar-context-menu-pin-to-overflow-menu"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#context_pinTab > label,
+#context_unpinTab > label,
+#context_pinSelectedTabs > label,
+#context_unpinSelectedTabs > label,
+menuitem[data-l10n-id="toolbar-context-menu-pin-to-overflow-menu"] > label,
+#customizationPanelItemContextMenuPin > label,
+#customizationPanelItemContextMenuUnpin > label,
+menuitem.customize-context-addToPanel > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Tab-Duplicate ****************************************************************/
+
+#context_duplicateTab::Before,
+#context_duplicateTabs::Before {
+
+	content: url("../MipImages/Crystal/crystal_TabDuplicate.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context_duplicateTab > label,
+#context_duplicateTabs > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Tabs-All [OVERRIDES SELECT ALL / FUGUE ONLY] *********************************/
+
+#menu_showAllTabs::Before,
+#menu_bookmarkAllTabs::Before,
+#context_selectAllTabs::Before,
+#toolbar-context-selectAllTabs::Before {
+
+	content: url("../MipImages/Fugue/fugue_TabsAll.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context_selectAllTabs[disabled=true]::Before,
+#toolbar-context-selectAllTabs[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_showAllTabs > label,
+#menu_bookmarkAllTabs > label,
+#context_selectAllTabs > label,
+#toolbar-context-selectAllTabs > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Tab-Move *********************************************************************/
+
+#context_moveTabOptions::Before {
+
+	content: url("../MipImages/Crystal/crystal_TabMove.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context_moveTabOptions[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#context_moveTabOptions > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Tab-Move Start/End (and Close to the Right) **********************************/
+
+#pictureInPictureToggleContextMenu menuitem[data-l10n-id="picture-in-picture-move-toggle-left"]::Before,
+#context_moveToStart::Before,
+#context_closeTabsToTheStart::Before {
+
+	content: url("../MipImages/Crystal/crystal_ToStart.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#pictureInPictureToggleContextMenu menuitem[data-l10n-id="picture-in-picture-move-toggle-right"]::Before,
+#context_moveToEnd::Before,
+#context_closeTabsToTheEnd::Before {
+
+	content: url("../MipImages/Crystal/crystal_ToEnd.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context_moveToStart[disabled=true]::Before,
+#context_moveToEnd[disabled=true]::Before,
+#context_closeTabsToTheEnd[disabled=true]::Before,
+#context_closeTabsToTheStart[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#pictureInPictureToggleContextMenu menuitem[data-l10n-id="picture-in-picture-move-toggle-left"] > label,
+#pictureInPictureToggleContextMenu menuitem[data-l10n-id="picture-in-picture-move-toggle-right"] > label,
+#context_moveToStart > label,
+#context_moveToEnd > label,
+#context_closeTabsToTheEnd > label,
+#context_closeTabsToTheStart > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Tab-Close ********************************************************************/
+
+#context_closeTab::Before,
+#context_closeSelectedTabs::Before,
+#context_closeDuplicateTabs::Before,
+#menu_close::Before {
+
+	content: url("../MipImages/Crystal/crystal_TabMinus.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context_closeDuplicateTabs[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#context_closeTab > label,
+#context_closeSelectedTabs > label,
+#context_closeDuplicateTabs > label,
+#menu_close > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Tab Close All / Do NOT Show PopUp Bar ****************************************/
+
+#context_closeTabOptions::Before,
+#blockedPopupDontShowMessage:not([checked=true])::Before {
+
+	content: url("../MipImages/Crystal/crystal_ClearAll.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context_closeTabOptions[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#context_closeTabOptions > label,
+#blockedPopupDontShowMessage:not([checked=true]) > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Tab Close Other Tabs *********************************************************/
+
+#context_closeOtherTabs::Before {
+
+	content: url("../MipImages/Crystal/crystal_TabsOthers.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context_closeOtherTabs[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#context_closeOtherTabs > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Tab-Hidden (History Menu) ****************************************************/
+
+#hiddenTabsMenu::Before {
+
+	content: url("../MipImages/Crystal/crystal_TabHidden.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+/* Tab-History (Recently Closed) ************************************************/
+
+#historyUndoMenu::Before {
+
+	content: url("../MipImages/Crystal/crystal_Tab.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#historyUndoMenu[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#hiddenTabsMenu > label,
+#historyUndoMenu > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Tab-Hidden (Tabs Dropdown Panel) *********************************************/
+
+#allTabsMenu-hiddenTabsButton > image {
+
+	list-style-image: url("../MipImages/Crystal/crystal_TabHidden.png");
+	width: 16px;
+	height: 16px;
+	}
+
+#allTabsMenu-hiddenTabsButton > label { padding-inline-start: 8px !important; }
+
+/* Tab-Share (Win10 Only) *******************************************************/
+
+menuitem[data-l10n-id="tab-context-share-url"]::Before {
+
+	content: url("../MipImages/Misc/Icon-Share-Green-Red.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+menuitem[data-l10n-id="tab-context-share-url"] > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/********************************************************************************
+ *
+ * CONTAINERS
+ *
+ ********************************************************************************/
+
+/* Manage Containers ************************************************************/
+
+menuitem[command="Browser:OpenAboutContainers"]::Before { /* #new-tab-button, #new-tab-button-popup, #menu_newUserContext */
+
+	content: url("../MipImages/FF/container-site.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#allTabsMenu-containerTabsView toolbarbutton[data-l10n-id="all-tabs-menu-manage-user-context"] > image { list-style-image: url("../MipImages/FF/container-site.svg"); }
+#allTabsMenu-containerTabsView toolbarbutton[data-l10n-id="all-tabs-menu-manage-user-context"] > label { padding-inline-start: 8px !important; }
+
+/* Single Same Container ********************************************************/
+
+#context-openlinkincontainertab::Before,
+#_testpilot-containers-menuitem-_open-in-this-container::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_Container.png"); */
+	content: url("../MipImages/Fugue/fugue_Container-grey.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+/* Multiple Containers **********************************************************/
+
+#menu_newUserContext::Before,
+#context_reopenInContainer::Before,
+#context-openlinkinusercontext-menu::Before {
+
+	content: url("../MipImages/Fugue/fugue_Theme.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_newUserContext[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#allTabsMenu-containerTabsButton > image { list-style-image: url("../MipImages/Fugue/fugue_Theme.png"); -moz-image-region: auto; }
+#allTabsMenu-containerTabsButton > label { padding-inline-start: 8px !important; }
+
+/* Bookmarks Context Menu *******************************************************/
+
+#_testpilot-containers-menuitem-_open-bookmark-in-container-tab > .menu-iconic-left > image { display: none !important; }
+
+#placesContext_open\:newcontainertab::Before,
+#_testpilot-containers-menuitem-_open-bookmark-in-container-tab::Before {
+
+	content: url("../MipImages/Fugue/fugue_Theme.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#_testpilot-containers-menuitem-_open-bookmark-in-container-tab > label {
+
+	margin-inline-start: var(--mip-iconreplace-label) !important;
+	}
+
+#placesContext_open\:newcontainertab > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* No Containers ****************************************************************/
+
+menuitem[data-usercontextid="0"]::Before { /* #new-tab-button, #new-tab-button-popup, #context-openlinkinusercontext-menu */
+
+	content: url("../MipImages/Crystal/crystal_DisableBlockEmpty.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+menuitem[command="Browser:OpenAboutContainers"] > label,
+#context-openlinkincontainertab > label,
+#menu_newUserContext > label,
+#context_reopenInContainer > label,
+#context-openlinkinusercontext-menu > label,
+#_testpilot-containers-menuitem-_open-in-this-container > label,
+menuitem[data-usercontextid="0"] > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/********************************************************************************
+ *
+ * PAGE CONTEXT MENU
+ *
+ ********************************************************************************/
+
+/* File-Save ********************************************************************/
+
+#menu_savePage::Before,
+#context-savelink::Before,
+#context-saveimage::Before,
+#context-savepage::Before,
+#context-saveframe::Before,
+#context-savevideo::Before,
+#context-video-saveimage::Before,
+#context-saveaudio::Before {
+
+/*	content: url("../MipImages/Crystal/crystal_SaveAs.png"); */
+	content: url("../MipImages/Crystal/crystal_Save.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context-video-saveimage[disabled=true]::Before {
+	
+	opacity: 0.4;
+	}
+
+#context-saveimage::Before,
+#context-video-saveimage::Before {
+/* File-Save-Image [Overrides Above] */
+
+	content: url("../MipImages/Crystal/crystal_SaveImage.png");
+	}
+
+#context-savevideo::Before {
+/* File-Save-Video [Overrides Above] */
+
+	content: url("../MipImages/Crystal/crystal_SaveVideo.png");
+	}
+
+#context-saveaudio::Before {
+/* File-Save-Audio [Overrides Above] */
+
+	content: url("../MipImages/Crystal/crystal_SaveAudio.png");
+	}
+
+#menu_savePage > label,
+#context-savelink > label,
+#context-saveimage > label,
+#context-savepage > label,
+#context-saveframe > label,
+#context-savevideo > label,
+#context-video-saveimage > label,
+#context-saveaudio > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Pocket ***********************************************************************/
+
+#context-pocket::Before,
+#context-savelinktopocket::Before {
+
+	content: url("../MipImages/PublicDomain/pocket-alt-demin-icon-light.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context-pocket > label,
+#context-savelinktopocket > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* View Image *******************************************************************/
+
+#context-viewimage::Before,
+#context-viewbgimage::Before {
+
+	content: url("../MipImages/Crystal/crystal_Image.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context-viewbgimage[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+/* Set Desktop Background *******************************************************/
+
+#context-setDesktopBackground::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_Desktop.png"); *//* This is only available for fugue but works for all */
+	content: url("../MipImages/Crystal/crystal_Image.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context-viewimage > label,
+#context-viewbgimage > label,
+#context-setDesktopBackground > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* View Video *******************************************************************/
+
+#context-viewvideo::Before {
+
+	content: url("../MipImages/Crystal/crystal_Video.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context-viewvideo > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* VIEW ALTERNATE ***************************************************************/
+
+#context-viewimage::Before,
+#context-viewbgimage::Before,
+#context-viewvideo::Before {
+
+	content: url("../MipImages/Crystal/crystal_View.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+/* Search Web [OPTIONAL OVERRIDES FIND] *****************************************/
+
+#context-searchselect::Before,
+#context-searchselect-private::Before {
+
+	content: url("../MipImages/Crystal/crystal_Zoom.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context-searchselect > label,
+#context-searchselect-private > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Search Add Keyword ***********************************************************/
+
+#context-keywordfield::Before {
+
+	content: url("../MipImages/Crystal/crystal_Lightning.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context-keywordfield > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Translate Selection **********************************************************/
+
+#context-translate-selection::Before {
+
+		content: url("../MipImages/Fugue/fugue_Translate-USA.png");
+
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: var(--mip-menu-icon-margin);
+		}
+
+#context-translate-selection > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Frame (This Frame/Show Only) *************************************************/
+
+#frame::Before,
+#context-showonlythisframe::Before {
+
+	content: url("../MipImages/Crystal/crystal_Frame.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#frame > label,
+#context-showonlythisframe > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Check Spelling Toggle / Add To Dictionary ************************************/
+
+#spell-add-to-dictionary::Before,
+#spell-check-enabled:not([checked=true])::Before {
+
+	content: url("../MipImages/Crystal/crystal_CheckSpelling.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#spell-add-to-dictionary > label,
+#spell-check-enabled:not([checked=true]) > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Check Spelling Select Language ***********************************************/
+
+#spell-dictionaries::Before,
+#spell-add-dictionaries-main::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_Encoding.png"); */
+	content: url("../MipImages/Oxygen/oxygen_Encoding.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#spell-add-dictionaries::Before {
+
+	content: url("../MipImages/Fugue/fugue_Research.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#spell-dictionaries > label,
+#spell-add-dictionaries-main > label,
+#spell-add-dictionaries > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Inspect Element **************************************************************/
+
+#context-inspect::Before {
+
+	content: url("../MipImages/Crystal/crystal_Dev-Inspect.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+/* Inspect Accessibility ********************************************************/
+
+#context-inspect-a11y::Before {
+
+/*	content: url("chrome://devtools/skin/images/tool-accessibility.svg"); */
+	content: url("chrome://devtools/skin/images/command-pick-accessibility.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	-moz-context-properties: fill;
+	 fill: SlateGrey;
+	}
+
+#context-inspect > label,
+#context-inspect-a11y > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/********************************************************************************
+ *
+ * MEDIA PLAYER
+ *
+ ********************************************************************************/
+
+/* PIP (Very Basic) *************************************************************/
+
+#context-video-pictureinpicture:not([checked=true])::Before {
+
+	content: url("../MipImages/Crystal/crystal_Pip.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context-video-pictureinpicture:not([checked=true]) > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Play/Pause/Speed *************************************************************/
+
+#context-media-play::Before {
+
+	content: url("../MipImages/Crystal/crystal_Player-Play.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context-media-pause::Before {
+
+	content: url("../MipImages/Crystal/crystal_Player-Pause.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context-media-playbackrate::Before {
+
+	content: url("../MipImages/Crystal/crystal_Player-Forward.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context-media-play[disabled=true]::Before,
+#context-media-playbackrate[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#context-media-play > label,
+#context-media-pause > label,
+#context-media-playbackrate > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Loop/Repeat ******************************************************************/
+
+#context-media-loop:not([checked=true])::Before {
+
+	content: url("../MipImages/Oxygen/oxygen_Reload.png"); /* Use this one preferably */
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context-media-loop:not([checked=true]) > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Show/Hide Controls ***********************************************************/
+
+#context-media-hidecontrols::Before {
+
+/*	content: url("../MipImages/FF/container-hide.svg"); */
+	content: url("../MipImages/FF/container-hide-black.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context-media-showcontrols::Before {
+
+/*	content: url("../MipImages/FF/container-unhide.svg"); */
+	content: url("../MipImages/FF/container-unhide-black.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context-media-hidecontrols[disabled=true]::Before,
+#context-media-showcontrols[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#context-media-hidecontrols > label,
+#context-media-showcontrols > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Plugin ***********************************************************************/
+
+#context-ctp-play::Before { /* Activate This Plugin */
+
+	content: url("../MipImages/Silk/silk_Plugin.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context-ctp-play > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/********************************************************************************
+ *
+ * VIEW SOURCE
+ *
+ ********************************************************************************/
+
+/* View Source ******************************************************************/
+
+#context-viewframesource::Before,
+#context-viewpartialsource-selection::Before,
+#context-viewsource::Before,
+#menu_pageSource::Before {
+
+	content: url("../MipImages/Crystal/crystal_ViewSource.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context-viewframesource[disabled=true]::Before,
+#context-viewpartialsource-selection[disabled=true]::Before,
+#context-viewsource[disabled=true]::Before,
+#menu_pageSource[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#context-viewframesource > label,
+#context-viewpartialsource-selection > label,
+#context-viewsource > label,
+#menu_pageSource > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* View Source GoTo Line ********************************************************/
+
+menuitem[label^="Go to Line"]:not([checked=true])::Before,
+menuitem[generateditemid="16"]:not([checked=true])::Before {
+
+	content: url("../MipImages/Crystal/crystal_GoTo.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+/* View Source Wrap Lines *******************************************************/
+
+menuitem[label="Wrap Long Lines"]:not([checked=true])::Before,
+menuitem[generateditemid="17"]:not([checked=true])::Before {
+
+	content: url("../MipImages/Crystal/crystal_Wrap.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+/* View Source Syntax Highlight *************************************************/
+
+menuitem[label="Syntax Highlighting"]:not([checked=true])::Before,
+menuitem[generateditemid="18"]:not([checked=true])::Before {
+
+	content: url("../MipImages/Crystal/crystal_Highlight.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+menuitem[label^="Go to Line"]:not([checked=true]) > label,
+menuitem[generateditemid="16"]:not([checked=true]) > label,
+menuitem[label="Wrap Long Lines"]:not([checked=true]) > label,
+menuitem[generateditemid="17"]:not([checked=true]) > label,
+menuitem[label="Syntax Highlighting"]:not([checked=true]) > label,
+menuitem[generateditemid="18"]:not([checked=true]) > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/********************************************************************************
+ *
+ * Screenshot BuiltIn Extension
+ *
+ ********************************************************************************/
+
+#context-take-screenshot::Before,
+#context-take-frame-screenshot::Before {
+
+	content: url("../MipImages/Crystal/crystal_ScreenshotSaveImage.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#context-take-screenshot > label,
+#context-take-frame-screenshot > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/********************************************************************************
+ *
+ * ALLOW / Pop-Up Blocker
+ *
+ ********************************************************************************/
+
+#blockedPopupAllowSite::Before,
+#menu_HelpPopup_reportPhishingErrortoolmenu::Before {
+
+/*	content: url("../MipImages/Silk/silk_Allow.png"); */
+	content: url("../MipImages/Fugue/fugue_Allow.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#blockedPopupAllowSite > label,
+#menu_HelpPopup_reportPhishingErrortoolmenu > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"]::Before {
+
+	content: url("../MipImages/Crystal/crystal_View.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/********************************************************************************
+ *
+ * EMPTY/HIDE
+ *
+ ********************************************************************************/
+
+/* EMPTY LISTS - ALWAYS DISABLED MENU ENTRIES ***********************************/
+
+#spell-no-suggestions::Before,
+#fill-login-no-logins::Before,
+#context_sendTabToDevicePopupMenu menuitem[label="No Devices Connected"]::Before, /* unfortunately Language-Dependent */
+#context-sendpagetodevice-popup menuitem[label="No Devices Connected"]::Before,
+#context-sendlinktodevice-popup menuitem[label="No Devices Connected"]::Before {
+
+	content: url("../MipImages/Crystal/crystal_DisableBlockEmpty.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	opacity: 0.4;
+	}
+
+#spell-no-suggestions > label,
+#fill-login-no-logins > label,
+#context_sendTabToDevicePopupMenu menuitem[label="No Devices Connected"] > label,
+#context-sendpagetodevice-popup menuitem[label="No Devices Connected"] > label,
+#context-sendlinktodevice-popup menuitem[label="No Devices Connected"] > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* HIDE STUFF that has no Un-Hide / Downloads,FullScreenToolbar,PIP Auto-Hide ***/
+
+#toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-never-show-2"][checked=false]::Before, /* FF85 Bookmarks Toolbar Sub-Menu */
+
+#toolbar-context-autohide-downloads-button:not([checked=true])::Before,
+#autohide-context menuitem[data-l10n-id="full-screen-autohide"]:not([checked=true])::Before,
+#pictureInPictureToggleContextMenu menuitem[data-l10n-id="picture-in-picture-hide-toggle"]::Before,
+#_testpilot-containers-menuitem-_hide-container::Before,
+#context-ctp-hide::Before {
+
+	content: url("../MipImages/FF/container-hide.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-never-show-2"][checked=false] > label,
+
+#toolbar-context-autohide-downloads-button:not([checked=true]) > label,
+#autohide-context menuitem[data-l10n-id="full-screen-autohide"]:not([checked=true]) > label,
+#pictureInPictureToggleContextMenu menuitem[oncommand="PictureInPicture.hideToggle();"] > label,
+#_testpilot-containers-menuitem-_hide-container > label,
+#context-ctp-hide > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/********************************************************************************
+ *
+ * LOGINS/PASSWORDS (Field Context Menu)
+ *
+ ********************************************************************************/
+
+#fill-login::Before,
+#fill-login > #fill-login-popup > menuitem.context-login-item::Before {
+
+	content: url("../MipImages/Crystal/crystal_UserSingle.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#fill-login[data-l10n-id="main-context-menu-use-saved-password"]::Before,
+#fill-login[data-l10n-id="main-context-menu-use-saved-password"] > #fill-login-popup > menuitem.context-login-item::Before {
+
+	content: url("../MipImages/Fugue/fugue_Key.png");
+	}
+
+#manage-saved-logins::Before,
+#fill-login-saved-passwords::Before {
+
+	content: url("../MipImages/Crystal/crystal_UserGroup2.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#fill-login-generated-password::Before { /* Use Generated Password */
+
+	content: url("../MipImages/Fugue/fugue_Key-solid.png"); /* Different Key */
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#fill-login > label,
+#manage-saved-logins > label,
+#fill-login-saved-passwords > label,
+#fill-login-generated-password > label,
+#fill-login > #fill-login-popup > menuitem.context-login-item > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/********************************************************************************
+ *
+ * Page Action Context Menu
+ *
+ ********************************************************************************/
+
+menuitem[data-l10n-id="page-action-add-to-urlbar"]::Before,
+menuitem.customize-context-addToToolbar::Before {
+
+	content: url("../MipImages/Crystal/crystal_Plus.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+menuitem[data-l10n-id="page-action-remove-from-urlbar"]::Before,
+menuitem[data-l10n-id="toolbar-context-menu-remove-from-toolbar"]::Before {
+
+	content: url("../MipImages/Crystal/crystal_Minus.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+menuitem[data-l10n-id="page-action-add-to-urlbar"][disabled=true]::Before,
+menuitem[data-l10n-id="page-action-remove-from-urlbar"][disabled=true]::Before,
+menuitem[data-l10n-id="toolbar-context-menu-remove-from-toolbar"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+menuitem[data-l10n-id="page-action-add-to-urlbar"] > label,
+menuitem.customize-context-addToToolbar > label,
+menuitem[data-l10n-id="page-action-remove-from-urlbar"] > label,
+menuitem[data-l10n-id="toolbar-context-menu-remove-from-toolbar"] > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/********************************************************************************
+ *
+ * Toolbar Context Menu
+ *
+ ********************************************************************************/
+
+/* Customize/Colors/Palette *****************************************************/
+
+#menu_customizeToolbars::Before,
+menuitem[command="cmd_CustomizeToolbars"]::Before, /* #customizationPanelContextMenu */
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"]::Before,
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar-2"]::Before {
+
+	content: url("../MipImages/Crystal/crystal_Palette.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_customizeToolbars[disabled=true]::Before,
+menuitem[command="cmd_CustomizeToolbars"][disabled=true]::Before,
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"][disabled=true]::Before,
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar-2"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_customizeToolbars > label,
+menuitem[command="cmd_CustomizeToolbars"] > label,
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"] > label,
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar-2"] > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/********************************************************************************
+ *
+ * Navigation Context Icons
+ *
+ ********************************************************************************/
+
+#context-back,
+#context-forward,
+#context-reload,
+#context-stop,
+#context-bookmarkpage {
+
+	max-height: unset !important;
+	}
+
+#context-back image {
+
+	list-style-image: url("../MipImages/Crystal/crystal_NavBack.png");
+	-moz-context-properties: none;
+	-moz-image-region: auto;
+	}
+
+#context-forward image {
+
+	list-style-image: url("../MipImages/Crystal/crystal_NavForward.png");
+	-moz-context-properties: none;
+	-moz-image-region: auto;
+	}
+
+#context-reload image {
+
+	list-style-image: url("../MipImages/Crystal/crystal_Reload.png");
+	-moz-context-properties: none;
+	-moz-image-region: auto;
+	}
+
+#context-stop image {
+
+	list-style-image: url("../MipImages/Crystal/crystal_NavStop.png");
+	-moz-context-properties: none;
+	-moz-image-region: auto;
+	}
+
+#context-bookmarkpage:not([starred=true]) image {
+
+	list-style-image: url("../MipImages/Crystal/crystal_Bookmark-New.png");
+	-moz-context-properties: none;
+	-moz-image-region: auto;
+	}
+
+#context-bookmarkpage[starred=true] image {
+
+	list-style-image: url("../MipImages/Crystal/crystal_Bookmark.png");
+	-moz-context-properties: none;
+	-moz-image-region: auto;
+	}
+
+#context-back[disabled=true] image,
+#context-forward[disabled=true] image,
+#context-reload[disabled=true] image,
+#context-stop[disabled=true] image,
+#context-bookmarkpage[disabled=true] image {
+
+	opacity: 0.4;
+	}
+
+/********************************************************************************
+ *
+ * Checkmarks
+ *
+ ********************************************************************************/
+
+menuitem[checked=true]::Before {
+
+	content: url("../MipImages/Crystal/crystal_Checkmark.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-checkmark-icon-margin);
+	}
+
+menuitem[checked=true][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+menuitem[checked=true] > hbox.menu-iconic-left { display: none; !important }
+
+menuitem[checked=true] > label {
+
+	margin-inline-start: var(--mip-checkmark-label-margin) !important;
+	}
+
+}

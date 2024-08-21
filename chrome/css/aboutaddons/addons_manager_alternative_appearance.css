@@ -26,6 +26,10 @@ url-prefix(chrome://mozapps/content/extensions/aboutaddons.xhtml) {
         }
 
     }
+    #categories .category[name="discover"],
+    recommended-extensions-section {
+        display: none !important;
+    }
 
     #categories .category:hover {
         color: var(--in-content-category-text-hover) !important;

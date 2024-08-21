@@ -25,6 +25,9 @@
 @import "./css/locationbar/ac_popup_megabar_title_and_url_50percent_width.css";
 @import "./css/generalui/close_icon_firefox3.css";
 @import "./css/download_indicator.css";
+@import "./MipCss/mip_ConfigMenus.css";
+@import "./MipCss/mip_Crystal-Menus.css";
+
 
 :root {
     --focus-outline: none !important;
@@ -48,7 +51,6 @@
     --balloon-border: 1px solid rgba(0, 0, 0, .4) !important;
     --balloon-box-shadow: 5px 5px 3px -3px rgba(0, 0, 0, .4) !important;
     --balloon-padding: 1em 1em 1em 2.5em !important;
-    --input-bgcolor: green !important;
 }
 
 #main-window #main-menubar {
@@ -68,7 +70,7 @@
     font-size: var(--results_font_size);
 }
 
-.urlbarView-url {
+.urlbarView-url, .urlbarView-action {
     font-size: 8pt !important;
 }
 
@@ -78,8 +80,9 @@
 #editBookmarkPanelFaviconContainer,
 #editBookmarkSeparator,
 #editBookmarkHeaderSeparator, #urlbar[focused="true"]:not([usertyping]) .urlbarView, #PanelUI-button #whats-new-menu-button, #firefox-view-button, #urlbar .search-one-offs, #PopupSearchAutoComplete .search-one-offs,
-#PopupSearchAutoComplete .search-panel-header, :is(#urlbar,.megabar) .urlbarView-row:is([type=search],[type=remotetab],[type=switchtab],[type=dynamic],[type=autofill_origin],[rich-suggestion]),
-:is(#urlbar,.megabar) .urlbarView-row:not([has-url]), .urlbarView-row[dynamicType="onboardTabToSearch"], #reader-mode-button, #unified-extensions-view > .panel-header, #identity-permission-box, #tracking-protection-icon-container, #blocked-permissions-container, :root[inFullscreen="true"] #statuspanel, #PlacesToolbarItems > toolbarseparator, #unified-extensions-view > toolbarseparator {
+#PopupSearchAutoComplete .search-panel-header, .urlbarView-row[dynamicType="onboardTabToSearch"], #reader-mode-button, #unified-extensions-view > .panel-header, #identity-permission-box,
+#tracking-protection-icon-container, #blocked-permissions-container, :root[inFullscreen="true"] #statuspanel, #PlacesToolbarItems > toolbarseparator, #unified-extensions-view > toolbarseparator
+{
     display: none !important;
 }
 
@@ -175,16 +178,22 @@ toolbaritem#unified-extensions-panel .unified-extensions-item {
     border-radius: 10px !important;
 }
 
-#urlbar[breakout][breakout-extend] #urlbar-input-container {
+#urlbar[breakout][breakout-extend][pageproxystate="invalid"] #urlbar-input-container {
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
 }
 
+.urlbarView{
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+}
 #identity-box {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
-
+#urlbar .urlbarView-body-inner,#urlbar .urlbarView-result-menu{
+    border: none !important;
+}
 #nav-bar {
     margin-bottom: 5px;
 }
@@ -400,7 +409,7 @@ panel {
 
 /*----------------------*/
 .unified-extensions-item-contents {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgba(229, 244, 252, 0.7);
     padding-bottom: 10px;
 }
 
@@ -643,3 +652,15 @@ panel {
     background-color: transparent !important;
 }
 
+.urlbarView-favicon[src="chrome://browser/skin/history.svg"], #sidebar-box[sidebarcommand="viewHistorySidebar"] > #sidebar-header > #sidebar-switcher-target > #sidebar-icon {
+    list-style-image: url("image/icons_fx3/history.png") !important;
+}
+
+#identity-box[pageproxystate="valid"].localResource #identity-icon{
+    list-style-image: url("image/page_aero.png") !important;
+}
+
+.urlbarView-favicon[src="chrome://global/skin/icons/defaultFavicon.svg"],
+.urlbarView-favicon.default-favicon {
+    content: url("image/globe.png") !important;
+}
