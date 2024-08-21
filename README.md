@@ -24,7 +24,7 @@ Aims to fully build the Windows/Frutiger Aero coolness into the Mozilla Firefox 
 
 ![4](https://github.com/user-attachments/assets/5c717b5b-7d92-4d60-bd61-c575dc0ebd9a)
 
-![5](https://github.com/user-attachments/assets/0023b7b6-7350-432b-99cb-ddc10966bad1)
+![Untitled](https://github.com/user-attachments/assets/2516ab70-ca86-40bb-bac5-616613ae0015)
 
 
 **Acknowledgements**:
