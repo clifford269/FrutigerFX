@@ -22,7 +22,9 @@
 @import "./css/tabs/classic_squared_tabs.css";
 @import "./css/tabs/tabs_below_navigation_toolbar.css";
 @import "./css/generalui/flex_space_on_navbar_replace_with_separator.css";
-@import "./css/locationbar/ac_popup_megabar_title_and_url_50percent_width.css";
+@import "./css/locationbar/ac_popup_megabar_title_and_url_two_lines.css";
+
+/*@import "./css/locationbar/ac_popup_megabar_title_and_url_50percent_width.css";*/
 @import "./css/generalui/close_icon_firefox3.css";
 @import "./css/download_indicator.css";
 @import "./MipCss/mip_ConfigMenus.css";
@@ -578,7 +580,6 @@ panel {
 }
 
 .tabbrowser-tab[label="Settings"] .tab-label {
-
     transform: translateY(100px);
 }
 
@@ -651,8 +652,11 @@ panel {
 .downloadButton .button-box {
     background-color: transparent !important;
 }
+.urlbarView-favicon[src="chrome://browser/skin/history.svg"]{
+    content: url("image/icons_fx3/history.png") !important;
 
-.urlbarView-favicon[src="chrome://browser/skin/history.svg"], #sidebar-box[sidebarcommand="viewHistorySidebar"] > #sidebar-header > #sidebar-switcher-target > #sidebar-icon {
+}
+#history-panelmenu, #sidebar-box[sidebarcommand="viewHistorySidebar"] > #sidebar-header > #sidebar-switcher-target > #sidebar-icon {
     list-style-image: url("image/icons_fx3/history.png") !important;
 }
 
@@ -660,7 +664,10 @@ panel {
     list-style-image: url("image/page_aero.png") !important;
 }
 
-.urlbarView-favicon[src="chrome://global/skin/icons/defaultFavicon.svg"],
+treechildren::-moz-tree-image(title), .urlbarView-favicon[src="chrome://global/skin/icons/defaultFavicon.svg"],
 .urlbarView-favicon.default-favicon {
     content: url("image/globe.png") !important;
+}
+.urlbarView-favicon[src="chrome://global/skin/icons/search-glass.svg"] {
+    content: url("image/prefs_search.png") !important;
 }

@@ -39,12 +39,27 @@
 
 #urlbar-results .urlbarView-row[selected] .urlbarView-url {
     color: rgb(31, 88, 159) !important;
+
 }
 
 #urlbar-results .urlbarView-row[selected] .urlbarView-action {
     color: rgb(31, 88, 159) !important;
+
 }
 
 .urlbarView-url, .urlbarView-action {
     color: #039bce !important;
+}
+.urlbarView-url{
+    transform: translateX(-5px) !important;
+
+}
+.urlbarView-action {
+    transform: translateX(15px) !important;
+}
+#urlbar-results:not([wrap="true"]) .urlbarView-action, #urlbar-results:not([wrap="true"])  .urlbarView-url{
+    transform: translateX(15px) !important;
+}
+#urlbar-results .urlbarView-action, #urlbar-results[wrap="true"] .urlbarView-action{
+display: block !important;
 }
