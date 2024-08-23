@@ -16,7 +16,7 @@ Aims to fully build the Windows/Frutiger Aero coolness into the Mozilla Firefox 
 
 ->Enable 'compact mode' under toolbar density
 
-![1](https://github.com/user-attachments/assets/c38b2882-e71a-4513-8dd5-c35ba5c9f7a8)
+![Untitled](https://github.com/user-attachments/assets/3af03765-f1b4-494c-8978-10aa9821abb9)
 
 ![2](https://github.com/user-attachments/assets/0df36700-24f8-4479-80a2-946fbb4717c0)
 
