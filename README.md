@@ -1,5 +1,5 @@
 # FrutigerFX
-Aims to fully build the Windows/Frutiger Aero coolness into the Mozilla Firefox ESR 115 interface, and make computing fun once again.
+Aims to fully build the Windows/Frutiger Aero coolness into the Mozilla Firefox ESR Releases (Currently, 115) interface, and make computing fun once again.
 
 **Disclaimer**: 
 
