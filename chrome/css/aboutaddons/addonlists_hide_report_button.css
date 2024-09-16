@@ -1,9 +1,0 @@
-@-moz-document url-prefix(about:addons),
-url-prefix(chrome://mozapps/content/extensions/aboutaddons.html),
-url-prefix(chrome://mozapps/content/extensions/aboutaddons.xhtml) {
-
-    panel-item[action="report"] {
-        display: none !important;
-    }
-
-}

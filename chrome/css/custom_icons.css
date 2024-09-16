@@ -1,0 +1,127 @@
+@import "buttons/custom_backforward_large.css";
+
+#urlbar[pageproxystate="valid"] #tracking-protection-icon-container:not([hidden]) ~ #identity-box:is(.verifiedDomain,.verifiedIdentity) #identity-icon,
+#urlbar[pageproxystate="valid"] :is(.verifiedDomain,.verifiedIdentity) #connection-icon {
+    list-style-image: url(../images/padlock_classic.png) !important;
+}
+
+#urlbar[pageproxystate="valid"] #tracking-protection-icon-container:not([hidden]) ~ #identity-box:is(.insecureLoginForms,.mixedActiveContent,.notSecure) #identity-icon,
+#urlbar[pageproxystate="valid"] :is(.insecureLoginForms,.mixedActiveContent,.notSecure) #connection-icon {
+    list-style-image: url(../images/padlock_classic_mal.png) !important;
+}
+
+#urlbar[pageproxystate="valid"] #tracking-protection-icon-container:not([hidden]) ~ #identity-box:is(.weakCipher,.mixedDisplayContent,.mixedDisplayContentLoadedActiveBlocked,.certUserOverridden) #identity-icon,
+#urlbar[pageproxystate="valid"] :is(.weakCipher,.mixedDisplayContent,.mixedDisplayContentLoadedActiveBlocked,.certUserOverridden) #connection-icon {
+    list-style-image: url(../images/padlock_classic_mpl.png) !important;
+}
+
+#urlbar[pageproxystate="valid"] #tracking-protection-icon-container:not([hidden]) ~ #identity-box.mixedActiveBlocked #identity-icon,
+#urlbar[pageproxystate="valid"] .mixedActiveBlocked #connection-icon {
+    list-style-image: url(../images/padlock_classic_mab.png) !important;
+}
+
+#main-window:not([uidensity=compact]):not([uidensity=touch]) #navigator-toolbox #nav-bar #back-button .toolbarbutton-icon,
+#main-window[uidensity=compact] #navigator-toolbox #nav-bar #back-button .toolbarbutton-icon,
+#main-window[uidensity=touch] #navigator-toolbox #nav-bar #back-button .toolbarbutton-icon,
+#main-window #navigator-toolbox #nav-bar #back-button .toolbarbutton-icon {
+    list-style-image: url("../images/bf_ie8_b.png") !important;
+}
+
+#main-window:not([uidensity=compact]):not([uidensity=touch]) #navigator-toolbox #nav-bar #forward-button .toolbarbutton-icon,
+#main-window[uidensity=compact] #navigator-toolbox #nav-bar #forward-button .toolbarbutton-icon,
+#main-window[uidensity=touch] #navigator-toolbox #nav-bar #forward-button .toolbarbutton-icon,
+#main-window #navigator-toolbox #nav-bar #forward-button .toolbarbutton-icon {
+    list-style-image: url("../images/bf_ie8_f.png") !important;
+}
+#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .ac-type-icon[type=bookmark],
+.urlbarView-row[type=bookmark] > .urlbarView-row-inner > .urlbarView-type-icon,
+#urlbar #star-button {
+    list-style-image: url("../images/star_button48.png") !important;
+}
+
+.urlbarView .urlbarView-row[type=bookmark] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-type-icon {
+    background-image: url("../images/star_button48.png") !important;
+}
+
+#editBookmarkPanelStarIcon {
+    list-style-image: url("../images/star_button48.png") !important;
+}
+
+#stop-reload-button .toolbarbutton-animatable-box {
+    display: none !important;
+}
+
+#tabs-newtab-button {
+    list-style-image: url("../images/newtab.png") !important;
+}
+
+#back-button {
+    list-style-image: url("../images/back.png") !important;
+}
+
+#forward-button {
+    list-style-image: url("../images/forward.png") !important;
+}
+
+#home-button {
+    list-style-image: url("../images/home.png") !important;
+}
+
+#stop-button {
+    list-style-image: url("../images/stop.png") !important;
+}
+
+#reload-button {
+    list-style-image: url("../images/reload.png") !important;
+}
+
+#bookmarks-menu-button, #bookmarks-toolbar-placeholder {
+    list-style-image: url("../images/bookmarks.png") !important;
+}
+
+#history-panelmenu {
+    list-style-image: url("../images/history.png") !important;
+}
+
+#add-ons-button, #unified-extensions-button {
+    list-style-image: url("../images/addons.png") !important;
+}
+
+
+#new-window-button {
+    list-style-image: url("../images/newwindow.png") !important;
+}
+
+
+#privatebrowsing-button {
+    list-style-image: url("../images/privatebrowsing.png") !important;
+}
+
+
+#preferences-button {
+    list-style-image: url("../images/preferences.png") !important;
+}
+
+#sidebar-button {
+    list-style-image: url("../images/sidebar.png") !important;
+    /*apply*/
+}
+
+#downloads-indicator-anchor {
+    list-style-image: url("../images/downloads.png") !important;
+}
+
+#PlacesToolbarDropIndicator:not(image) {
+    background: url(../images/toolbar-drag-indicator.png) no-repeat bottom !important;
+}
+
+.tab-drop-indicator:not(image) {
+    background: url(../images/tab-drag-indicator.png) no-repeat bottom !important;
+}
+#PlacesToolbarDropIndicator:not(image) {
+    background: url(../images/toolbar-drag-indicator.png) no-repeat bottom !important;
+}
+
+.tab-drop-indicator:not(image) {
+    background: url(../images/tab-drag-indicator.png) no-repeat bottom !important;
+}

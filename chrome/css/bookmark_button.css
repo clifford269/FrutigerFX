@@ -1,0 +1,45 @@
+
+#urlbar #star-button,
+#urlbar #star-button-box,
+#urlbar #star-button-animatable-box {
+    background: unset !important;
+    box-shadow: unset !important;
+    list-style-image: unset !important;
+}
+
+#star-button[preloadanimations] + #star-button-animatable-box > #star-button-animatable-image,
+#star-button-box[animationsenabled] > #star-button[starred][animate] + #star-button-animatable-box > #star-button-animatable-image,
+#star-button-box[animationsenabled] > #star-button[starred][animate] + #star-button-animatable-box,
+#star-button-box[animationsenabled] > #star-button[starred][animate],
+#star-button-box[animationsenabled] {
+    background: unset !important;
+    box-shadow: unset !important;
+    animation-name: unset !important;
+    animation-iteration-count: unset !important;
+    animation-timing-function: unset !important;
+    animation-duration: 1ms !important;
+    fill: unset !important;
+}
+
+#urlbar #star-button[starred],
+#urlbar #star-button-animatable-box[starred]:is(:hover,:hover:active),
+#urlbar #star-button[preloadanimations][animate][starred]:is(:hover,:hover:active),
+#urlbar #star-button-box[open] #star-button[starred],
+#urlbar #star-button[starred]:is(:hover,:hover:active) {
+    filter: unset !important;
+}
+
+#urlbar #star-button:not([starred]),
+#urlbar #star-button-box[open] #star-button:not([starred]),
+#urlbar #star-button:not([starred]):is(:hover,:hover:active) {
+    filter: grayscale(1.0)  !important;
+
+}
+
+/* hover/open filters */
+#urlbar #star-button-box[open],
+#urlbar #star-button-box:is(:hover,:hover:active) {
+    filter: brightness(1.15) contrast(100%) !important;
+
+}
+

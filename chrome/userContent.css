@@ -1,14 +1,9 @@
-@import "./css/aboutpreferences/preferences_alternative_appearance_aero.css";
-@import "./css/aboutaddons/addons_manager_alternative_appearance_aero.css";
-@import "./css/aboutlogins/aboutlogins_alternative_appearance_aero.css";
-
-@import "./css/aboutaddons/addonlists_compact.css";
-@import "./css/aboutconfig/aboutconfig_compact_appearance.css";
-
-@import "./css/aboutaddons/addonlists_hide_report_button.css";
-@import "./css/aboutaddons/addonlists_show_addon_version_number.css";
-
-@import "./css/aboutnewtab/custom_newtabpage.css";
+@import "./css/prefs_page.css";
+@import "./css/addons_page.css";
+@import "./css/logins_page.css";
+@import "./css/addons_page.css";
+@import "./css/config_page.css";
+@import "./css/newtab_page.css";
 
 :root {
     --btn-bg: linear-gradient(180deg, #f2f2f2 45%, #ebebeb 0, #cfcfcf) !important;
@@ -62,7 +57,7 @@ html.private body {
 }
 
 .showPrivate #about-private-browsing-logo {
-    background: url("image/explorer.png") no-repeat center center !important;
+    background: url("images/explorer.png") no-repeat center center !important;
     background-size: cover !important;
 }
 
@@ -81,7 +76,7 @@ html.private body {
     display: inline-block !important;
     width: 64px !important;
     height: 64px !important;
-    background-image: url('image/error-64.png') !important;
+    background-image: url('images/error-64.png') !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
     margin-right: 10px !important;
@@ -104,7 +99,7 @@ html.private body {
 
 }
 
-#neterrorTryAgainButton, #preferences-root button, #profiles button {
+#neterrorTryAgainButton, #preferences-root button, #profiles button, #create-button, #restart-button,#restart-in-safe-mode-button {
     background: var(--btn-bg) !important;
     border: var(--btn-border) !important;
     border-radius: 3px !important;
@@ -128,7 +123,7 @@ html.private body {
     padding-top: 10px !important;
 }
 
-#neterrorTryAgainButton:hover, #preferences-root button:hover, #profiles button:hover {
+#neterrorTryAgainButton:hover, #preferences-root button:hover, #profiles button:hover, #create-button:hover, #restart-button:hover,#restart-in-safe-mode-button:hover  {
     background: var(--btn-hover) !important;
     border-radius: 3px !important;
     box-shadow: var(--btn-box-shadow) !important;
@@ -137,7 +132,7 @@ html.private body {
 
 }
 
-#neterrorTryAgainButton:active, #preferences-root button:active, #profiles button:active {
+#neterrorTryAgainButton:active, #preferences-root button:active, #profiles button:active,#create-button:active, #restart-button:active,#restart-in-safe-mode-button:active  {
     background: var(--btn-active) !important;
     border-radius: 2px !important;
     box-shadow: var(--btn-active-box-shadow) !important;
@@ -347,12 +342,12 @@ select:not([multiple]):focus {
 }
 
 .topsite-form .icon.icon-clear-input {
-    background-image: url("image/close_alt_h.png") !important;
+    background-image: url("images/close.png") !important;
 
 }
 
 .topsite-form .icon.icon-clear-input:hover {
-    background-image: url("image/close_alt_a.png") !important;
+    background-image: url("images/close.png") !important;
 }
 
 .form-input-container h3 {
@@ -390,15 +385,15 @@ select:not([multiple]):focus {
 
 
 .sidebar-footer-icon {
-    list-style-image: url("image/icons_fx3/addons.png") !important;
+    list-style-image: url("images/addons.png") !important;
 }
 
 .category[name="extension"] {
-    background-image: url("image/icons_fx3/addons.png") !important;
+    background-image: url("images/addons.png") !important;
 }
 
 .category[name="theme"] {
-    background-image: url("image/icons_fx3/theme.png") !important;
+    background-image: url("images/theme.png") !important;
 
 }
 
@@ -434,7 +429,7 @@ select:not([multiple]):focus {
 }
 
 .page-options-menu > .more-options-button, .page-options-menu > .more-options-button:is(:hover, :active) {
-    background-image: url("image/winarrow.svg") !important;
+    background-image: url("images/winarrow.svg") !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
     width: 20px !important;
@@ -442,7 +437,7 @@ select:not([multiple]):focus {
 }
 
 .more-options-button, .modal .actions button {
-    background: url("image/winarrow.svg") no-repeat, var(--btn-bg) !important;
+    background: url("images/winarrow.svg") no-repeat, var(--btn-bg) !important;
     background-position: center !important;
     border: var(--btn-border) !important;
     box-shadow: var(--btn-box-shadow) !important;
@@ -451,13 +446,13 @@ select:not([multiple]):focus {
 }
 
 .more-options-button:hover, .modal button:hover {
-    background: url("image/winarrow.svg") no-repeat, var(--btn-hover) !important;
+    background: url("images/winarrow.svg") no-repeat, var(--btn-hover) !important;
     border: var(--btn-border-hover) !important;
     background-position: center !important;
 }
 
 .more-options-button:active, .modal button:active {
-    background: url("image/winarrow.svg") no-repeat, var(--btn-active) !important;
+    background: url("images/winarrow.svg") no-repeat, var(--btn-active) !important;
     box-shadow: var(--btn-active-box-shadow) !important;
     border: var(--btn-border-active) !important;
     background-position: center !important;
@@ -479,7 +474,7 @@ select:not([multiple]):focus {
 }
 
 .icon-modal-delete {
-    background: url("image/error-64.png") !important;
+    background: url("images/error-64.png") !important;
     background-position: center !important;
     width: 64px !important;
     height: 64px !important;
@@ -516,7 +511,7 @@ select:not([multiple]):focus {
 
 .textbox-search-sign {
     list-style-image: unset !important;
-    background: url("image/icons_fx3/search.png") no-repeat !important;
+    background: url("images/search.png") no-repeat !important;
     background-position: center !important;
     background-size: cover !important;
     width: 20px !important;
@@ -538,14 +533,10 @@ search-textbox {
 }
 
 .category[name="plugin"] {
-    background-image: url("image/icons_fx3/plugins.png") !important;
+    background-image: url("images/plugins.png") !important;
 
 }
 
-#categories .category[name="extension"], #categories .category[name="plugin"], #categories .category[name="theme"] {
-    /*background: url("image/icons_fx3/addons.png"), green !important;*/
-
-}
 
 #categories .category[name="extension"] {
     position: relative !important;
@@ -558,8 +549,26 @@ search-textbox {
     left: 10px;
     width: 20px !important;
     height: 20px !important;
-    background-image: url('image/icons_fx3/addons.png') !important;
+    background-image: url('images/addons.png') !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
     /*margin-right: 10px !important;*/
+}
+h1[data-l10n-id="profiles-title"]{
+    font-size: 20pt !important;
+    font-weight: 500 !important;
+}
+h3[data-l10n-id="profiles-current-profile"]{
+    display: none !important;
+}
+h2[data-l10n-id="profiles-name"]{
+    font-weight: 400 !important;
+
+}
+h3[data-l10n-id="profiles-restart-title"]{
+    font-weight: 500 !important;
+    font-style: italic;
+}
+#profiles tr th{
+background-color: #009dff !important
 }

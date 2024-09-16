@@ -1,0 +1,64 @@
+#PopupSearchAutoComplete :is(richlistitem,button):is(:hover,[selected]), /* apply code to search popup too */
+.urlbarView button:is(:hover,:hover:active,[selected]),
+#urlbar-results .urlbarView-row[aria-selected="true"] .urlbarView-row-inner,
+.urlbarView-row[row-selectable]:not([selected]):hover,
+.urlbarView-row[selected] {
+    color: rgb(56, 127, 213) !important;
+    background-color: transparent !important;
+    background-image: linear-gradient(rgba(234, 240, 248, 0.45) 45%, rgba(255, 255, 255, 0.3) 0%, rgba(178, 213, 238, 0.4));
+    box-shadow: 0 -1px 6px 0px rgba(255, 255, 255, 0.6) inset,
+    0 3px 4px 0px rgba(255, 255, 255, 0.3) inset;
+    outline: 1px solid rgba(124, 163, 206, 1) !important;
+    outline-offset: -2px !important;
+}
+
+
+#urlbar-results .urlbarView-row[selected] .urlbarView-title,
+#urlbarView-results .urlbarView-title[selected],
+#urlbar-results .urlbarView-row[selected] .urlbarView-url,
+#urlbarView-results .urlbarView-url[selected],
+#urlbar-results .urlbarView-row[selected] .urlbarView-action,
+#urlbarView-results .urlbarView-action[selected],
+#urlbar-results .urlbarView-row[selected] .ac-separator,
+#urlbarView-results .ac-separator[selected] {
+    color: HighlightText !important;
+}
+
+.urlbarView-title {
+    color: blue;
+}
+
+.urlbarView-row:hover .urlbarView-title {
+    color: rgb(56, 127, 213);
+}
+
+#urlbar-results .urlbarView-row[selected] .urlbarView-title {
+    color: rgb(56, 127, 213) !important;
+}
+
+#urlbar-results .urlbarView-row[selected] .urlbarView-url {
+    color: rgb(31, 88, 159) !important;
+
+}
+
+#urlbar-results .urlbarView-row[selected] .urlbarView-action {
+    color: rgb(31, 88, 159) !important;
+
+}
+
+.urlbarView-url, .urlbarView-action {
+    color: darkblue !important;
+}
+.urlbarView-url{
+    transform: translateX(-5px) !important;
+
+}
+.urlbarView-action {
+    transform: translateX(15px) !important;
+}
+#urlbar-results:not([wrap="true"]) .urlbarView-action, #urlbar-results:not([wrap="true"])  .urlbarView-url{
+    transform: translateX(15px) !important;
+}
+#urlbar-results .urlbarView-action, #urlbar-results[wrap="true"] .urlbarView-action{
+display: block !important;
+}

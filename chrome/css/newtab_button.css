@@ -1,0 +1,38 @@
+#TabsToolbar :is(.tabs-newtab-button, #tabs-newtab-button) .toolbarbutton-icon {
+    width: 14px !important;
+    height: 13px !important;
+    transform: translateY(-1px);
+
+}
+#TabsToolbar:not(:-moz-lwtheme) :is(.tabs-newtab-button,#tabs-newtab-button):hover {
+    background: var(--btn-bg) !important;
+    border: var(--btn-border) !important;
+    border-radius: 10px !important;
+    box-shadow: var(--btn-box-shadow) !important;
+}
+
+#TabsToolbar:not(:-moz-lwtheme) :is(.tabs-newtab-button,#tabs-newtab-button):is(:active) {
+    background: var(--btn-active) !important;
+    border: var(--btn-border) !important;
+    box-shadow: var(--btn-active-box-shadow);
+}
+
+#TabsToolbar:not(:-moz-lwtheme) :is(.tabs-newtab-button,#tabs-newtab-button) {
+    transform: translateY(4px);
+    height: 22px !important;
+    width: 22px !important;
+    padding: 0 !important;
+    border-radius: 10px !important;
+    margin-left: 2px !important;
+}
+:is(.tabs-newtab-button,#tabs-newtab-button),
+.tabbrowser-tab:not([pinned]) {
+    margin-inline-start: 0px !important;
+}
+
+#TabsToolbar :is(.tabs-newtab-button,#tabs-newtab-button) .toolbarbutton-icon {
+    padding: 0px !important;
+}
+.tabbrowser-tab[selected]+#tabbrowser-arrowscrollbox-periphery #tabs-newtab-button{
+    /*transform: translateY(4px);*/
+}

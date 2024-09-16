@@ -1,0 +1,129 @@
+
+:root {
+    --photon_tabs_tab_height: 28px !important;
+    --classic_squared_tabs_tab_height: 26px !important;
+    --classic_squared_tabs-border-radius: 3px !important;
+    --default_tab_border_roundness: 5px !important;
+    --classic_squared_tabs_tab_default_loading_icon_color: #0A84FF !important;
+    --tab_close_icons_size: 16px !important;
+    --tab_min_width: 50px !important;
+    --tab_max_width: 250px !important;
+
+    --tab_min_width_mlt: 100px !important;
+    --tab_max_width_mlt: 200px !important;
+    --tabs-lines: 3 !important;
+
+    --bookmark_items_height: 22px !important;
+    --bookmark_items_lines: 3 !important;
+
+    --general_ui_font_size: 10pt !important;
+
+    --search-one-offs_labels_height: 100px !important;
+
+    --addonbar_height: 25px !important;
+
+    --results_font_size: var(--general_ui_font_size, 10pt) !important; /* 10pt */
+
+    --megabar_border_roundness: 20px !important;
+
+    --top_toolbars_background: hsl(235, 33%, 19%) !important;
+    --top_toolbars_background_inactive: hsl(235, 13%, 9%) !important;
+    --top_toolbars_text: hsl(240, 9%, 98%) !important;
+    --top_toolbars_text_inactive: #999999 !important;
+
+    --urlbar_background_color: white !important;
+    --urlbar_text_color: black !important;
+
+    --custom_border-radius: 3px !important;
+    --general_toolbar_color_toolbars: none !important;
+    --general_toolbar_color_navbar: none !important;
+    --general_toolbar_text_color: white !important;
+    --general_toolbar_text_shadow: black !important;
+    --tabs_toolbar_color_tabs_not_on_top: unset !important;
+    --tabs_toolbar_border-tnot_normal_mode_size: 0px !important;
+    --tabs_toolbar_border-tnot_normal_mode: var(--tabs-border-color) !important;
+    --colored_menubar_background_image: unset !important;
+    --colored_menubar_text_color: white !important;
+    --statusbar_background_color: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .4)) !important;
+    --statusbar_font_color: black !important;
+    --classic_squared_tabs_active_tab: linear-gradient(to top, rgba(255, 255, 255, .0), rgba(255, 255, 255, .7)) !important;
+    --classic_squared_tabs_hovered_tabs: linear-gradient(to top, rgba(255, 255, 255, .1), rgba(255, 255, 255, .3)) !important;
+    --classic_squared_tabs_other_tabs: linear-gradient(to top, rgba(255, 255, 255, .0), rgba(255, 255, 255, .2)) !important;
+    --classic_squared_tabs_unloaded_tabs: linear-gradient(to top, rgba(255, 255, 255, .0), rgba(255, 255, 255, .2)) !important;
+    --classic_squared_tabs-border_size: 1px;
+    --classic_squared_tabs-border1: rgba(0, 0, 0, .0) !important;
+    --classic_squared_tabs-border2: rgba(0, 0, 0, .0) !important;
+    --classic_squared_tabs-border3: rgba(0, 0, 0, .0) !important;
+    --classic_squared_tabs_new_tab_icon_color: white !important;
+    --classic_squared_tabs_tab_text_color: white !important;
+    --classic_squared_tabs_tab_text_shadow: black !important;
+    --classic_squared_tabs_lwt-dark_active_tab: inherit !important;
+    --classic_squared_tabs_lwt-dark_hovered_tabs: linear-gradient(hsla(0, 0%, 80%, .5), hsla(0, 0%, 60%, .5) 80%) !important;
+    --classic_squared_tabs_lwt-dark_other_tabs: linear-gradient(hsla(0, 0%, 60%, .5), hsla(0, 0%, 45%, .5) 80%) !important;
+    --classic_squared_tabs_lwt-bright_hovered_tabs: linear-gradient(hsla(0, 0%, 60%, .6), hsla(0, 0%, 45%, .6) 80%) !important;
+    --classic_squared_tabs_lwt-bright_other_tabs: linear-gradient(hsla(0, 0%, 40%, .6), hsla(0, 0%, 30%, .6) 80%) !important;
+    --classic_squared_tabs_lwt-bright_active_tab: inherit !important;
+
+    --general_toolbar_color_toolbars: linear-gradient(#f9f9fa, #f9f9fa);
+    --general_toolbar_color_navbar: linear-gradient(#f9f9fa, #f9f9fa);
+    --general_toolbar_text_color: inherit;
+    --general_toolbar_text_shadow: transparent;
+}
+
+
+#main-window:not(:-moz-lwtheme) #PersonalToolbar #bookmarks-menu-button::after,
+#main-window:not(:-moz-lwtheme) toolbar > toolbarbutton > .toolbarbutton-text,
+#main-window:not(:-moz-lwtheme) toolbar #stop-reload-button toolbarbutton > .toolbarbutton-text,
+#main-window:not(:-moz-lwtheme) toolbar #PanelUI-button toolbarbutton > .toolbarbutton-text,
+#main-window:not(:-moz-lwtheme) toolbar > toolbarbutton > .toolbarbutton-badge-stack .toolbarbutton-text,
+#main-window:not(:-moz-lwtheme) #nav-bar-customization-target > toolbarbutton > .toolbarbutton-text,
+#main-window:not(:-moz-lwtheme) #PlacesToolbarItems toolbarbutton > :is(label,description) {
+    color: var(--general_toolbar_text_color, inherit) !important;
+    text-shadow: 1px 1px 1px var(--general_toolbar_text_shadow, inherit) !important;
+}
+
+#main-window :is(.browserContainer,#viewSource):not(:-moz-lwtheme) :is(findbar,#FindToolbar) {
+    background: var(--general_toolbar_color_toolbars, inherit) !important;
+}
+
+#main-window[style*='--lwt-header-image']:-moz-lwtheme :is(.browserContainer,#viewSource) :is(findbar,#FindToolbar) {
+    background: var(--lwt-header-image) !important;
+    background-position: calc(100vw - 5px) !important;
+}
+
+#main-window[style*='--lwt-header-image']:-moz-lwtheme :is(.browserContainer,#viewSource) :is(findbar,#FindToolbar) :is(.toolbarbutton-icon,.toolbarbutton-text) {
+    color: var(--lwt-text-color) !important;
+    fill: var(--lwt-text-color) !important;
+}
+
+#main-window[style*='--lwt-header-image']:-moz-lwtheme-brighttext :is(.browserContainer,#viewSource) :is(findbar,#FindToolbar) :is(.toolbarbutton-icon,.toolbarbutton-text) {
+    text-shadow: 1px 1px 1px black !important;
+}
+
+
+.browserContainer > findbar > #findbar-close-container {
+    background-color: unset !important;
+}
+
+#nav-bar:not(:-moz-lwtheme) {
+    background: unset !important;
+    border: unset !important;
+    box-shadow: unset !important;
+}
+
+toolbar:not(#TabsToolbar):not(#toolbar-menubar):not(#nav-bar):not(:-moz-lwtheme) {
+    background: unset !important;
+    border: unset !important;
+    box-shadow: unset !important;
+}
+
+#nav-bar:not(:-moz-lwtheme),
+toolbar:not(#TabsToolbar):not(#toolbar-menubar):not(#nav-bar):not(:-moz-lwtheme) {
+    appearance: none !important;
+    box-shadow: unset !important;
+}
+
+#main-window:not(:-moz-lwtheme) #main-menubar > menu > :-moz-any(label,description) {
+    color: var(--general_toolbar_text_color, inherit) !important;
+    text-shadow: 1px 1px 1px var(--general_toolbar_text_shadow, inherit) !important;
+}

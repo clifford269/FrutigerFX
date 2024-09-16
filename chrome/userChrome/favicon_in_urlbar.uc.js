@@ -1,8 +1,8 @@
 (function () {
 
     try {
-        const globe = '../image/globe.png';
-        const page = '../image/page.png';
+        const globe = '../images/globe.png';
+        const page = '../images/page.png';
 
         const favicon_click_opens_page_info_window = false;
 
@@ -40,7 +40,7 @@
                 }
                 document.querySelector('#favimginurlbar').style.display = 'block';
                 var favicon_in_urlbar = gBrowser.selectedTab.image;
-                if (favicon_in_urlbar.startsWith('chrome')) favicon_in_urlbar = '../image/page.png';
+                if (favicon_in_urlbar.startsWith('chrome')) favicon_in_urlbar = '../images/page.png';
                 if (!gBrowser.selectedTab.image || gBrowser.selectedTab.image == null)
                     favicon_in_urlbar = page;
 

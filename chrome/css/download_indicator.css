@@ -1,28 +1,71 @@
 #downloads-indicator-anchor {
-    list-style-image: url("../image/icons_fx3/downloads.png") !important;
+    list-style-image: url("../images/downloads.png") !important;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 40%, rgba(255, 255, 255, 0.8) 0%, rgba(207, 207, 207, 0.1)) !important;
-    box-shadow: 0 -2px 6px 0px skyblue inset !important;
+    box-shadow: 0 -2px 6px 0px skyblue inset, 0 0 0 1px green !important;
     border-radius: 3px !important;
 }
 
 
 #downloads-button[attention] #downloads-indicator-anchor {
-    list-style-image: url("../image/download-glow.png") !important;
+    list-style-image: url("../images/download-glow.png") !important;
 }
 
-#downloads-indicator-finish-box, #downloads-indicator-start-box {
+#downloads-indicator-finish-box {
     display: none !important;
 }
 
-#downloads-button:not([progress]) > .toolbarbutton-badge-stack > #downloads-indicator-anchor > #downloads-indicator-icon {
+#downloads-button:not([progress])  #downloads-indicator-icon {
     visibility: visible !important;
 }
 
 #downloads-button > .toolbarbutton-badge-stack > #downloads-indicator-progress-outer {
     visibility: visible !important;
     border: 0 !important;
+
+}
+#downloads-button[progress] #downloads-indicator-anchor{
+    background: none !important;
+    box-shadow: none !important;
+}
+#downloads-button[progress]  #downloads-indicator-start-box{
+    animation: zoom-out 1s ease-out;
+    fill: none !important;
+    color: transparent !important;
+    background: url("../images/downloads.png") !important;
+    opacity: 0;
+    background-color: rgba(192, 192, 192, 0.65) !important;
+    border-radius: 3px !important;
+    z-index: 100 !important;
+    position: absolute !important;
 }
 
+@keyframes zoom-out {
+    0% {
+        opacity: 1;
+        transform: scale(1.8) translateY(10px);
+    }
+
+    100% {
+        transform:scale(1) translateY(0px);
+    }
+}
+#downloads-button[attention] #downloads-indicator-anchor #downloads-indicator-icon{
+    animation: zoom 1s ease-out;
+}
+@keyframes zoom {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.8;
+        transform: scale(1.8);
+
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 #downloads-button:not([progress]) > .toolbarbutton-badge-stack > #downloads-indicator-progress-outer {
     visibility: hidden !important;
 }
@@ -54,12 +97,14 @@
 }
 
 :root {
+    --panel-border-radius:3px !important;
     --arrowpanel-border-color: hsla(210, 4%, 10%, .2) !important;
 }
 
 :is(panel, menupopup):not(#PlacesChevronPopup, #OtherBookmarksPopup)[type=arrow] {
-    --panel-shadow: 0 0 0 1px var(--arrowpanel-border-color), 0 0 5px rgba(0, 0, 0, .65) !important;
+    /*--panel-shadow: 0 0 0 1px var(--arrowpanel-border-color), 0 0 5px rgba(0, 0, 0, .65) !important;*/
     --panel-shadow-margin: 5px !important;
+
 }
 
 :is(panel, menupopup):not(#PlacesChevronPopup, #OtherBookmarksPopup)[type=arrow]:not([animate=false]) {

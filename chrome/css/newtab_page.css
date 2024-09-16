@@ -1,0 +1,205 @@
+.non-collapsible-section, .icon-settings {
+    display: none !important;
+}
+
+a > div.tile {
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+a > div.title {
+    text-transform: capitalize;
+    color: rgb(56, 127, 213) !important;
+    margin-top: -11px;
+}
+
+body.activity-stream {
+    background: url("aerobg.jpg") center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.activity-stream #root {
+    -webkit-backdrop-filter: blur(2px) !important;
+    backdrop-filter: blur(2px) !important;
+}
+
+.top-site-outer {
+    border-radius: 6px !important;
+    border: 1px solid transparent !important;
+}
+
+.topsite-form .top-site-button span {
+    color: #222 !important;
+    text-decoration: none !important;
+}
+
+.top-site-outer:hover {
+    border: 1px solid rgba(0, 0, 0, .7) !important;
+    border-radius: 6px !important;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, .7), inset 0 0 0 1px #fffa !important;
+    font: 9pt Segoe UI, SegoeUI, Noto Sans, sans-serif;
+    position: relative !important;
+    z-index: 0 !important;
+    outline: none !important;
+}
+
+.top-site-outer:hover:before {
+    background:
+            linear-gradient(180deg, #ffffff66, #0000001a, #ffffff33), #4580c4 !important;
+    border-radius: 6px !important;
+    box-shadow: inset 0 0 0 1px #fffd !important;
+    content: "" !important;
+    height: 100% !important;
+    left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+    width: 100% !important;
+    z-index: -1 !important
+
+}
+
+.top-site-outer:hover:after {
+    -webkit-backdrop-filter: blur(4px) !important;
+    backdrop-filter: blur(4px) !important;
+    border: 1px solid #fffc !important;
+    border-radius: 6px !important;
+    content: "" !important;
+    height: 109% !important;
+    left: -5px !important;
+    position: absolute !important;
+    top: -5px !important;
+    width: 109% !important;
+    z-index: -10 !important;
+    background: linear-gradient(135deg, #fff5 70px, transparent 100px), linear-gradient(225deg, #fff5 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%,
+    #0002 41% 41.5%, #bbb2 44% 45%, #bbb2 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #0002 56% 56.5%, #bbb2 57% 63%, #0002 67% 69%, #bbb2 69.5% 70%, #0002 73.5% 74%, #bbb2 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #bbb1 90%) ;
+}
+
+
+.top-site-inner .top-site-button .tile {
+    opacity: 0.75;
+    z-index: 10;
+}
+.top-site-outer:hover .top-site-inner .top-site-button .tile{
+    opacity: 1;
+}
+.top-site-inner:after {
+    border: 1px solid #fffc !important;
+    border-radius: 6px !important;
+    content: "" !important;
+    height: 100% !important;
+    left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+    width: 100% !important;
+    z-index: 2 !important;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, .7), inset 0 0 0 1px #fffa !important;
+    /*interior background, it's fine*/
+    background:linear-gradient(135deg, #fff5 70px, transparent 100px),
+    linear-gradient(225deg, #fff5 70px, transparent 100px),
+    linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #bbb2 44% 45%, #bbb2 46% 47%,
+            #0002 48% 49%, #0002 50% 50.5%, #0002 56% 56.5%, #bbb2 57% 63%, #0002 67% 69%, #bbb2 69.5% 70%, #0002 73.5% 74%, #bbb2 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #bbb1 90%) 0/100vw 100vh no-repeat fixed;
+}
+
+.top-site-outer:hover .top-site-inner:after {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+.top-site-outer:is(.active, :focus) {
+    background-color: transparent !important;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6) 0px, transparent 0px),
+    linear-gradient(to left, rgba(255, 255, 255, 0.6) 0px, transparent 0px),
+    linear-gradient(to top, rgba(255, 255, 255, 0.5) 0px, transparent 0px),
+    linear-gradient(to bottom, rgba(163, 196, 247, 0.4), rgba(122, 180, 246, 0.4)) !important;
+}
+
+
+.top-site-icon.rich-icon {
+    background-color: transparent !important;
+}
+
+.top-site-outer:is(.active, :focus, :hover) a > div.title {
+    color: #f2f2f2 !important;
+}
+
+.context-menu-button.icon {
+    background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzMzMztzdG9wLW9wYWNpdHk6MSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2FhYTtzdG9wLW9wYWNpdHk6MSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGQ9Ik0xMSA2SDR2MWgxdjFoMXYxaDF2MWgxVjloMVY4aDFWN2gxVjZaIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+"), var(--btn-bg) !important;
+    box-shadow: var(--btn-box-shadow) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    border-radius: 3px !important;
+    padding: 0 !important;
+    width: 15px !important;
+    height: 15px !important;
+    margin-right: -7px;
+}
+
+.context-menu-button.icon:hover {
+    background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzMzMztzdG9wLW9wYWNpdHk6MSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2FhYTtzdG9wLW9wYWNpdHk6MSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGQ9Ik0xMSA2SDR2MWgxdjFoMXYxaDF2MWgxVjloMVY4aDFWN2gxVjZaIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+"), var(--btn-hover) !important;
+    box-shadow: var(--btn-box-shadow) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+.context-menu-button.icon:active, .context-menu-button.icon:focus {
+    background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzMzMztzdG9wLW9wYWNpdHk6MSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2FhYTtzdG9wLW9wYWNpdHk6MSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGQ9Ik0xMSA2SDR2MWgxdjFoMXYxaDF2MWgxVjloMVY4aDFWN2gxVjZaIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+"), var(--btn-active) !important;
+    box-shadow: inset 0 0 0 1px #fffc !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    border-radius: 3px !important;
+
+}
+
+.top-site-inner {
+    position: relative;
+
+}
+
+.top-site-inner .context-menu {
+    border-radius: 0 !important;
+    letter-spacing: 0 !important;
+    background: #f0f0f0 !important;
+    border: 1px solid rgba(0, 0, 0, .4) !important;
+    box-shadow: 4px 4px 3px -2px rgba(0, 0, 0, .5) !important;
+    color: initial !important;
+    min-width: 150px !important;
+    padding: 2px !important;
+    z-index: 100 !important;
+    position: relative;
+}
+
+.top-site-outer.active .context-menu {
+    z-index: 100 !important;
+    position: absolute;
+
+}
+
+.top-site-inner .context-menu .context-menu-item {
+    font: 9pt Segoe UI, SegoeUI, Noto Sans, sans-serif !important;
+    color: #000 !important;
+    z-index: 100 !important;
+    position: relative;
+
+}
+
+.top-site-inner .context-menu .context-menu-item button:is(:hover, :focus) {
+    background: linear-gradient(180deg, #fff9, #e6ecf5cc 90%, #fffc) !important;
+    outline: 1px solid #b8d6fb !important;
+    border-radius: 3px !important;
+    z-index: 100 !important;
+    position: relative;
+}
+
+@media (min-width: 866px) {
+    .activity-stream main {
+        /*width: 986px !important;*/
+    }
+}
+@media (min-width: 866px) {
+    .top-sites-list .hide-for-narrow {
+        display: inline-block !important;
+    }
+}
