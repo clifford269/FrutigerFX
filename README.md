@@ -16,15 +16,30 @@ Aims to fully build the Skeuomorphic/Frutiger Aero beauty into the Mozilla Firef
 
 ->Enable 'compact mode' under toolbar density
 
-![Untitled](https://github.com/user-attachments/assets/3af03765-f1b4-494c-8978-10aa9821abb9)
+**Previews**:
 
-![2](https://github.com/user-attachments/assets/0df36700-24f8-4479-80a2-946fbb4717c0)
+![1~01](https://github.com/user-attachments/assets/deca03d5-ed8d-4c43-b3f3-394d0cd3d21a)
 
-![3](https://github.com/user-attachments/assets/01b3ee23-0fb2-4085-8b3c-d2d674815520)
+![2~01](https://github.com/user-attachments/assets/609a19e0-9b18-49e8-bdc7-45dbd2e4b12b)
 
-![4](https://github.com/user-attachments/assets/5c717b5b-7d92-4d60-bd61-c575dc0ebd9a)
+![3~01](https://github.com/user-attachments/assets/dd7ce923-dfb6-496a-94eb-0e447fc6e7cc)
 
-![Untitled](https://github.com/user-attachments/assets/2516ab70-ca86-40bb-bac5-616613ae0015)
+![4~01](https://github.com/user-attachments/assets/a2c2f9e2-4f5a-4e74-877c-5b124aa38fd6)
+
+![5~01](https://github.com/user-attachments/assets/f4d87f7c-cdfb-4edd-8507-b0003ff52eae)
+
+![6~01](https://github.com/user-attachments/assets/0c43d0e3-eaed-486b-a939-74b5eb7a1393)
+
+![7~01](https://github.com/user-attachments/assets/8bc6bc62-0e4e-4ea8-ae6a-cca9edfab542)
+
+![8~01](https://github.com/user-attachments/assets/a6ca3a73-0b1f-4c2c-b0f3-ed8f1f4ea2df)
+
+![9~01](https://github.com/user-attachments/assets/49f53974-12b1-4de4-9c99-73d8c7ed8757)
+
+![10~01](https://github.com/user-attachments/assets/5a7ac4f7-71f2-45d5-858c-4254e72f0d90)
+
+![11~01](https://github.com/user-attachments/assets/a7dce3e3-fe8b-4d8c-9733-ecbde4104679)
+
+![12~01](https://github.com/user-attachments/assets/ed9aa844-4b90-47e4-ae31-8433acfa1dc9)
 
 
-Kindly consider **donating** if you like the project (available soon).
