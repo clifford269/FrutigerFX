@@ -1,13 +1,13 @@
 # FrutigerFX
-Aims to fully build the Windows/Frutiger Aero coolness into the Mozilla Firefox ESR Releases (Currently, 115) interface, and make computing fun once again.
+Aims to fully build the Skeuomorphic/Frutiger Aero beauty into the Mozilla Firefox ESR Releases (Currently, 115) interface, and make computing **productive** and **fun**, once again.
 
 **Disclaimer**: 
 
-            1. This theme was built to look best with the Windows 7 Aero user interface.
+ This theme was built to look best with the Windows 7 Aero user interface.
+ Windows 10 builds might be get **tested** for accuracy in the future, though.
             
-            2. You might encounter bugs/issues.
-               You are encouraged to discover them and they might get corrected with time.
-               
+**Installation**:
+
 ->Put the defaults folder and config.js file in C:\Program Files\Mozilla Firefox
 
 ->And the chrome folder in %appdata%\Mozilla\Firefox\Profiles\(Your default Firefox profile)
@@ -27,7 +27,4 @@ Aims to fully build the Windows/Frutiger Aero coolness into the Mozilla Firefox 
 ![Untitled](https://github.com/user-attachments/assets/2516ab70-ca86-40bb-bac5-616613ae0015)
 
 
-**Acknowledgements**:
-1. Aris-t2's css and js scripts proved to be a good customisable base.
-2. Khang-nd’s reproduction of the Windows 7 UI elements proved beneficial for learning to craft glossy Aero interfaces.
-3. Microsoft, for their awesome Icons (in the past).
+Kindly consider **donating** if you like the project (available soon).
