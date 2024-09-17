@@ -5,7 +5,7 @@ Aims to fully build the Skeuomorphic/Frutiger Aero beauty into the Mozilla Firef
 
  This theme was built to look best with the Windows 7 Aero user interface.
  Windows 10 builds might get **tested** for accuracy in the future, though.
- Kindly consider **donating** if you like the project
+ Kindly consider **donating** if you like the project:
  
  [![Donate](https://raw.githubusercontent.com/clifford269/FrutigerFX/main/donate_button.PNG)](https://www.paypal.com/paypalme/clifford269)
             
