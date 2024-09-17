@@ -7,7 +7,7 @@ Aims to fully build the Skeuomorphic/Frutiger Aero beauty into the Mozilla Firef
  Windows 10 builds might get **tested** for accuracy in the future, though.
  Kindly consider **donating** if you like the project:
  
- [![Donate](https://raw.githubusercontent.com/clifford269/FrutigerFX/main/donate_button.PNG)](https://www.paypal.com/paypalme/clifford269)
+[![Donate](https://raw.githubusercontent.com/clifford269/FrutigerFX/main/donate_button.PNG)](https://www.paypal.com/paypalme/clifford269)
             
 **Installation**:
 
