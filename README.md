@@ -45,4 +45,5 @@ Aims to fully build the Skeuomorphic/Frutiger Aero beauty into the Mozilla Firef
 
 ![12~01](https://github.com/user-attachments/assets/ed9aa844-4b90-47e4-ae31-8433acfa1dc9)
 
+![13](https://github.com/user-attachments/assets/e6fac906-eb57-4427-9a98-98e9311fe2bb)
 
