@@ -17,3 +17,4 @@ defaultPref("browser.theme.dark-private-windows", false);
 defaultPref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 defaultPref("browser.compactmode.show", true);
 defaultPref("extensions.pocket.enabled", false);
+defaultPref("layout.css.backdrop-filter.enabled", true);
