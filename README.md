@@ -1,7 +1,8 @@
-# FrutigerFX
+# ![try](https://github.com/user-attachments/assets/e48c969d-b9a1-4daf-a237-232daefb08be)
+
 Aims to fully build the Skeuomorphic/Frutiger Aero beauty into the Mozilla Firefox ESR Releases (Currently, 115) interface, and make computing **productive** and **fun**, once again.
 
-**Disclaimer**: 
+<ins>**Disclaimer**</ins>: 
 
  This theme was built to look best with the Windows 7 Aero user interface.
  Windows 10 builds might get **tested** for accuracy in the future, though.
@@ -9,7 +10,7 @@ Aims to fully build the Skeuomorphic/Frutiger Aero beauty into the Mozilla Firef
  
 [![Donate](https://raw.githubusercontent.com/clifford269/FrutigerFX/main/donate_button.PNG)](https://www.paypal.com/paypalme/clifford269)
             
-**Installation**:
+<ins>**Installation**</ins>:
 
 ->Put the defaults folder and config.js file in C:\Program Files\Mozilla Firefox
 
@@ -19,7 +20,7 @@ Aims to fully build the Skeuomorphic/Frutiger Aero beauty into the Mozilla Firef
 
 ->Enable 'compact mode' under toolbar density
 
-**Previews**:
+<ins>**Previews**</ins>:
 
 ![1~01](https://github.com/user-attachments/assets/deca03d5-ed8d-4c43-b3f3-394d0cd3d21a)
 
