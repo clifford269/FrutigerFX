@@ -430,7 +430,7 @@ background-color:transparent !important;
 }
 
 #downloadsPanel-mainView{
-    background: rgba(10, 250, 255, 0.53) !important;
+    background: rgba(16, 199, 255, 0.53) !important;
 
 }
 .findbar-find-previous{
@@ -457,6 +457,6 @@ background-color:transparent !important;
 }
 .findbar-textbox[status="notfound"]{
     background-color: #e9f7fe !important;
-    box-shadow: inset 0 0 0 1px #def9fa, inset 1px 1px 0 1px #79c6f9, inset -1px -1px 0 1px #c6e9fc, inset 3px 3px 6px #b1dffd !important
+    box-shadow: inset 0 0 0 1px #def9fa, inset 1px 1px 0 1px #79c6f9, inset -1px -1px 0 1px #c6e9fc, inset 3px 3px 6px #b1dffd !important;
     border-color: #8e8f8f !important;
 }
