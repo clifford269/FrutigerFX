@@ -1,40 +1,12 @@
-@import "tabs_below.css";
 
 :root {
-    --classic_squared_tabs_tab_height: 26px;
-    --classic_squared_tabs_tab_default_loading_icon_color: #0A84FF;
-    --classic_squared_tabs_active_tab: linear-gradient(180deg, #f2f2f2 45%, #ebebeb 0, #cfcfcf);
-    --classic_squared_tabs_hovered_tabs: linear-gradient(180deg, #f2f2f2 45%, #ebebeb 0, #cfcfcf);
-    --classic_squared_tabs_other_tabs: linear-gradient(180deg, #f2f2f2 45%, #ebebeb 0, #cfcfcf);
-    --classic_squared_tabs_unloaded_tabs: linear-gradient(180deg, #f2f2f2 45%, #ebebeb 0, #cfcfcf);
-    --classic_squared_tabs_lwt-dark_active_tab: inherit;
-    --classic_squared_tabs_lwt-dark_hovered_tabs: linear-gradient(180deg, #f2f2f2 45%, #ebebeb 0, #cfcfcf);
-    --classic_squared_tabs_lwt-dark_other_tabs: linear-gradient(180deg, #f2f2f2 45%, #ebebeb 0, #cfcfcf);
-    --classic_squared_tabs_lwt-bright_active_tab: inherit;
-    --classic_squared_tabs_lwt-bright_hovered_tabs: linear-gradient(180deg, #f2f2f2 45%, #ebebeb 0, #cfcfcf);
-    --classic_squared_tabs_lwt-bright_other_tabs: linear-gradient(180deg, #f2f2f2 45%, #ebebeb 0, #cfcfcf);
-    --classic_squared_tabs-border_size: 1px;
-    --classic_squared_tabs-border1: #5f7181;
-    --classic_squared_tabs-border2: rgba(0, 0, 0, .2);
-    --classic_squared_tabs-border3: rgba(0, 0, 0, .5);
-    --classic_squared_tabs-border-radius:0px;
-    --classic_squared_tabs_new_tab_icon_color: black;
-    --classic_squared_tabs_tab_text_color: black;
-    --classic_squared_tabs_tab_text_shadow: transparent;
-
     --tab-min-height: var(--classic_squared_tabs_tab_height) !important;
     --mltabs-newtab-height: calc(var(--classic_squared_tabs_tab_height) + 1px) !important;
     --tab-min-height_tnot: calc(var(--classic_squared_tabs_tab_height) - 1px) !important;
-
     --tab_below_navigation_toolbar_bottom_padding: var(--classic_squared_tabs_tab_height) !important;
-
     --tab_below_main_content_bottom_margin: calc(2px + var(--classic_squared_tabs_tab_height)) !important;
     --tab_below_main_content_toolbar_height: calc(1px + var(--classic_squared_tabs_tab_height)) !important;
     --tab_below_main_content_top_margin: 0 !important;
-
-    --tab_below_navigation_toolbar_bottom_padding_macOS: var(--classic_squared_tabs_tab_height) !important;
-    --tab_below_navigation_toolbar_toolbox_top_padding_macOS: calc(-2px + var(--classic_squared_tabs_tab_height)) !important;
-
     --ctb_start_padding: 2px !important;
     --ctb_width: 14px !important;
     --ctb_start_margin: -4px !important;
@@ -154,9 +126,6 @@
 }
 
 
-
-
-
 .tabbrowser-tab .tab-background:is([selected],[multiselected]) {
     border-image: unset !important;
     border-image-slice: 0 !important;
@@ -225,3 +194,6 @@
     content: url("../images/page_aero.png") !important;
 }
 
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab:only-of-type{
+    --classic_squared_tabs_tab_height: 27px;
+}

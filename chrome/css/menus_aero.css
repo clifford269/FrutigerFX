@@ -9,8 +9,8 @@
 
 }
 
- :is(popup,menupopup,panel,panelmultiview,.panel-subview-body) :is(.subviewbutton):not(#appMenu-fxa-status2):hover, .downloadButton:hover, #downloadsListBox > richlistitem[state="1"][exists].hoveringMainArea:hover,
- #downloadsListBox > richlistitem.openWhenFinished.hoveringMainArea:hover, #downloadsListBox > richlistitem[verdict]:hover, #downloadsListBox > richlistitem.openWhenFinished:hover{
+ :is(popup,menupopup,panel,panelmultiview,.panel-subview-body) :is(.subviewbutton):not(#appMenu-fxa-status2, #downloadsHistory):hover, .downloadButton:hover, #downloadsListBox > richlistitem[state="1"][exists].hoveringMainArea:hover,
+ #downloadsListBox > richlistitem.openWhenFinished.hoveringMainArea:hover, #downloadsListBox > richlistitem[verdict]:hover, #downloadsListBox > richlistitem.openWhenFinished:hover, .bookmark-item:hover{
      color: inherit !important;
     background: transparent !important;
     background-color: transparent !important;
@@ -24,7 +24,23 @@
     outline-offset: -1px !important;
      box-shadow: inset 0 0 0 2px #fffc !important;
 }
+ .bookmark-item:hover{
+     background: linear-gradient(135deg, #fff5 70px, transparent 100px), linear-gradient(225deg, #fff5 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%,
+     #0002 41% 41.5%, #bbb2 44% 45%, #bbb2 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #0002 56% 56.5%, #bbb2 57% 63%, #0002 67% 69%, #bbb2 69.5% 70%, #0002 73.5% 74%, #bbb2 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #bbb1 90%)  !important;
+     box-shadow:  none !important;
+     outline:1px solid #fff !important;
 
+ }
+ .downloadButton:hover, #downloadsListBox > richlistitem[state="1"][exists].hoveringMainArea:hover,
+ #downloadsListBox > richlistitem.openWhenFinished.hoveringMainArea:hover, #downloadsListBox > richlistitem[verdict]:hover, #downloadsListBox > richlistitem.openWhenFinished:hover, #downloadsHistory:hover{
+     box-shadow: inset 0 0 0 1px #fffc !important;
+     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.4) 0px, transparent 0px),
+     linear-gradient(to left, rgba(255, 255, 255, 0.4) 0px, transparent 0px),
+     linear-gradient(to top, rgba(255, 255, 255, 0.3) 0px, transparent 0px),
+     linear-gradient(to bottom, rgba(163, 196, 247, 0.2), rgba(122, 180, 246, 0.2)) !important;
+     background-color: transparent !important;
+
+ }
 :is(popup,menupopup,panel,panelmultiview,.panel-subview-body) :is(menuitem,menu,.subviewbutton,toolbarbutton):not(#appMenu-fxa-status2):hover .unified-extensions-item-contents {
     border-bottom: 1px solid transparent !important;
 }
@@ -46,4 +62,21 @@
 }
 .downloadsPanelFooterButton .button-text{
     margin: 0 auto !important;
+}
+.bookmark-item, .bookmark-item:hover{
+    padding:4px !important;
+    border-radius: 5px !important;
+}
+ .bookmark-item{
+     margin-right: 5px !important;
+ }
+.bookmark-item:active{
+    color: inherit !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: linear-gradient(180deg, #e5f4fc, #c4e5f6 30% 50%, #98d1ef 50%, #68b3db) !important ;
+    outline:1px solid #fff !important;
+    outline-radius: 3px !important;
+    outline-offset: -1px !important;
+    box-shadow: inset 1px 1px 0 #0003, inset -1px 1px 0 #0001 !important;
 }

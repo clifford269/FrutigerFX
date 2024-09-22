@@ -1,18 +1,19 @@
-#PopupSearchAutoComplete :is(richlistitem,button):is(:hover,[selected]), /* apply code to search popup too */
+#PopupSearchAutoComplete :is(richlistitem,button):is(:hover,[selected]),
 .urlbarView button:is(:hover,:hover:active,[selected]),
-#urlbar-results .urlbarView-row[aria-selected="true"] .urlbarView-row-inner,
 .urlbarView-row[row-selectable]:not([selected]):hover,
 .urlbarView-row[selected] {
     color: rgb(56, 127, 213) !important;
     background-color: transparent !important;
-    background-image: linear-gradient(rgba(234, 240, 248, 0.45) 45%, rgba(255, 255, 255, 0.3) 0%, rgba(178, 213, 238, 0.4));
-    box-shadow: 0 -1px 6px 0px rgba(255, 255, 255, 0.6) inset,
-    0 3px 4px 0px rgba(255, 255, 255, 0.3) inset;
-    outline: 1px solid rgba(124, 163, 206, 1) !important;
-    outline-offset: -2px !important;
+    background-image: linear-gradient( rgba(178, 213, 238, 0.31) 0%, rgb(178, 213, 238,0.8));
+    box-shadow: 0 2px 2px 0px rgba(255, 255, 255, 0.3) inset,
+    inset 0 -1px 0 0 #777,  0 -4px 6px 0px rgba(255, 255, 255, 0.6) inset;
+    border: 1px solid rgba(124, 163, 206, 1) !important;
+
 }
 
-
+.urlbarView-row:active{
+    background-color: rgba(0, 191, 255, 0.87) !important;
+}
 #urlbar-results .urlbarView-row[selected] .urlbarView-title,
 #urlbarView-results .urlbarView-title[selected],
 #urlbar-results .urlbarView-row[selected] .urlbarView-url,

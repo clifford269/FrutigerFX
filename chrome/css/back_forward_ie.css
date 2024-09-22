@@ -88,3 +88,14 @@
 #main-window[uidensity=touch] #nav-bar #nav-bar-customization-target > #forward-button {
   margin-inline-start: -4px !important;
 }
+#back-button > image,
+#forward-button > image {
+    outline: none !important;
+}
+#back-button,
+#forward-button {
+    appearance: auto !important;
+}
+#forward-button{
+  padding-left: 0 !important;
+}

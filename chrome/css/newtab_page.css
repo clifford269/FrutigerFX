@@ -9,8 +9,9 @@ a > div.tile {
 
 a > div.title {
     text-transform: capitalize;
-    color: rgb(56, 127, 213) !important;
+    color: #fff !important;
     margin-top: -11px;
+
 }
 
 body.activity-stream {
@@ -44,7 +45,7 @@ body.activity-stream {
     outline: none !important;
 }
 
-.top-site-outer:hover:before {
+.top-site-outer:is(:hover, .active)::before {
     background:
             linear-gradient(180deg, #ffffff66, #0000001a, #ffffff33), #4580c4 !important;
     border-radius: 6px !important;
@@ -58,8 +59,12 @@ body.activity-stream {
     z-index: -1 !important
 
 }
+.top-site-outer.active{
+    position: relative !important;
+}
 
-.top-site-outer:hover:after {
+
+.top-site-outer:is(:hover, .active)::after {
     -webkit-backdrop-filter: blur(4px) !important;
     backdrop-filter: blur(4px) !important;
     border: 1px solid #fffc !important;
@@ -70,17 +75,21 @@ body.activity-stream {
     position: absolute !important;
     top: -5px !important;
     width: 109% !important;
-    z-index: -10 !important;
+    z-index: -2 !important;
     background: linear-gradient(135deg, #fff5 70px, transparent 100px), linear-gradient(225deg, #fff5 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%,
     #0002 41% 41.5%, #bbb2 44% 45%, #bbb2 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #0002 56% 56.5%, #bbb2 57% 63%, #0002 67% 69%, #bbb2 69.5% 70%, #0002 73.5% 74%, #bbb2 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #bbb1 90%) ;
+
 }
 
 
-.top-site-inner .top-site-button .tile {
+.top-site-inner  {
+    z-index: 0;
+}
+.top-site-inner .top-site-button .tile{
     opacity: 0.75;
-    z-index: 10;
+
 }
-.top-site-outer:hover .top-site-inner .top-site-button .tile{
+.top-site-outer:is(:hover, .active) .top-site-inner .top-site-button .tile{
     opacity: 1;
 }
 .top-site-inner:after {
@@ -92,7 +101,7 @@ body.activity-stream {
     position: absolute !important;
     top: 0 !important;
     width: 100% !important;
-    z-index: 2 !important;
+    z-index: -1 !important;
     box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, .7), inset 0 0 0 1px #fffa !important;
     /*interior background, it's fine*/
     background:linear-gradient(135deg, #fff5 70px, transparent 100px),
@@ -101,6 +110,7 @@ body.activity-stream {
             #0002 48% 49%, #0002 50% 50.5%, #0002 56% 56.5%, #bbb2 57% 63%, #0002 67% 69%, #bbb2 69.5% 70%, #0002 73.5% 74%, #bbb2 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #bbb1 90%) 0/100vw 100vh no-repeat fixed;
 }
 
+
 .top-site-outer:hover .top-site-inner:after {
     background: none !important;
     border: none !important;
@@ -108,13 +118,6 @@ body.activity-stream {
 }
 
 
-.top-site-outer:is(.active, :focus) {
-    background-color: transparent !important;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6) 0px, transparent 0px),
-    linear-gradient(to left, rgba(255, 255, 255, 0.6) 0px, transparent 0px),
-    linear-gradient(to top, rgba(255, 255, 255, 0.5) 0px, transparent 0px),
-    linear-gradient(to bottom, rgba(163, 196, 247, 0.4), rgba(122, 180, 246, 0.4)) !important;
-}
 
 
 .top-site-icon.rich-icon {
@@ -167,20 +170,17 @@ body.activity-stream {
     color: initial !important;
     min-width: 150px !important;
     padding: 2px !important;
-    z-index: 100 !important;
-    position: relative;
+    z-index: 3 !important;
+    position: absolute !important;
 }
 
-.top-site-outer.active .context-menu {
-    z-index: 100 !important;
-    position: absolute;
-
+.top-site-outer.active, .top-site-outer.active .top-site-inner{
+    z-index: 10 !important;
 }
 
 .top-site-inner .context-menu .context-menu-item {
     font: 9pt Segoe UI, SegoeUI, Noto Sans, sans-serif !important;
     color: #000 !important;
-    z-index: 100 !important;
     position: relative;
 
 }
@@ -189,10 +189,11 @@ body.activity-stream {
     background: linear-gradient(180deg, #fff9, #e6ecf5cc 90%, #fffc) !important;
     outline: 1px solid #b8d6fb !important;
     border-radius: 3px !important;
-    z-index: 100 !important;
-    position: relative;
+    z-index: 3!important;
 }
-
+.top-site-outer.active .top-site-inner::after{
+    display: none !important;
+}
 @media (min-width: 866px) {
     .activity-stream main {
         /*width: 986px !important;*/

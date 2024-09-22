@@ -187,6 +187,7 @@ html.private body {
     left: 2px !important;
     position: absolute !important;
     top: 5px !important;
+    transform: scale(0.8);
 }
 
 #dialogGrid #titleText {

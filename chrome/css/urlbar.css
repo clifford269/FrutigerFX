@@ -24,10 +24,7 @@ treechildren::-moz-tree-image(title), .urlbarView-favicon[src="chrome://global/s
 #urlbar-results :is(.urlbarView-tags, .urlbarView-action, .urlbarView-title) {
     font-size: var(--results_font_size);
 }
-.urlbarView-title{
-background: rgba(255, 255, 255, 0.22);
-    backdrop-filter: blur(4px);
-}
+
 
 .urlbarView-url, .urlbarView-action {
     font-size: 8pt !important;
@@ -35,7 +32,7 @@ background: rgba(255, 255, 255, 0.22);
 #urlbar #urlbar-results {
     padding: 0px !important;
     margin: 0px !important;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(135, 206, 235, 0.2);
 }
 
 :is(#urlbar,.megabar) .urlbarView-row[label] {
@@ -116,22 +113,14 @@ background: rgba(255, 255, 255, 0.22);
     box-shadow: 0 0 2px 0 #f2f2f2, inset 0 0 0 1px #fffc !important
 
 }
-#unified-extensions-view {
-    background: rgba(255, 212, 41, 0.2) !important;
-}
 
-#downloadsPanel-mainView{
-    background: rgba(10, 250, 255, 0.53) !important;
-
-}
 .urlbarView{
     position: relative !important;
     z-index: 0 !important;
-    backdrop-filter: blur(4px) contrast(150%);
-    background: transparent !important;
     border-bottom-left-radius: 10px !important;
     border-bottom-right-radius: 10px !important;
-
+    border-top: 1px solid #8e8f8f !important;
+    background: #fff !important;
 }
 
 #urlbar[breakout][breakout-extend]::after{
@@ -267,21 +256,24 @@ background: rgba(255, 255, 255, 0.22);
     box-shadow: var(--btn-box-shadow);
     color: #222 !important;
     border: var(--btn-border) !important;
+    margin-top:0 !important;
+    margin-bottom:0 !important;
+    margin-right:1px !important;
 }
 
 #urlbar-zoom-button:before {
     content: "" !important;
     display: inline-block !important;
-    width: 16px !important;
-    height: 16px !important;
-    background-image: url('images/search.png') !important;
+    width: 14px !important;
+    height: 14px !important;
+    background-image: url('../images/search.png') !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
     margin-right: 5px !important;
     margin-left: -4px !important;
 
 }
-#urlbar-search-mode-indicator:hover, .dialog-button-box button:hover, popupnotification button:hover, .edit-topsites button:hover {
+.findbar-closebutton:hover, .findbar-find-previous:hover, .findbar-find-next:hover, #urlbar-search-mode-indicator:hover, .dialog-button-box button:hover, popupnotification button:hover, .edit-topsites button:hover {
     background: var(--btn-hover) !important;
     border-radius: 3px !important;
     box-shadow: inset 0 0 0 1px #fffc !important;
@@ -290,7 +282,7 @@ background: rgba(255, 255, 255, 0.22);
 
 }
 
-#urlbar-search-mode-indicator:active, .dialog-button-box button:active, popupnotification button:active, .edit-topsites button:active {
+.findbar-closebutton:active, .findbar-find-previous:active, .findbar-find-next:active, #urlbar-search-mode-indicator:active, .dialog-button-box button:active, popupnotification button:active, .edit-topsites button:active {
     background: var(--btn-active) !important;
     border-radius: 2px !important;
     box-shadow: var(--btn-active-box-shadow) !important;

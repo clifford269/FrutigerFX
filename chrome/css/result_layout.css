@@ -139,5 +139,6 @@
 }
 
 .urlbarView-row  {
-  border-bottom: 1px solid rgba(0,0,0, 0.6) !important;
+  border: 1px solid rgba(0,0,0,0) !important;
+  border-bottom: 1px solid #777 !important;
 }
