@@ -1,5 +1,51 @@
 @import "buttons/custom_backforward_large.css";
+treechildren::-moz-tree-image(title, container),
+treechildren::-moz-tree-image(title, query, hostContainer) {
+    list-style-image: url("../images/folder-item.png") !important;
+}
+treechildren::-moz-tree-image(title, container, query) {
+    list-style-image: url("../images/query.png") !important;
+}
+treechildren::-moz-tree-image(title, query, tagContainer),
+treechildren::-moz-tree-image(query, OrganizerQuery_tags_______v) {
+    list-style-image: url("../images/tag.png") !important;
+}
+treechildren::-moz-tree-image(title, query, hostContainer) {
+    list-style-image: url("../images/folder-item.png") !important;
+}
 
+#bookmarksToolbarFolderMenu > .menu-iconic-left > .menu-iconic-icon,
+treechildren::-moz-tree-image(container, queryFolder_toolbar_____) {
+    list-style-image: url("../images/bookmarksToolbar.png") !important;
+}
+
+treechildren::-moz-tree-image(container, OrganizerQuery_BookmarksMenu),
+treechildren::-moz-tree-image(container, queryFolder_menu________) {
+    list-style-image: url("../images/bookmarksMenu.png") !important;
+}
+
+treechildren::-moz-tree-image(container, OrganizerQuery_UnfiledBookmarks),
+treechildren::-moz-tree-image(container, queryFolder_unfiled_____) {
+    list-style-image: url("../images/unsortedBookmarks.png") !important;
+}
+treechildren::-moz-tree-image(query, OrganizerQuery_downloads__v) {
+    list-style-image: url("../images/downloads.png") !important;
+}
+.textbox-search-sign {
+    width: 16px !important;
+    height: 16px !important;
+    list-style-image: none !important;
+    background-image: url("../images/search.png") !important;
+    order: 1001 !important;
+    margin-inline-end: 1px !important;
+    margin-top: 1px !important;
+    background-size: contain !important;
+
+}
+treechildren::-moz-tree-image(query, OrganizerQuery_history____v),
+treechildren::-moz-tree-image(title, query, dayContainer) {
+    list-style-image: url("../images/calendar.png") !important;
+}
 #urlbar[pageproxystate="valid"] #tracking-protection-icon-container:not([hidden]) ~ #identity-box:is(.verifiedDomain,.verifiedIdentity) #identity-icon,
 #urlbar[pageproxystate="valid"] :is(.verifiedDomain,.verifiedIdentity) #connection-icon {
     list-style-image: url(../images/padlock_classic.png) !important;
@@ -24,14 +70,14 @@
 #main-window[uidensity=compact] #navigator-toolbox #nav-bar #back-button .toolbarbutton-icon,
 #main-window[uidensity=touch] #navigator-toolbox #nav-bar #back-button .toolbarbutton-icon,
 #main-window #navigator-toolbox #nav-bar #back-button .toolbarbutton-icon {
-    list-style-image: url("../images/bf_ie8_b.png") !important;
+    list-style-image: url("../images/back.png") !important;
 }
 
 #main-window:not([uidensity=compact]):not([uidensity=touch]) #navigator-toolbox #nav-bar #forward-button .toolbarbutton-icon,
 #main-window[uidensity=compact] #navigator-toolbox #nav-bar #forward-button .toolbarbutton-icon,
 #main-window[uidensity=touch] #navigator-toolbox #nav-bar #forward-button .toolbarbutton-icon,
 #main-window #navigator-toolbox #nav-bar #forward-button .toolbarbutton-icon {
-    list-style-image: url("../images/bf_ie8_f.png") !important;
+    list-style-image: url("../images/forward.png") !important;
 }
 #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .ac-type-icon[type=bookmark],
 .urlbarView-row[type=bookmark] > .urlbarView-row-inner > .urlbarView-type-icon,
@@ -56,11 +102,11 @@
 }
 
 #back-button {
-    list-style-image: url("../images/back.png") !important;
+    list-style-image: url("../images/back_sm.png") !important;
 }
 
 #forward-button {
-    list-style-image: url("../images/forward.png") !important;
+    list-style-image: url("../images/forward_sm.png") !important;
 }
 
 #home-button {

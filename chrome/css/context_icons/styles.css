@@ -1,8 +1,6 @@
 @import "icons.css";
 
 @-moz-document	url("chrome://browser/content/browser.xhtml"),
-		url("chrome://browser/content/places/places.xhtml"),
-		url("chrome://browser/content/places/historySidebar.xhtml"),
 		url("chrome://browser/content/places/bookmarksSidebar.xhtml"),
 		url("chrome://browser/content/syncedtabs/sidebar.xhtml") {
 

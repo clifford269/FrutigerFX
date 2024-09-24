@@ -1,6 +1,9 @@
 
 @-moz-document url(about:preferences),url-prefix(about:preferences),url(about:settings),url-prefix(about:settings) {
+:root{
+	background-image: linear-gradient(to bottom, rgb(231, 237, 246) 3px, rgba(231, 237, 246, 0) 156px), linear-gradient(to left, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.2)), linear-gradient(32deg, rgba(255, 255, 255, 0) 19.5%, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.1) 21.5%, rgba(255, 255, 255, 0.2) 22%, rgba(255, 255, 255, 0.2) 25.5%, rgba(255, 255, 255, 0.1) 26%, rgba(255, 255, 255, 0.1) 27.5%, rgba(255, 255, 255, 0) 28%, rgba(255, 255, 255, 0) 49.5%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 52.5%, rgba(255, 255, 255, 0.2) 53%, rgba(255, 255, 255, 0.2) 54.5%, rgba(255, 255, 255, 0.1) 55%, rgba(255, 255, 255, 0.1) 57.5%, rgba(255, 255, 255, 0) 58%, rgba(255, 255, 255, 0) 87%, rgba(255, 255, 255, 0.2) 90%), url("chrome://userchrome/content/pages/preferences/images/background-texture.png") !important;
 
+}
 	.category {
 	  margin-inline-start: 0px !important;
 	  padding-inline-end: 0px !important;
@@ -20,7 +23,7 @@
 
 		.groupbox-body,
 		#dialogFrame{
-		  background-color: white !important;
+		  background-color: transparent !important;
 		}
 		
 		#policies-container {
@@ -32,7 +35,7 @@
 		}
 		
 		.main-content {
-		  background-color: white !important;
+		  background-color: transparent !important;
 		}
 
 	}
@@ -272,20 +275,7 @@
   outline: unset !important;
 }
 
-@media (-moz-toolbar-prefers-color-scheme: dark), (prefers-color-scheme: dark) {
 
-	*[subdialog="true"] > vbox,
-	*[subdialog="true"] > hbox,
-	*[subdialog="true"] .prefWindow-dlgbuttons,
-	*[subdialog="true"] prefpane,
-	*[subdialog="true"] .contentPane,
-	*[subdialog="true"] .dialog-content-box,
-	*[subdialog="true"] .largeDialogContainer{
-	  background-color: var(--in-content-page-background) !important;
-	  color: var(--in-content-page-color) !important;
-	}
-
-}
 
 *[subdialog="true"] textbox {
   min-height: 24px !important;
@@ -314,9 +304,9 @@
 window > stack > hbox,
 #preferences-stack,
 page, page .dialogBox .groupbox-title {
-	background: #edf6ff !important;
+	background: transparent!important;
 }
 
 .pane-container {
-	background: #ffffff !important;
+	background: transparent !important;
 }

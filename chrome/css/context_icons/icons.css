@@ -1,70 +1,7 @@
-/********************************************************************************
- * Menu Icon Plus CSS v2.9.1 (MIP/CSS)
- * Add Icons To Firefox Menus/Context-Menus
- *
- * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
- *   Project Homepage https://github.com/B00ze64/FF-Menu-Icon-Plus-CSS
- *   Released under Creative Commons Attribution 4.0 License.
- *   https://creativecommons.org/licenses/by/4.0/
- *
- * - The Original MIP Firefox Extension (c) Justin Rodes http://www.codedawn.com/menu-icons-plus.php
- * - MOST OF THE PANELS CODE (c) Black7375 (https://github.com/black7375/Firefox-UI-Fix)
- *
- * + The icons come from ->
- *
- * - Crystal Project	http://www.everaldo.com/
- *			https://commons.wikimedia.org/wiki/Category:Crystal_Project
- *			LGPL
- *
- * - Fugue Icons	http://p.yusukekamiyamane.com/
- *			by Yusuke Kamiyamane,
- *			Creative Commons Attribution 3.0 License.
- *
- * - Oxygen Icons	http://www.oxygen-icons.org/ [use Wayback Machine]
- *			https://github.com/pasnox/oxygen-icons-png
- *			https://techbase.kde.org/Projects/Oxygen/Licensing
- *
- * - Silk Icons		http://www.famfamfam.com/
- *			Mark James, Birmingham (UK),
- *			Creative Commons Attribution 2.5 License.
- *
- * - Tango Icons	http://tango-project.org/
- *			Public Domain
- *
- * + Contributors ->
- *
- *	Aris-t2 (https://github.com/Aris-t2) Figured out how to add icons to the Firefox menus
- *	Acid-Crash Discovered bug with the Responsive Design SVG icon and suggested the fix for it
- *	Devtools/Help Menu SVG icons and Panels code by Black7375 (https://github.com/black7375/Firefox-UI-Fix)
- *
- * + NOTES:
- * - TabSize=8
- *
- */
-
-/********************************************************************************
- * STANDARD MENUS: CRYSTAL PROJECT
- ********************************************************************************
- *
- * This is the main skinning file for the Firefox menus. This one uses icons
- * from the Crystal Project when they are available - missing icons are taken
- * from the other themes.
- *
- */
-
 @-moz-document	url("chrome://browser/content/browser.xhtml"),
-		url("chrome://browser/content/places/places.xhtml"),
-		url("chrome://browser/content/places/historySidebar.xhtml"),
 		url("chrome://browser/content/places/bookmarksSidebar.xhtml"),
 		url("chrome://browser/content/syncedtabs/sidebar.xhtml") {
 
-/********************************************************************************
- *
- * FILE MENU
- *
- ********************************************************************************/
-
-/* New Window (Open In) *********************************************************/
 
 #menu_newNavigator::Before,
 #context-openlink::Before,

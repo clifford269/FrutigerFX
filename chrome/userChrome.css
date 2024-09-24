@@ -27,6 +27,7 @@
 @import "css/close_icon.css";
 @import "css/navbar_separator.css";
 @import "css/context_icons/styles.css";
+@import "css/library.css";
 /*Misc*/
 :root {
     --focus-outline: none !important;
@@ -66,7 +67,7 @@
 #editBookmarkSeparator,
 #editBookmarkHeaderSeparator, #PanelUI-button #whats-new-menu-button, #firefox-view-button,  #PopupSearchAutoComplete .search-one-offs,
 #PopupSearchAutoComplete .search-panel-header, #reader-mode-button, #unified-extensions-view > .panel-header, #identity-permission-box,
-#tracking-protection-icon-container, #blocked-permissions-container, :root[inFullscreen="true"] #statuspanel, #PlacesToolbarItems > toolbarseparator, #unified-extensions-view > toolbarseparator
+#tracking-protection-icon-container, #blocked-permissions-container, :root[inFullscreen="true"] #statuspanel,  #unified-extensions-view > toolbarseparator
 {
     display: none !important;
 }
@@ -98,7 +99,9 @@
 .unified-extensions-item-menu-button.subviewbutton:hover, .unified-extensions-item-menu-button:hover, .unified-extensions-item-menu-button.subviewbutton {
     background: transparent !important;
 }
-
+ .unified-extensions-item:hover{
+    cursor: pointer !important;
+}
 #identity-box *:hover, .identity-box-button[open="true"], .unified-extensions-item-menu-button.subviewbutton:hover > .toolbarbutton-icon {
     background: unset !important;
 }
@@ -136,12 +139,15 @@ toolbarbutton.bookmark-item:not(.subviewbutton){
     margin-bottom: 2px !important;
     padding-left:10px !important;
 }
+#PersonalToolbar{
+    transform: translateY(-2px) !important;
+}
 panel {
     padding-block: 0 !important;
     margin-top: 5px !important;
 }
 
-#downloadsPanel-mainView, .unified-extensions-item-menu-button, .unified-extensions-item-menu-button > image, unified-extensions-item-action-button {
+.unified-extensions-item-menu-button, .unified-extensions-item-menu-button > image, unified-extensions-item-action-button {
     padding: 0 !important;
 }
 
@@ -172,10 +178,13 @@ panel {
 
 
 
-#downloadsHistory > hbox, #unified-extensions-manage-extensions > label {
+ #unified-extensions-manage-extensions > label {
     color: #333 !important;
 }
+#downloadsHistory > hbox{
+    color: #555 !important;
 
+}
 
 
 #alltabs-button{
@@ -225,7 +234,7 @@ panel {
 
 /*----------------------*/
 .unified-extensions-item-contents {
-    border-bottom: 1px solid lightgreen;
+    border-bottom: 1px solid green;
     padding-bottom: 10px;
 }
 
@@ -296,7 +305,10 @@ panel {
     width: 30px !important;
 }
 
-
+#unified-extensions-button{
+    padding-top:1px !important;
+    padding-bottom:1px !important;
+}
 
 #unified-extensions-button image {
     height: 32px !important;
@@ -397,10 +409,16 @@ panel {
 #unified-extensions-view{
     position: relative !important;
     border-radius: 3px !important;
+    padding:5px !important;
+    box-shadow: inset 0 0 0 1px  #8e8f8f, inset 0 0 0 2px rgba(255, 255, 0, 0.5) !important;
 }
-#unified-extensions-manage-extensions, #downloadsHistory{
+   #downloadsHistory{
+       box-shadow: var(--btn-box-shadow), inset 0 8px 4px rgba(255, 255, 255, 0.3), inset 0 -4px 4px rgba(255, 255, 255, 0.4) !important;
+       border: var(--btn-border) !important;
+    background: linear-gradient(rgba(135, 206, 235, 1), rgba(0, 191, 255, 0.7)) !important;
+}
+#unified-extensions-manage-extensions{
     border: var(--btn-border) !important;
-    background: linear-gradient(rgba(234, 240, 248, 0.45) 45%, rgba(255, 255, 255, 0.3) 0%, rgba(178, 213, 238, 0.4)) !important;
 }
 #dialogGrid #titleText {
     font-size: 1.24rem !important;
@@ -426,12 +444,14 @@ background-color:transparent !important;
     background: rgba(255, 255, 255, 0.3);
 }
 #unified-extensions-view {
-    background: rgba(255, 212, 41, 0.2) !important;
+    background: rgba(255, 212, 41, 0.15) !important;
 }
 
 #downloadsPanel-mainView{
-    background: rgba(16, 199, 255, 0.53) !important;
-
+    background: rgba(16, 199, 255, 0.2) !important;
+}
+#downloadsPanel-mainView #downloadsListBox{
+    background: transparent !important;
 }
 .findbar-find-previous{
     list-style-image: url("images/arrow-up.png") !important;

@@ -57,8 +57,8 @@ treechildren::-moz-tree-image(title), .urlbarView-favicon[src="chrome://global/s
 
 #urlbar[breakout] .urlbarView-row-inner {
     border-radius: 4px !important;
+    transform: translateX(3px) !important;
 }
-
 #urlbar[breakout],
 #urlbar[breakout] * {
     animation: unset !important;
@@ -192,8 +192,18 @@ treechildren::-moz-tree-image(title), .urlbarView-favicon[src="chrome://global/s
     opacity: 0.8 !important;
     color: #555 !important;
 }
- .unified-extensions-item, #downloadsListBox {
+ .unified-extensions-item{
     color: rgb(51, 122, 208) !important;
+}
+#downloadsListBox .download-state{
+    color: rgb(51, 122, 208) !important;
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+}
+.unified-extensions-item-name{
+    font-weight: 600 !important;
+    font-size: 1.2rem !important;
+
 }
 #urlbar[usertyping="true"] #urlbar-input{
     color: #000 !important;

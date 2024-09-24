@@ -29,11 +29,11 @@
 }
 
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab .tab-content {
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.18) 50%, rgba(255, 255, 255, 0.1) 0%, rgba(207, 207, 207, 0.06));
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.2) 0%, rgba(207, 207, 207, 0.12));
     box-shadow: 0 2px 4px 0px #fffc inset, 0 0 0 1px  #fffc inset;
-    background-color: rgba(95,139,195, 0.5);
+    background-color: rgba(91, 164, 235, 0.5);
     border: 1px solid #444;
-    color: rgb(0, 255, 0);
+    color: lawngreen;
     padding-left: 12px !important;
     padding-right: 10px !important;
     border-bottom: transparent;

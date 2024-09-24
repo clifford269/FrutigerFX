@@ -42,6 +42,7 @@ menupopup[type=arrow] > menu {
 
 .panel-subview-body {
     padding: 0px !important;
+    margin-bottom:10px !important;
 }
 
 * menupopup[type=arrow],
@@ -126,6 +127,7 @@ menupopup[type=arrow] > menu {
 #unified-extensions-panel .unified-extensions-item {
     padding-block: 0 !important;
     padding: 0 !important;
+    padding-right:5px !important;
 }
 
 .unified-extensions-item-name,
