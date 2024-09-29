@@ -86,13 +86,6 @@
   background-color: #ECECEC !important;
 }
 
-:root:not([echelon-style-4]) #customization-titlebar-visibility-checkbox {
-  display: none !important;
-}
-
-#customization-titlebar-visibility-checkbox .checkbox-check {
-  display: none !important;
-}
 
 #customization-titlebar-visibility-checkbox .checkbox-icon {
   width: 24px !important;

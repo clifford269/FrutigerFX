@@ -102,7 +102,7 @@
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[selected] .tab-content {
     background-image: linear-gradient(rgba(234, 240, 248, 0.45) 45%, rgba(255, 255, 255, 0.3) 0%, rgba(178, 213, 238, 0.4));
     box-shadow: 0 -2px 5px 0px rgba(255, 255, 255, 0.6) inset, inset 0 1px 2px 0px rgba(255,255,255, 0.64),
-    0 3px 6px 0px rgba(84, 220, 80, 0.8) inset, 0 0 0 1px  #fffc inset;
+    0 2px 6px 0px rgba(84, 220, 80, 0.8) inset, 0 0 0 1px  #fffc inset;
     color: white;
     backdrop-filter: blur(4px) !important;
     border: 1px solid #444;

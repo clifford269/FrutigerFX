@@ -103,8 +103,7 @@
 
 #identity-box.verifiedDomain[pageproxystate="invalid"] {
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.50) 45%, rgba(255, 255, 255, 0.40) 0%, rgba(207, 207, 207, 0.1)) !important;
-    box-shadow: 0 0 2px 0 #f2f2f2, inset 0 0 0 1px #0001 !important
-
+    box-shadow: inset 0 0 2px 0 #f2f2f2, inset 0 0 0 1px #fffc !important
 }
 
 
@@ -112,7 +111,8 @@
 #urlbar[pageproxystate="valid"] :is(.chromeUI,.extensionPage),
 #urlbar[pageproxystate="invalid"] .chromeUI {
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.60) 45%, rgba(255, 255, 255, 0.50) 0%, rgba(207, 207, 207, 0.2)) !important;
-    box-shadow: inset 1px 1px 0 #0003, inset -1px 1px 0 #0001 !important;
+    /*box-shadow: inset 1px 1px 0 #0003, inset -1px 1px 0 #0001 !important;*/
+    box-shadow: inset 0 0 2px 0 #f2f2f2, inset 0 0 0 1px #fffc !important;
     color: rgba(0, 153, 255, 0.85) !important;
     border-inline-end: 1px solid #bebebe !important;
     border-image: unset !important;
