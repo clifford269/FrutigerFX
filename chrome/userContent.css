@@ -2,12 +2,10 @@
 @import "./css/prefs_page.css";
 /*@import "css/preferences.css";*/
 
-@import "./css/addons_page.css";
 @import "./css/logins_page.css";
 @import "./css/addons_page.css";
 @import "./css/config_page.css";
 @import "./css/newtab_page.css";
-
 :root {
     --btn-bg: linear-gradient(180deg, #f2f2f2 45%, #ebebeb 0, #cfcfcf) !important;
     --btn-hover: linear-gradient(180deg, #eaf6fd 45%, #bee6fd 0, #a7d9f5) !important;
@@ -203,8 +201,6 @@ html.private body {
 }
 
 menulist {
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
     appearance: none !important;
     background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzMzMztzdG9wLW9wYWNpdHk6MSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2FhYTtzdG9wLW9wYWNpdHk6MSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGQ9Ik0xMSA2SDR2MWgxdjFoMXYxaDF2MWgxVjloMVY4aDFWN2gxVjZaIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+"), linear-gradient(180deg, #f2f2f2 45%, #ebebeb 0, #cfcfcf) !important;
     background-position: 100% !important;
@@ -219,7 +215,7 @@ menulist {
     position: relative !important
 }
 
-menulist:after {
+menulist::after {
     background: linear-gradient(180deg, #f2f2f2 45%, #ebebeb 0, #cfcfcf) !important;
     border: transparent;
     box-sizing: border-box;
@@ -232,7 +228,20 @@ menulist:after {
     right: 25px;
     top: 0;
 }
+#scaleSelect{
 
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzMzMztzdG9wLW9wYWNpdHk6MSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2FhYTtzdG9wLW9wYWNpdHk6MSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGQ9Ik0xMSA2SDR2MWgxdjFoMXYxaDF2MWgxVjloMVY4aDFWN2gxVjZaIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+"), linear-gradient(180deg, #f2f2f2 45%, #ebebeb 0, #cfcfcf) !important;
+    background-position: 100% !important;
+    background-repeat: no-repeat !important;
+    border: var(--btn-border) !important;
+    border-radius: 3px !important;
+    box-shadow: var(--btn-box-shadow) !important;
+    box-sizing: border-box !important;
+    color: #222 !important;
+    font: 9pt Segoe UI, SegoeUI, Noto Sans, sans-serif !important;
+    padding: 2px 30px 2px 3px !important;
+    position: relative !important
+}
 /*select:not([multiple]):hover {*/
     /*background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzMzMztzdG9wLW9wYWNpdHk6MSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2FhYTtzdG9wLW9wYWNpdHk6MSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGQ9Ik0xMSA2SDR2MWgxdjFoMXYxaDF2MWgxVjloMVY4aDFWN2gxVjZaIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+"), linear-gradient(180deg, #eaf6fd 45%, #bee6fd 0, #a7d9f5);*/
     /*border-color: #3c7fb1*/
@@ -379,7 +388,11 @@ menulist:after {
     background: linear-gradient(180deg, #e5f4fc, #c4e5f6 30% 50%, #98d1ef 50%, #68b3db) !important;
     color: #555 !important;
 }
+#preferences-stack richlistitem:hover{
+    background: linear-gradient(#cbdcec 40%, #a2cfec) !important;
+    box-shadow: inset 0 0 0 1px #fffc, inset 0 -6px 10px #fff !important;
 
+}
 #preferences-stack richlistitem {
     min-width: 36px !important;
     margin-top: 4px !important;
@@ -390,6 +403,8 @@ menulist:after {
 
 .sidebar-footer-icon {
     list-style-image: url("images/addons.png") !important;
+    width: 22px !important;
+    height: 22px !important;
 }
 
 .category[name="extension"] {
@@ -404,6 +419,8 @@ menulist:after {
 #categories > .category[selected]:not(:hover), #categories .category[selected] {
     background: linear-gradient(180deg, #e5f4fc, #c4e5f6 30% 50%, #98d1ef 50%, #68b3db) !important;
     color: #666 !important;
+    box-shadow: inset 0 0 0 1px #fffc !important;
+
 }
 
 #categories .category:not([selected]):hover {
@@ -485,9 +502,25 @@ menulist:after {
 }
 
 #preferencesButton .sidebar-footer-icon[src="chrome://global/skin/icons/settings.svg"] {
-    display: none !important;
+   opacity: 0 !important;
+    position: relative !important;
 }
+#preferencesButton{
+    position: relative !important;
 
+}
+#preferencesButton::before{
+    content: "" !important;
+    display: inline-block !important;
+    position: absolute;
+    left: 10px;
+    width: 32px !important;
+    height: 20px !important;
+    bottom:6px !important;
+    background-image: url('images/preferences.png') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
 #moz-toggle-button {
     border-radius: 3px !important;
     background-color: #0bd82c !important;
@@ -496,7 +529,9 @@ menulist:after {
     height: 100% !important;
     overflow: hidden !important;
 }
-
+#moz-toggle-button[aria-pressed="false"]{
+    background-color: transparent !important;
+}
 .toggle-button[aria-pressed="true"]::before {
     border-radius: 2px !important;
     background: var(--btn-active) !important;
@@ -517,7 +552,7 @@ menulist:after {
     list-style-image: unset !important;
     background: url("images/search.png") no-repeat !important;
     background-position: center !important;
-    background-size: cover !important;
+    background-size: contain !important;
     width: 20px !important;
     margin-inline-end: 2px !important;
 }
@@ -556,7 +591,27 @@ search-textbox {
     background-image: url('images/addons.png') !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
-    /*margin-right: 10px !important;*/
+}
+#categories .category[name="theme"][selected]:before {
+    content: "" !important;
+    display: inline-block !important;
+    position: absolute;
+    left: 10px;
+    width: 20px !important;
+    height: 20px !important;
+    background-image: url('images/theme.png') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}#categories .category[name="plugin"][selected]:before {
+    content: "" !important;
+    display: inline-block !important;
+    position: absolute;
+    left: 10px;
+    width: 20px !important;
+    height: 20px !important;
+    background-image: url('images/plugins.png') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
 }
 h1[data-l10n-id="profiles-title"]{
     font-size: 20pt !important;
@@ -576,3 +631,22 @@ h3[data-l10n-id="profiles-restart-title"]{
 #profiles tr th{
 background-color: #009dff !important
 }
+#toolbarViewer{
+    color: #fff !important;
+    background-image: linear-gradient(180deg, rgba(255,255, 255, 0.1) 45%, rgba(10, 83, 118, 0.7) 0%, #0f5975),
+    linear-gradient(to left, rgba(111, 169, 177, 0.75), rgba(84, 141, 167, 0.76));
+    box-shadow:   inset 0 -4px 6px 0 #8bbec4, inset 0 -2px 0 #8bbec4 !important;
+    background-color:  #548da7 !important;
+}
+#toolbarViewer #sidebarToggle{
+    background: url("images/sidebar.png")!important;
+background-repeat: none !important;
+    background-size: contain !important;
+    width: 20px !important;
+    height: 20px !important;
+   transform: translateY(4px) translateX(2px);
+}
+#sidebarToggle::before{
+    display: none !important;
+}
+.radio-check, input[type="radio"]{appearance: auto !important}

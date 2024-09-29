@@ -62,9 +62,7 @@ notification {
     padding-inline-end: 4px !important;
 }
 
-#urlbar[breakout] .urlbarView-row {
-    padding-block: 0px !important;
-}
+
 
 #urlbar[breakout] .search-one-offs {
     padding-top: 0px !important;

@@ -6,7 +6,7 @@ url-prefix(chrome://mozapps/content/extensions/aboutaddons.xhtml) {
         --in-content-category-text-hover: HighlightText !important;
         --in-content-category-background-hover: Highlight !important;
         --in-content-category-text-selected: black !important;
-        --in-content-category-background-selected: white !important;
+        --in-content-category-background-selected:  linear-gradient(blue, white) !important;
         --section-width: unset !important;
         --main-margin-start: unset !important;
         --in-content-page-background: linear-gradient(to bottom right, #f5f5f5, -moz-Dialog, #f5f5f5, -moz-Dialog) !important;
@@ -25,20 +25,26 @@ url-prefix(chrome://mozapps/content/extensions/aboutaddons.xhtml) {
     recommended-extensions-section {
         display: none !important;
     }
-
+    .back-button{
+        margin-left:5px !important;
+        padding:4px !important;
+        background-image: url("../images/back_sm.png") !important;
+        background-color: transparent !important;
+        background-repeat: no-repeat !important;
+    }
     #categories .category:hover {
-        color: var(--in-content-category-text-hover) !important;
-        background-color: var(--in-content-category-background-hover) !important;
+        background-color: linear-gradient(#cbdcec 40%, #a2cfec)  !important;
+        box-shadow: inset 0 0 0 1px #fffc !important;
+        box-shadow: inset 0 0 0 1px #fffc !important;
+
     }
 
-    #categories .category[selected],
-    #categories .category.selected,
-    #categories .category[selected]:hover,
-    #categories .category.selected:hover,
-    #categories .category[selected]:hover:active,
-    #categories .category.selected:hover:active {
-        color: var(--in-content-category-text-selected) !important;
-        background-color: var(--in-content-category-background-selected) !important;
+    #categories .category[selected]{
+        border:1px solid #8e8f8f !important;
+        border-right-color: transparent !important;
+
+        box-shadow: inset 0 0 0 1px #fffc !important;
+
     }
 
     .category {
@@ -126,7 +132,7 @@ url-prefix(chrome://mozapps/content/extensions/aboutaddons.xhtml) {
         margin-bottom: unset !important;
         margin-inline-start: unset !important;
         min-width: 100% !important;
-        margin-top: -26px !important;
+        /*margin-top: -26px !important;*/
     }
 
     #heading .header-name,
@@ -196,7 +202,7 @@ url-prefix(chrome://mozapps/content/extensions/aboutaddons.xhtml) {
     }
 
     .message-bar {
-        background-color: white !important;
+        background-color: transparent !important;
     }
 
     .addon {
@@ -257,82 +263,46 @@ url-prefix(chrome://mozapps/content/extensions/aboutaddons.xhtml) {
         box-shadow: unset !important;
         border: 0 !important;
         border-radius: 0 !important;
-        background: linear-gradient(to bottom right, #f5f5f5, -moz-Dialog, #f5f5f5, -moz-Dialog) !important;
-
     }
 
-    @media (-moz-toolbar-prefers-color-scheme: dark), (prefers-color-scheme: dark) {
-
-        :root {
-            --in-content-page-background: rgb(28, 27, 34) !important;
-        }
-
-        body > div#full {
-            background: rgb(28, 27, 34) !important;
-        }
-
-    }
 
     .addon.card {
         box-shadow: unset !important;
-        margin-bottom: 1px !important;
-        border-radius: 0 !important;
+        margin-bottom: 10px !important;
+        margin-left:5px !important;
     }
-
-    addon-card:not([expanded]) > .addon.card {
-        border: 0 !important;
+    .addon-detail-row{
+        border-top-color: skyblue !important;
     }
+    .tab-group{
+        border-bottom-color: transparent !important;
+        border-top-color: transparent !important;
 
+
+    }
+    button.tab-button[selected]{
+        color: #219aeb !important;
+        border-top-color: transparent !important;
+        border-bottom-color: darkblue !important;
+    }
     addon-card:not([expanded="true"]) .addon.card:hover {
-        background: Highlight !important;
+        /*background: Highlight !important;*/
         box-shadow: unset !important;
     }
 
     addon-card:not([expanded="true"]) .addon.card:hover .card-contents :is(div,span,.addon-name-link) {
-        color: HighlightText !important;
+        color: #222 !important;
     }
-
+    .addon-name-link, .addon-name-container h1{
+        font-weight: 500 !important;
+    }
     /* remove headers like 'Enabled'/'Disabled' */
     .list-section-heading {
         display: none !important;
     }
 
-    /* reduce opacity for disabled add-ons */
-    section[section="1"] addon-card:not([expanded]) > .addon.card:not([active="false"]),
-    addon-card:not([expanded]) > .addon.card[active="false"],
-    addon-card:not([expanded])[panelopen] > .addon.card[active="false"],
-    addon-card:not([expanded]) > .addon.card[active="false"]:focus-within,
-    addon-card:not([expanded]) > .addon.card[active="false"]:hover {
-        color: grey !important;
-        transition: unset !important;
-    }
 
-    section[section="1"] addon-card:not([expanded]) > .addon.card[active="true"] {
-        color: inherit !important;
-        opacity: 1.0 !important;
-        transition: unset !important;
-    }
 
-    addon-card[expanded] .addon-name[data-l10n-id="addon-name-disabled"] {
-        color: dimgray !important;
-    }
-
-    @media (-moz-toolbar-prefers-color-scheme: dark), (prefers-color-scheme: dark) {
-        section[section="1"] addon-card:not([expanded]) > .addon.card:not([active="false"]),
-        addon-card:not([expanded]) > .addon.card[active="false"],
-        addon-card:not([expanded])[panelopen] > .addon.card[active="false"],
-        addon-card:not([expanded]) > .addon.card[active="false"]:focus-within,
-        addon-card:not([expanded]) > .addon.card[active="false"]:hover {
-            color: lightgrey !important;
-        }
-
-        addon-card[expanded] .addon-name[data-l10n-id="addon-name-disabled"] {
-            color: lightgrey !important;
-        }
-
-    }
-
-    /* remove advertising other add-ons */
     recommended-themes-section,
     recommended-extensions-section {
         display: none !important;
@@ -355,7 +325,7 @@ url-prefix(chrome://mozapps/content/extensions/aboutaddons.xhtml) {
         margin-inline-start: 0px !important;
     }
     .sticky-container {
-        background: #f9f9fa !important;
+        background: rgb(204,217,234) !important;
         z-index: 1000 !important;
     }
 
@@ -375,15 +345,13 @@ url-prefix(chrome://mozapps/content/extensions/aboutaddons.xhtml) {
 
     .main-search search-textbox {
         min-height: unset !important;
-        width: unset !important;
+        width: 300px !important;
         font-size: 12px !important;
     }
 
     .main-heading .back-button,
     .page-options-menu > .more-options-button {
-        margin: 3px 0.5px 2px 0.5px !important;
         min-width: unset !important;
-        width: 58px !important;
         min-height: unset !important;
         height: 22px !important;
     }
@@ -407,6 +375,8 @@ url-prefix(chrome://mozapps/content/extensions/aboutaddons.xhtml) {
 
     .category {
         margin-inline-end: -4px !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
     }
 
     .sidebar-footer-list {
@@ -423,14 +393,20 @@ url-prefix(chrome://mozapps/content/extensions/aboutaddons.xhtml) {
 
     #preferencesButton:hover,
     #help-button:hover {
-        color: var(--in-content-category-text-hover) !important;
-        background-color: var(--in-content-category-background-hover) !important;
+        color: #333 !important;
+        background: linear-gradient(180deg, #eaf6fd 45%, #bee6fd 0, #a7d9f5) !important;
     }
+    search-textbox[focused]{
+        border:1px solid skyblue !important;
+        outline:1px solid skyblue !important;
 
+    }
     .sidebar-footer-icon {
         fill: unset !important;
     }
-
+    .textbox-search-icon{
+        list-style-image: url("../images/search.png") !important;
+    }
     .addon-badge {
         width: 16px !important;
         height: 16px !important;
@@ -464,8 +440,13 @@ url-prefix(chrome://mozapps/content/extensions/aboutaddons.xhtml) {
     colorways-card .addon.card {
         max-width: unset !important;
         padding-inline-end: 0px !important;
-    }
 
+    }
+    .addon.card {
+        border:1px solid #8e8f8f !important;
+        box-shadow: inset 0 0 0 1px #fffc !important;
+        background: rgba(104, 179, 219, 0.2) !important;
+    }
     colorways-card .card-heading-image {
         max-width: 335px !important;
     }
@@ -493,21 +474,24 @@ url-prefix(chrome://mozapps/content/extensions/aboutaddons.xhtml) {
         overflow-y: auto !important;
     }
 
-    #addons-page {
-        background: linear-gradient(to bottom right, #edf6ff, #dbeaf9, #edf6ff, #dbeaf9) !important;
+    #full {
+        background-image: 	linear-gradient(to bottom, rgb(231, 237, 246) 3px, rgba(231, 237, 246, 0) 156px), linear-gradient(to left, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.2)), linear-gradient(32deg, rgba(255, 255, 255, 0) 19.5%, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.1) 21.5%, rgba(255, 255, 255, 0.2) 22%, rgba(255, 255, 255, 0.2) 25.5%, rgba(255, 255, 255, 0.1) 26%, rgba(255, 255, 255, 0.1) 27.5%, rgba(255, 255, 255, 0) 28%, rgba(255, 255, 255, 0) 49.5%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 52.5%, rgba(255, 255, 255, 0.2) 53%, rgba(255, 255, 255, 0.2) 54.5%, rgba(255, 255, 255, 0.1) 55%, rgba(255, 255, 255, 0.1) 57.5%, rgba(255, 255, 255, 0) 58%, rgba(255, 255, 255, 0) 87%, rgba(255, 255, 255, 0.2) 90%), url("chrome://userchrome/content/pages/preferences/images/background-texture.png") !important;
+        background-color: rgb(204, 217, 234) !important;
     }
 
     :root {
-        --in-content-page-background: #edf6ff !important;
+        --in-content-page-background: transparent !important;
     }
-
-    body > div#full {
-        background: #edf6ff !important;
+    #content{
+        padding-top:3px !important;
     }
 
     .sticky-container {
-        background: #edf6ff !important;
+        background: transparent !important;
+        padding-bottom:20px !important;
     }
 
-
+    addon-list:not([type="theme"]) addon-card:not([expanded]):not([panelopen]) > .addon.card[active="false"]:not(:focus-within):not(:hover){
+        opacity: 1 !important;
+    }
 }

@@ -66,18 +66,30 @@ treechildren::-moz-tree-image(title, query, dayContainer) {
     list-style-image: url(../images/padlock_classic_mab.png) !important;
 }
 
-#main-window:not([uidensity=compact]):not([uidensity=touch]) #navigator-toolbox #nav-bar #back-button .toolbarbutton-icon,
-#main-window[uidensity=compact] #navigator-toolbox #nav-bar #back-button .toolbarbutton-icon,
-#main-window[uidensity=touch] #navigator-toolbox #nav-bar #back-button .toolbarbutton-icon,
-#main-window #navigator-toolbox #nav-bar #back-button .toolbarbutton-icon {
-    list-style-image: url("../images/back.png") !important;
+
+
+#back-button, #forward-button{  position: relative !important;
+    z-index: 0 !important;
+}
+#nav-bar #back-button::before{
+    z-index: -1;
+    content: "" ;
+    display: inline-block ;
+    position: absolute;
+    left: 5px;
+    top:3px;
+    width: 57px ;
+    height: 28px ;
+    background-image: url('../images/frame.png') ;
+    background-size: cover ;
+    background-repeat: no-repeat ;
 }
 
-#main-window:not([uidensity=compact]):not([uidensity=touch]) #navigator-toolbox #nav-bar #forward-button .toolbarbutton-icon,
-#main-window[uidensity=compact] #navigator-toolbox #nav-bar #forward-button .toolbarbutton-icon,
-#main-window[uidensity=touch] #navigator-toolbox #nav-bar #forward-button .toolbarbutton-icon,
-#main-window #navigator-toolbox #nav-bar #forward-button .toolbarbutton-icon {
-    list-style-image: url("../images/forward.png") !important;
+
+#placesToolbar #forward-button:hover, #placesToolbar #back-button:hover{
+    appearance: none !important;
+    background: transparent !important;
+    filter: brightness(1.3);
 }
 #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .ac-type-icon[type=bookmark],
 .urlbarView-row[type=bookmark] > .urlbarView-row-inner > .urlbarView-type-icon,
@@ -88,7 +100,9 @@ treechildren::-moz-tree-image(title, query, dayContainer) {
 .urlbarView .urlbarView-row[type=bookmark] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-type-icon {
     background-image: url("../images/star_button48.png") !important;
 }
-
+.bookmark-item{
+    list-style-image: url("../images/page.png") !important;
+}
 #editBookmarkPanelStarIcon {
     list-style-image: url("../images/star_button48.png") !important;
 }
@@ -102,11 +116,11 @@ treechildren::-moz-tree-image(title, query, dayContainer) {
 }
 
 #back-button {
-    list-style-image: url("../images/back_sm.png") !important;
+    list-style-image: url("../images/back.png") !important;
 }
 
 #forward-button {
-    list-style-image: url("../images/forward_sm.png") !important;
+    list-style-image: url("../images/back.png") !important;
 }
 
 #home-button {
@@ -129,7 +143,7 @@ treechildren::-moz-tree-image(title, query, dayContainer) {
     list-style-image: url("../images/history.png") !important;
 }
 
-#add-ons-button, #unified-extensions-button {
+#add-ons-button, #unified-extensions-button, #identity-box[pageproxystate="valid"].extensionPage #identity-icon {
     list-style-image: url("../images/addons.png") !important;
 }
 

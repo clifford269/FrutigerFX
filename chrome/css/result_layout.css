@@ -26,10 +26,6 @@
   flex-wrap: wrap !important;
 }
 
-.urlbarView-results > .urlbarView-row[type=tabtosearch] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-action {
-  flex-basis: 100% !important;
-  margin-inline-start: var(--urlbarView-second-line-indent) !important;
-}
 
 .urlbarView-results > .urlbarView-row[rich-suggestion] > .urlbarView-row-inner > .urlbarView-row-body > .urlbarView-row-body-top {
   flex-wrap: wrap !important;
@@ -71,7 +67,7 @@
   color: var(--link-color);
 }
 
- 
+
 .urlbarView-row[rich-suggestion] > .urlbarView-row-inner > .urlbarView-favicon {
   width: 16px !important;
   height: 16px !important;
@@ -98,25 +94,9 @@
   flex-wrap: wrap !important;
 }
 
-.urlbarView-row:is([type=search],[type=remotetab],[type=switchtab],[type=autofill_origin]):not([rich-suggestion]) .urlbarView-no-wrap .urlbarView-action  {
-  display: unset !important;
-  flex-wrap: wrap !important;
-  appearance: none !important;
-  background: unset !important;
-  margin-inline-start: var(--urlbarView-second-line-indent) !important;
-}
-
-.urlbarView-row[type=autofill_origin][has-url]:not([rich-suggestion]) .urlbarView-no-wrap .urlbarView-action  {
-  margin-inline-start: 0 !important;
-}
 
 
-.urlbarView-row[type=search]:not([rich-suggestion]) > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-action,
-.urlbarView-row[type=remotetab]:not([rich-suggestion]) > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-action,
-.urlbarView-row[type=switchtab]:not([rich-suggestion]) > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-action,
-.urlbarView-row[type=autofill_origin]:not([rich-suggestion]) > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-action {
-  padding: 0px !important;
-}
+
 
 .urlbarView-row:is([type=search],[type=remotetab],[type=switchtab],[type=autofill_origin]):not([rich-suggestion]) .urlbarView-title-separator {
   display: none !important;
@@ -133,12 +113,43 @@
   font-size: unset !important;
 }
 
-.urlbarView-row[rich-suggestion] .urlbarView-title-separator::before, .urlbarView-title-separator,
-.urlbarView-row[rich-suggestion] .urlbarView-action {
-  display: none !important;
-}
 
 .urlbarView-row  {
   border: 1px solid rgba(0,0,0,0) !important;
   border-bottom: 1px solid #777 !important;
+  cursor: pointer;
 }
+
+.urlbarView-url{
+  padding-bottom:4px !important;
+
+}
+.urlbarView-row-inner {
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  min-height: 42px !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+
+}
+.urlbarView-title {
+  line-height: unset !important;
+  font-size: 120% !important;
+  margin-bottom: 2px !important;
+  text-overflow: ellipsis;
+  mask-image: none !important;
+}
+.urlbarView-row[has-url] .urlbarView-title{
+  font-size: 125% !important;
+  color: #104973;
+  font-weight: 600 !important;
+}
+.urlbarView-title-separator,
+.urlbarView-action,
+.urlbarView-row[label]::before,
+#urlbar .search-one-offs {
+  display: none !important;
+}
+
+

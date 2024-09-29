@@ -75,14 +75,14 @@
 #main-window:not(:-moz-lwtheme) toolbar #stop-reload-button toolbarbutton > .toolbarbutton-text,
 #main-window:not(:-moz-lwtheme) toolbar #PanelUI-button toolbarbutton > .toolbarbutton-text,
 #main-window:not(:-moz-lwtheme) toolbar > toolbarbutton > .toolbarbutton-badge-stack .toolbarbutton-text,
-#main-window:not(:-moz-lwtheme) #nav-bar-customization-target > toolbarbutton > .toolbarbutton-text,
-#main-window:not(:-moz-lwtheme) #PlacesToolbarItems toolbarbutton > :is(label,description) {
+#main-window:not(:-moz-lwtheme) #nav-bar-customization-target > toolbarbutton > .toolbarbutton-text
+ {
     color: var(--general_toolbar_text_color, inherit) !important;
-    text-shadow: 1px 1px 1px var(--general_toolbar_text_shadow, inherit) !important;
+    text-shadow: 1px 1px 2px var(--general_toolbar_text_shadow, inherit) !important;
 }
 
 #main-window :is(.browserContainer,#viewSource):not(:-moz-lwtheme) :is(findbar,#FindToolbar) {
-    background: var(--general_toolbar_color_toolbars, inherit) !important;
+    /*background: var(--general_toolbar_color_toolbars, inherit) !important;*/
 }
 
 #main-window[style*='--lwt-header-image']:-moz-lwtheme :is(.browserContainer,#viewSource) :is(findbar,#FindToolbar) {
@@ -96,7 +96,7 @@
 }
 
 #main-window[style*='--lwt-header-image']:-moz-lwtheme-brighttext :is(.browserContainer,#viewSource) :is(findbar,#FindToolbar) :is(.toolbarbutton-icon,.toolbarbutton-text) {
-    text-shadow: 1px 1px 1px black !important;
+    text-shadow: 1px 1px 2px black !important;
 }
 
 
@@ -110,19 +110,24 @@
     box-shadow: unset !important;
 }
 
-toolbar:not(#TabsToolbar):not(#toolbar-menubar):not(#nav-bar):not(:-moz-lwtheme) {
+toolbar:not(#TabsToolbar, #PersonalToolbar):not(#toolbar-menubar):not(#nav-bar):not(:-moz-lwtheme) {
+    background-image: linear-gradient(180deg, rgba(255,255, 255, 0.1) 45%, rgba(10, 83, 118, 0.7) 0%, #0f5975),
+    linear-gradient(to left, rgba(111, 169, 177, 0.75), rgba(84, 141, 167, 0.76));
+    box-shadow:   inset 0 -4px 6px 0 #8bbec4, inset 0 -2px 0 #8bbec4 !important;
+    background-color:  #548da7 !important;
+    border: unset !important;
+}
+#PersonalToolbar{
     background: unset !important;
     border: unset !important;
     box-shadow: unset !important;
 }
-
 #nav-bar:not(:-moz-lwtheme),
 toolbar:not(#TabsToolbar):not(#toolbar-menubar):not(#nav-bar):not(:-moz-lwtheme) {
     appearance: none !important;
-    box-shadow: unset !important;
 }
 
 #main-window:not(:-moz-lwtheme) #main-menubar > menu > :-moz-any(label,description) {
     color: var(--general_toolbar_text_color, inherit) !important;
-    text-shadow: 1px 1px 1px var(--general_toolbar_text_shadow, inherit) !important;
+    text-shadow: 1px 1px 2px var(--general_toolbar_text_shadow, inherit) !important;
 }

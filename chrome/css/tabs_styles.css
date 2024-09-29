@@ -24,32 +24,20 @@
 
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab {
     color: var(--classic_squared_tabs_tab_text_color) !important;
-    text-shadow: 1px 1px 1px var(--classic_squared_tabs_tab_text_shadow) !important;
     margin-bottom: 2px !important;
 }
 
-#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab .tab-content {
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.2) 0%, rgba(207, 207, 207, 0.12));
-    box-shadow: 0 2px 4px 0px #fffc inset, 0 0 0 1px  #fffc inset;
-    background-color: rgba(91, 164, 235, 0.5);
-    border: 1px solid #444;
-    color: lawngreen;
-    padding-left: 12px !important;
-    padding-right: 10px !important;
-    border-bottom: transparent;
-}
-#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab .tab-content :is(.tab-icon-image, .tab-close-button){
-    /*opacity: 0.7 ;*/
-}
 
-#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[selected] .tab-content :is(.tab-icon-image, .tab-close-button) {
-    /*opacity: 1 ;*/
 
-}
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[selected]{
     margin-bottom: 1px !important;
     min-width: 250px !important;
 
+}
+@media (max-width: 1000px){
+    #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[selected]{
+        min-width: 240px !important;
+    }
 }
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab{
     position: relative;
@@ -57,27 +45,27 @@
 }
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[selected]::after{
     content:"";
-    width:20px;
+    width:17px;
     height: 20px;
-    background: url("../images/arc_1.png");
+    background: url("../images/arc.png");
     background-size: cover;
-    transform: translateY(6px) translateX(-4px);
+    transform: translateY(6px) translateX(-4px) ;
     border-bottom: 1px solid white;
 
 }
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[selected]::before{
     content:"";
-    width:20px;
+    width:17px;
     height: 20px;
     background: url("../images/arc.png");
     background-size: cover;
-    transform: translateY(6px) translateX(4px);
+    transform: translateY(6px) translateX(4px) scaleX(-1);
     z-index: 1;
     border-bottom: 1px solid white;
 }
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab::after{
     content:"";
-    width:20px;
+    width:17px;
     height: 22px;
     background: url("../images/arc''.png");
     background-size: cover;
@@ -88,27 +76,40 @@
 }
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab::before{
     content:"";
-    width:20px;
+    width:17px;
     height: 22px;
-    background: url("../images/arc''~01.png");
+    background: url("../images/arc''.png");
     background-size: cover;
-    transform: translateY(3px) translateX(2px);
+    transform: translateY(3px) translateX(3px) scaleX(-1);
     z-index: 1 ;
     border-bottom: 1px solid white;
+
+}
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab .tab-content {
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 45%, rgba(181, 227, 255, 0.15) 0%, rgba(207, 207, 207, 0.22));
+    box-shadow:  0 2px 6px 0px rgba(203, 247, 255, 0.8) inset, 0 0 0 1px  #fffc inset, inset 0 -2px 2px 0 rgba(0, 255, 255, 0.67);
+    background-color: rgba(93, 183, 235, 0.4);
+    border: 1px solid #444;
+    color: #fffc;
+    padding-left: 12px !important;
+    padding-right: 10px !important;
+    border-bottom: transparent;
+    font-size: 13px !important;
+    text-shadow: 1px 1px 2px #333 !important;
 }
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[selected] .tab-content {
     background-image: linear-gradient(rgba(234, 240, 248, 0.45) 45%, rgba(255, 255, 255, 0.3) 0%, rgba(178, 213, 238, 0.4));
-    box-shadow: 0 -1px 6px 0px rgba(255, 255, 255, 0.6) inset,
-    0 3px 4px 0px rgba(255, 255, 255, 0.3) inset, 0 0 0 1px  #fffc inset;
-    color: yellow;
+    box-shadow: 0 -2px 5px 0px rgba(255, 255, 255, 0.6) inset, inset 0 1px 2px 0px rgba(255,255,255, 0.64),
+    0 3px 6px 0px rgba(84, 220, 80, 0.8) inset, 0 0 0 1px  #fffc inset;
+    color: white;
     backdrop-filter: blur(4px) !important;
     border: 1px solid #444;
-
     border-bottom: none;
+    background-color: rgba(0, 149, 0, 0.4);
+    text-shadow: 1px 1px 2px #222 !important;
 
-
-    background-color: rgba(0, 128, 0, 0.26);
 }
+
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[selected] .tab-icon-stack{
     margin-left: 2px !important;
 }
@@ -118,11 +119,10 @@
     border-bottom-right-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
 }
-/* hovered 2s color */
+
 
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab:hover .tab-content:not([selected],[multiselected]) {
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.40) 45%, rgba(255, 255, 255, 0.30) 0%, rgba(207, 207, 207, 0.1)) !important;
-
+    background-color: rgba(0, 255, 255, 0.3);
 }
 
 

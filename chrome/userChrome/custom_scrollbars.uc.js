@@ -2,8 +2,6 @@
 
 
 (function () {
-
-
     /* General scrollbar settings *******************************************************/
 
     // default: hide_scrollbars = false

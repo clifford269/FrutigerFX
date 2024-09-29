@@ -10,7 +10,7 @@
 }
 
  :is(popup,menupopup,panel,panelmultiview,.panel-subview-body) :is(.subviewbutton):not(#appMenu-fxa-status2, #downloadsHistory, #unified-extensions-manage-extensions):hover, .downloadButton:hover, #downloadsListBox > richlistitem[state="1"][exists].hoveringMainArea:hover,
- #downloadsListBox > richlistitem.openWhenFinished.hoveringMainArea:hover, #downloadsListBox > richlistitem[verdict]:hover, #downloadsListBox > richlistitem.openWhenFinished:hover, .bookmark-item:hover{
+ #downloadsListBox > richlistitem.openWhenFinished.hoveringMainArea:hover, #downloadsListBox > richlistitem[verdict]:hover, #downloadsListBox > richlistitem.openWhenFinished:hover{
     background: transparent !important;
     background-color: transparent !important;
     background-image: linear-gradient(rgba(255, 255, 255, 0.55) 45%, rgba(135, 206, 235, 0.36)) !important;
@@ -20,14 +20,24 @@
     outline-offset: -1px !important;
      box-shadow: inset 0 0 0 1px #fffc, inset 0 -8px 10px #fff !important;
 }
- .bookmark-item:hover{
-     background: linear-gradient(135deg, #fff5 70px, transparent 100px), linear-gradient(225deg, #fff5 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%,
-     #0002 41% 41.5%, #bbb2 44% 45%, #bbb2 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #0002 56% 56.5%, #bbb2 57% 63%, #0002 67% 69%, #bbb2 69.5% 70%, #0002 73.5% 74%, #bbb2 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #bbb1 90%)  !important;
-     box-shadow:  none !important;
-     outline:1px solid #fff !important;
+ #PlacesToolbarItems{
+     padding-top: 2px !important;
+     padding-left: 2px !important;
+ }
+ #personal-bookmarks .bookmark-item{
+     background-image: linear-gradient(180deg, rgba(255,255, 255, 0.1) 45%, rgba(10, 83, 118, 0.7) 0%, #0f5975),
+     linear-gradient(to left, rgba(111, 169, 177, 0.75), rgba(84, 141, 167, 0.76));
+     box-shadow:   inset 0 -4px 6px 0 #8bbec4, inset 0 -2px 0 #8bbec4, 1px 1px 2px #333 !important;
+     background-color:  #548da7 !important;
+ }
+ .bookmark-item .toolbarbutton-text{
+     color: #e8e8e8 !important;
 
  }
+ #personal-bookmarks .bookmark-item:hover{
+     box-shadow:   inset 0 -5px 6px 0 #8bbec4, inset 0 -2px 0 #8bbec4, 1px 1px 2px  #333 !important;
 
+ }
 :is(popup,menupopup,panel,panelmultiview,.panel-subview-body) :is(menuitem,menu,.subviewbutton,toolbarbutton):not(#appMenu-fxa-status2):hover .unified-extensions-item-contents {
     border-bottom: 1px solid transparent !important;
 }
@@ -42,44 +52,39 @@
  #unified-extensions-manage-extensions:active{
      box-shadow: var(--btn-active-box-shadow) !important;
  }
-#downloadsListBox {
+#downloadsPanel #downloadsListBox {
     margin-bottom: 10px !important;
 }
-#downloadsListBox .download-state {
+ #downloadsPanel #downloadsListBox .download-state {
     border:1px solid rgba(0,0,0,0) !important;
 }
- .downloadContainer{
+ #downloadsPanel .downloadContainer{
      border-bottom: 1px solid darkblue !important;
      padding-bottom: 13px !important;
 
  }
- .download-state:hover .downloadContainer{
+ #downloadsPanel .download-state:hover .downloadContainer{
      border-bottom-color: transparent !important;
 
  }
 
- .downloadTarget:hover, .download-state:hover, .downloadButton:hover, #downloadsHistory:hover,#unified-extensions-manage-extensions:hover{
+ #downloadsPanel .downloadTarget:hover, .download-state:hover, .downloadButton:hover, #downloadsHistory:hover,#unified-extensions-manage-extensions:hover{
      cursor: pointer !important;
  }
-.downloadsPanelFooterButton .button-text{
+ #downloadsPanel .downloadsPanelFooterButton .button-text{
     margin: 0 auto !important;
 }
-.bookmark-item, .bookmark-item:hover{
-    padding:4px !important;
+ #personal-bookmarks .bookmark-item, .bookmark-item:hover{
+    padding:2px !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
     border-radius: 5px !important;
 }
- .bookmark-item{
+ #personal-bookmarks .bookmark-item{
      margin-right: 5px !important;
  }
-.bookmark-item:active{
-    color: inherit !important;
-    background: transparent !important;
-    background-color: transparent !important;
-    background-image: linear-gradient(180deg, #e5f4fc, #c4e5f6 30% 50%, #98d1ef 50%, #68b3db) !important ;
-    outline:1px solid #fff !important;
-    outline-radius: 3px !important;
-    outline-offset: -1px !important;
-    box-shadow: inset 1px 1px 0 #0003, inset -1px 1px 0 #0001 !important;
+ #personal-bookmarks .bookmark-item:active{
+    filter: brightness(1.2);
 }
  #downloadsHistory:hover{
      background: linear-gradient(rgba(135, 206, 235, 1), rgba(225, 255, 67, 0.7)) !important;

@@ -2,7 +2,7 @@
 @-moz-document url(about:preferences),url-prefix(about:preferences),url(about:settings),url-prefix(about:settings) {
 :root{
 	background-image: linear-gradient(to bottom, rgb(231, 237, 246) 3px, rgba(231, 237, 246, 0) 156px), linear-gradient(to left, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.2)), linear-gradient(32deg, rgba(255, 255, 255, 0) 19.5%, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.1) 21.5%, rgba(255, 255, 255, 0.2) 22%, rgba(255, 255, 255, 0.2) 25.5%, rgba(255, 255, 255, 0.1) 26%, rgba(255, 255, 255, 0.1) 27.5%, rgba(255, 255, 255, 0) 28%, rgba(255, 255, 255, 0) 49.5%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 52.5%, rgba(255, 255, 255, 0.2) 53%, rgba(255, 255, 255, 0.2) 54.5%, rgba(255, 255, 255, 0.1) 55%, rgba(255, 255, 255, 0.1) 57.5%, rgba(255, 255, 255, 0) 58%, rgba(255, 255, 255, 0) 87%, rgba(255, 255, 255, 0.2) 90%), url("chrome://userchrome/content/pages/preferences/images/background-texture.png") !important;
-
+	background-color: rgb(204, 217, 234) !important;
 }
 	.category {
 	  margin-inline-start: 0px !important;
@@ -39,7 +39,9 @@
 		}
 
 	}
-	
+	.pane-container{
+		border:1px solid skyblue !important;
+	}
 	.main-content {
 	  padding: 0px !important;
 	}
@@ -66,11 +68,21 @@
 	
 	#policies-container, #searchInput {
 	  min-height: 0px !important;
-	  margin: 0 5px 5px 5px!important;
+	  margin: 5px!important;
 	}
+	#policies-container{
+		margin-top:0 !important;
+	}
+	#searchInput[focused]{
+		border:1px solid skyblue !important;
+		outline:1px solid skyblue !important;
 
+	}
+	#searchInput {
+		font-size: 14px !important;
+	}
 	#searchInput[focused] {
-	  box-shadow: unset !important;
+	  box-shadow: none !important;
 	}
 	
 	.sticky-container {
@@ -101,8 +113,14 @@
 
 	#categories .category {
 	  transition-duration: unset !important;
+		border-radius: 3px !important;
+		border-top-right-radius: 0 !important;
+		border-bottom-right-radius: 0 !important;
 	}
-
+	#categories .category[selected]{
+		border:1px solid #8e8f8f !important;
+		border-right-color: transparent !important;
+	}
 	/* category icons */
 	#category-search .category-icon {
 	  list-style-image: url("./../images/prefs_search.png") !important;
@@ -237,7 +255,7 @@
 	  fill: #63c54f !important;
 	}
 	
-	#helpButton {
+	#helpButton, #category-more-from-mozilla {
 	  fill: #ff0000 !important;
 		display: none !important;
 	}
@@ -304,9 +322,9 @@
 window > stack > hbox,
 #preferences-stack,
 page, page .dialogBox .groupbox-title {
-	background: transparent!important;
+	background: transparent !important;
 }
 
 .pane-container {
-	background: transparent !important;
+	background: rgba(255,255,255,0.5) !important;
 }

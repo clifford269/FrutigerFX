@@ -22,12 +22,7 @@ url-prefix(chrome://mozapps/content/extensions/aboutaddons.xhtml) {
     }
 
     addon-card:not([expanded="true"]) .addon.card {
-        margin-top: 0 !important;
-        margin-bottom: -2px !important;
-        padding-top: 3px !important;
-        padding-bottom: 0px !important;
-        padding-inline-start: 2px !important;
-        min-height: 40px !important;
+        border-radius: 3px !important;
     }
 
     addon-list[type="theme"] .addon.card {

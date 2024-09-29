@@ -147,7 +147,7 @@
 #nav-bar #nav-bar-customization-target > toolbaritem toolbarbutton[disabled=true] .toolbarbutton-icon,
 #nav-bar #nav-bar-customization-target > toolbarbutton[disabled=true] .toolbarbutton-icon,
 #nav-bar > toolbarbutton[disabled=true] > .toolbarbutton-icon {
-    opacity: .4 !important;
+    opacity: 1 !important;
 }
 
 #nav-bar #nav-bar-customization-target > toolbaritem toolbarbutton[disabled=true],

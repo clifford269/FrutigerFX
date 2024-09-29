@@ -11,9 +11,18 @@ a > div.title {
     text-transform: capitalize;
     color: #fff !important;
     margin-top: -11px;
+    font-weight: 600 !important;
+    flex-wrap: wrap !important;
+    font-size: 1.1rem !important;
+    text-shadow: 1px 1px 2px #333;
 
 }
-
+.top-site-outer .title span{
+    overflow: visible !important;
+    white-space: normal !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
 body.activity-stream {
     background: url("aerobg.jpg") center center;
     background-size: cover;
@@ -28,6 +37,7 @@ body.activity-stream {
 .top-site-outer {
     border-radius: 6px !important;
     border: 1px solid transparent !important;
+    width: auto !important;
 }
 
 .topsite-form .top-site-button span {
@@ -93,6 +103,7 @@ body.activity-stream {
     opacity: 1;
 }
 .top-site-inner:after {
+    backdrop-filter: blur(2px);
     border: 1px solid #fffc !important;
     border-radius: 6px !important;
     content: "" !important;
@@ -194,11 +205,7 @@ body.activity-stream {
 .top-site-outer.active .top-site-inner::after{
     display: none !important;
 }
-@media (min-width: 866px) {
-    .activity-stream main {
-        /*width: 986px !important;*/
-    }
-}
+
 @media (min-width: 866px) {
     .top-sites-list .hide-for-narrow {
         display: inline-block !important;

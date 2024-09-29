@@ -1,0 +1,323 @@
+
+
+.bookmark-item[container][query] .toolbarbutton-icon {
+  background-image: url("../images/query.png") !important;
+}
+
+#bookmarksToolbarFolderMenu > .menu-iconic-left > .menu-iconic-icon {
+  background-image: none !important;
+}
+
+/** MENUPOPUPS **/
+/* Context Navigation */
+#context-navigation > .menuitem-iconic {
+  width: 45px !important;
+}
+
+#context-navigation > .menuitem-iconic > .menu-iconic-left > .menu-iconic-icon {
+  width: 18px !important;
+}
+
+#context-forward [disabled=true] .menu-iconic-icon {
+  opacity: 0.4 !important;
+}
+
+#context-inspect-a11y {
+  display: none !important;
+}
+
+
+
+
+
+
+/* Pop Ups */
+#tab-notification-deck {
+  border-left: 1px solid rgba(26, 26, 26, 0.4) !important;
+  border-right: 1px solid rgba(26, 26, 26, 0.4) !important;
+}
+
+notification-message {
+  border-top: 1px solid ThreeDHighlight !important;
+  border-left: 1px solid ThreeDHighlight !important;
+  border-bottom: 1px solid ThreeDShadow !important;
+  border-right: 1px solid ThreeDShadow !important;
+}
+
+.notification-button {
+  appearance: button !important;
+  font-size: revert !important;
+  font-weight: revert !important;
+  margin: 0 !important;
+}
+
+/* Hack to remove padding but don't break the notification message */
+notification-message {
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+notification-message[style="margin-top: -34px; opacity: 0;"] {
+  margin-top: -34px !important;
+}
+
+.container.infobar {
+  align-items: center !important;
+  border-radius: 0 !important;
+  background-color: infobackground !important;
+  color: infotext !important;
+}
+
+.container.infobar::before {
+  display: none !important;
+}
+
+.infobar > .icon,
+.notification-content {
+  margin-inline-start: 6px !important;
+}
+
+.ghost-button {
+  background-size: unset !important;
+}
+
+.notification-content {
+  display: flex !important;
+  width: 100% !important;
+}
+
+.notification-message {
+  flex: 1 !important;
+}
+
+/* Sidebar */
+.sidebar-panel {
+  background-color: -moz-Dialog !important;
+}
+
+#sidebar-header {
+  min-height: 25px !important;
+  background-image: linear-gradient(180deg, rgba(255,255, 255, 0.1) 45%, rgba(10, 83, 118, 0.7) 0%, #0f5975),
+  linear-gradient(to left, rgba(111, 169, 177, 0.75), rgba(84, 141, 167, 0.76));
+  box-shadow:   inset 0 -4px 6px 0 #8bbec4, inset 0 -2px 0 #8bbec4;
+  background-color:  #548da7 !important;
+  color: #fff !important;
+  -moz-default-appearance: toolbox !important;
+  border-bottom: 1px solid ThreeDLightShadow;
+  border-top: 1px solid ThreeDHighlight;
+}
+
+#main-window:not([echelon-style-5]) #sidebar-header {
+  padding: 0 !important;
+  padding-inline: 1px !important;
+  font-size: revert !important;
+}
+
+#main-window:not([echelon-style-5]) #sidebar-close {
+  margin-top: 1px !important;
+  margin-inline: 6px !important;
+}
+
+.sidebar-placesTree {
+  border: 0 !important;
+  margin: 0 !important;
+  border-top: 1px solid ThreeDShadow !important;
+  background-color: #FFF !important;
+}
+
+#main-window:not([echelon-style-5]) #sidebar-switcher-target {
+  appearance: toolbarbutton !important;
+}
+
+#main-window:not([echelon-style-5]) #sidebar-title {
+  padding-inline: 0 !important;
+}
+
+#main-window:not([echelon-style-5]) #sidebar-icon,
+#main-window:not([echelon-style-5]) #sidebar-switcher-arrow {
+  visibility: collapse !important;
+}
+
+#viewButton {
+  appearance: button !important;
+  margin-inline-start: 10px !important;
+}
+
+#viewButton > .button-box > .button-menu-dropmarker {
+  width: 5px !important;
+  height: 3px !important;
+  list-style-image: url("../images/dropdown.png") !important;
+  margin-left: 2px !important;
+}
+
+#sidebar-search-container {
+  padding: 3px 6px !important;
+  align-items: center !important;
+}
+
+#sidebar-search-container::before {
+  content: "Search:";
+  margin-inline-end: 9px !important;
+}
+
+#search-box {
+  height: 100% !important;
+  max-height: 22px !important;
+}
+
+
+#sidebar-splitter {
+  margin-inline-start: 0 !important;
+  border-width: 0 1px !important;
+  border-left-color: ThreeDShadow !important;
+  border-right-color: ThreeDDarkShadow !important;
+  box-shadow: inset 1px 0 ThreeDHighlight !important;
+  min-width: 6px !important;
+  background-color: ThreeDFace !important;
+}
+
+treechildren::-moz-tree-indentation {
+  width: 12px !important;
+}
+
+treechildren::-moz-tree-twisty {
+  padding-inline: 0 !important;
+  width: 9px !important;
+}
+
+treechildren::-moz-tree-row {
+  min-height: 18px !important;
+  padding: 0 !important;
+}
+
+treechildren::-moz-tree-row(hover) {
+  background-color: unset !important;
+}
+
+treechildren::-moz-tree-row(selected, hover),
+treechildren::-moz-tree-row(selected) {
+  background-color: -moz-Dialog !important;
+}
+
+treechildren::-moz-tree-row(selected, hover, focus),
+treechildren::-moz-tree-row(selected, focus) {
+  background-color: Highlight !important;
+}
+
+treechildren::-moz-tree-row(current, focus) {
+  outline: 1px dotted transparent !important;
+  outline-offset: -1px !important;
+}
+
+treechildren::-moz-tree-row(selected, current, focus) {
+  outline-color: #F3D982 !important;
+}
+
+treechildren::-moz-tree-twisty {
+  list-style-image: url("../images/twisty-clsd.png") !important;
+}
+
+treechildren::-moz-tree-twisty(hover) {
+  list-style-image: url("../images/twisty-clsd-hover.png") !important;
+}
+
+treechildren::-moz-tree-twisty(open) {
+  list-style-image: url("../images/twisty-open.png") !important;
+}
+
+treechildren::-moz-tree-twisty(hover, open) {
+  list-style-image: url("../images/twisty-open-hover.png") !important;
+}
+
+
+
+/** MAXIMIZED CHANGES **/
+#main-window[sizemode=maximized] #navigator-toolbox toolbar {
+  border-radius: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+
+#main-window[sizemode=maximized] #navigator-toolbox::after {
+  width: 100% !important;
+  left: 0 !important;
+}
+
+/* Message box icons */
+.message-icon {
+  list-style-image: url("chrome://userchrome/content/../images/information-32.png") !important;
+}
+
+.alert-icon {
+  list-style-image: url("chrome://userchrome/content/../images/Warning.png") !important;
+}
+
+.error-icon {
+  list-style-image: url("chrome://userchrome/content/../images/Error.png") !important;
+}
+
+.question-icon {
+  list-style-image: url("chrome://userchrome/content/../images/Question.png") !important;
+}
+
+
+:root[sizemode=fullscreen][tabs-on-top=true] #TabsToolbar .toolbar-items, :root[sizemode=fullscreen]:not([tabs-on-top=true]) #nav-bar {
+  margin-inline-end: 49px !important;
+}
+:root[sizemode=fullscreen] .titlebar-button:not(.titlebar-max) {
+  display: flex !important;
+  appearance: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 16px !important;
+  height: 16px;
+  background-image: url("../images/windowControls.png") !important;
+}
+:root[sizemode=fullscreen] .titlebar-button:not(.titlebar-max):hover {
+  background-position-y: -16px !important;
+}
+:root[sizemode=fullscreen] .titlebar-button:not(.titlebar-max):hover:active {
+  background-position-y: -32px !important;
+}
+:root[sizemode=fullscreen] .titlebar-button:not(.titlebar-max).titlebar-restore {
+  background-position-x: -16px !important;
+}
+:root[sizemode=fullscreen] .titlebar-button:not(.titlebar-max).titlebar-close {
+  background-position-x: -32px !important;
+  width: 17px !important;
+}
+:root[sizemode=fullscreen][echelon-appearance-xp] .titlebar-button:not(.titlebar-max) {
+  background-image: url("../images/windowControls-XP.png") !important;
+}
+
+.dialogBox {
+  border-radius: 0 !important;
+}
+
+/* Status Panel */
+#statuspanel {
+  transition: opacity 100ms ease-out !important;
+}
+
+#statuspanel-label {
+  padding: 2px 4px !important;
+  background: -moz-linear-gradient(white, #ddd) !important;
+  border: 1px none #ccc !important;
+  border-top-style: solid !important;
+  color: #333 !important;
+  text-shadow: none !important;
+}
+
+#statuspanel:not([mirror]) > #statuspanel-label:-moz-locale-dir(ltr),
+#statuspanel[mirror] > #statuspanel-label:-moz-locale-dir(rtl) {
+  border-right-style: solid !important;
+  border-top-right-radius: 0.3em !important;
+  margin-right: 1em !important;
+}
+
+#statuspanel:not([mirror]) > #statuspanel-label:-moz-locale-dir(rtl),
+#statuspanel[mirror] > #statuspanel-label:-moz-locale-dir(ltr) {
+  border-left-style: solid !important;
+  border-top-left-radius: 0.3em !important;
+  margin-left: 1em !important;
+}
