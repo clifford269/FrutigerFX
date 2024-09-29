@@ -51,6 +51,7 @@
     background-size: cover;
     transform: translateY(6px) translateX(-4px) ;
     border-bottom: 1px solid white;
+    filter: grayscale(40%) brightness(0.9);
 
 }
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[selected]::before{
@@ -62,6 +63,7 @@
     transform: translateY(6px) translateX(4px) scaleX(-1);
     z-index: 1;
     border-bottom: 1px solid white;
+    filter: grayscale(40%) brightness(0.9);
 }
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab::after{
     content:"";

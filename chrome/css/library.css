@@ -39,7 +39,7 @@
   border-bottom: 1px solid ThreeDShadow !important;
   color: #fff !important;
 }
-#placesToolbar *{
+#placesToolbar *:not(#searchFilter){
   color: #fff !important;
 
 }
