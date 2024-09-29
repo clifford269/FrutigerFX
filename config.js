@@ -19,3 +19,5 @@ defaultPref("browser.compactmode.show", true);
 defaultPref("extensions.pocket.enabled", false);
 defaultPref("layout.css.backdrop-filter.enabled", true);
 defaultPref("browser.display.windows.non_native_menus", 0);
+defaultPref("widget.non-native-theme.enabled", false);
+defaultPref("full-screen-api.warning.timeout", 0);
