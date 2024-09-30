@@ -9,12 +9,12 @@ Aims to fully build the Skeuomorphic/Frutiger Aero beauty into the Mozilla Firef
 **Features**:
 
 1. Aero user interface across all Windows versions.
-2. Aero hover effect on context menus; Windows 7/Vista scrollbars: on Windows 10+ systems as well.
+2. Aero hover effect on context menus; Windows 7/Vista style scrollbars, buttons, menus and toolbars: on Windows 10+ systems as well.
 3. Better User Experience compared to vanilla Firefox or any other Firefox theme, owing to better legibility, colour and contrast.
 4. The UI is **pleasing** and **fun** to work with.
 5. The project means to build, restore and **uphold** user-centric and user-pleasing UI design practices.
 
-**Donate** here to support the project:
+This project is the work of a single individual and relies on your support. Please **Donate** here:
  
 ![new](https://github.com/user-attachments/assets/9d8e3c93-35dd-415d-a854-669c74274220)
 
