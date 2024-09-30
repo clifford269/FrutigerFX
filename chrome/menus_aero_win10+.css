@@ -1,0 +1,102 @@
+ #context-navigation :is(#context-back,#context-forward,#context-reload,#context-stop,#context-bookmarkpage):hover {
+    background-color: unset !important;
+    outline: none !important;
+}
+
+
+:is(popup,menupopup,panel,panelmultiview,.panel-subview-body) :is(menuitem,menu,.subviewbutton,toolbarbutton):not(#appMenu-fxa-status2) {
+    border-radius: 3px !important;
+
+}
+
+ :is(popup,menupopup,panel,panelmultiview,.panel-subview-body) :is(.subviewbutton):not(#appMenu-fxa-status2, #downloadsHistory, #unified-extensions-manage-extensions):hover, .downloadButton:hover, #downloadsListBox > richlistitem[state="1"][exists].hoveringMainArea:hover,
+ #downloadsListBox > richlistitem.openWhenFinished.hoveringMainArea:hover, #downloadsListBox > richlistitem[verdict]:hover, #downloadsListBox > richlistitem.openWhenFinished:hover{
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.55) 45%, rgba(135, 206, 235, 0.36)) !important;
+    border-radius: 3px !important;
+    outline: 1px solid rgba(124, 163, 206, 0.7) !important;
+    outline-radius: 3px !important;
+    outline-offset: -1px !important;
+     box-shadow: inset 0 0 0 1px #fffc, inset 0 -8px 10px #fff !important;
+}
+ :is(popup,menupopup,panel,panelmultiview,.panel-subview-body) :is(menuitem,menu):not(#appMenu-fxa-status2):hover{
+     background: transparent !important;
+     background-color: transparent !important;
+     background-image: linear-gradient(rgba(255, 255, 255, 0.55) 45%, rgba(135, 206, 235, 0.36)) !important;
+     border-radius: 10px !important;
+     outline: 1px solid rgba(124, 163, 206, 0.7) !important;
+     box-shadow: inset 0 0 0 1px #fffc, inset 0 -8px 10px #fff !important;
+ }
+ #PlacesToolbarItems{
+     padding-top: 2px !important;
+     padding-left: 2px !important;
+ }
+ #personal-bookmarks .bookmark-item{
+     background-image: linear-gradient(180deg, rgba(255,255, 255, 0.1) 45%, rgba(10, 83, 118, 0.7) 0%, #0f5975),
+     linear-gradient(to left, rgba(111, 169, 177, 0.75), rgba(84, 141, 167, 0.76));
+     box-shadow:   inset 0 -4px 6px 0 #8bbec4, inset 0 -2px 0 #8bbec4, 1px 1px 2px #333 !important;
+     background-color:  #548da7 !important;
+ }
+ .bookmark-item .toolbarbutton-text{
+     color: #e8e8e8 !important;
+
+ }
+ #personal-bookmarks .bookmark-item:hover{
+     box-shadow:   inset 0 -5px 6px 0 #8bbec4, inset 0 -2px 0 #8bbec4, 1px 1px 2px  #333 !important;
+
+ }
+:is(popup,menupopup,panel,panelmultiview,.panel-subview-body) :is(menuitem,menu,.subviewbutton,toolbarbutton):not(#appMenu-fxa-status2):hover .unified-extensions-item-contents {
+    border-bottom: 1px solid transparent !important;
+}
+#unified-extensions-manage-extensions:hover{
+    background: linear-gradient(rgba(248, 190, 16, 0.45) ,  rgba(222, 245, 53, 0.76)) !important;
+}
+ #unified-extensions-manage-extensions{
+     box-shadow: inset 0 11px 2px rgba(255, 255, 255, 0.26) !important;
+     background: linear-gradient(rgba(248, 241, 83, 0.3), rgba(243, 245, 39, 0.6)) !important;
+ }
+
+ #unified-extensions-manage-extensions:active{
+     box-shadow: var(--btn-active-box-shadow) !important;
+ }
+#downloadsPanel #downloadsListBox {
+    margin-bottom: 10px !important;
+}
+ #downloadsPanel #downloadsListBox .download-state {
+    border:1px solid rgba(0,0,0,0) !important;
+}
+ #downloadsPanel .downloadContainer{
+     border-bottom: 1px solid darkblue !important;
+     padding-bottom: 13px !important;
+
+ }
+ #downloadsPanel .download-state:hover .downloadContainer{
+     border-bottom-color: transparent !important;
+
+ }
+
+ #downloadsPanel .downloadTarget:hover, .download-state:hover, .downloadButton:hover, #downloadsHistory:hover,#unified-extensions-manage-extensions:hover{
+     cursor: pointer !important;
+ }
+ #downloadsPanel .downloadsPanelFooterButton .button-text{
+    margin: 0 auto !important;
+}
+ #personal-bookmarks .bookmark-item, .bookmark-item:hover{
+    padding:2px !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    border-radius: 5px !important;
+}
+ #personal-bookmarks .bookmark-item{
+     margin-right: 5px !important;
+ }
+ #personal-bookmarks .bookmark-item:active{
+    filter: brightness(1.2);
+}
+ #downloadsHistory:hover{
+     background: linear-gradient(rgba(135, 206, 235, 1), rgba(225, 255, 67, 0.7)) !important;
+ }
+ #downloadsHistory:active{
+    box-shadow: var(--btn-active-box-shadow) !important;
+ }
