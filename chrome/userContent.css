@@ -281,13 +281,15 @@ menulist::after {
     box-sizing: border-box;
     content: "Save";
     display: inline-block;
-    min-height: 23px !important;
+    min-height: 21px !important;
     min-width: 88px !important;
     padding: 3px 12px !important;
     position: absolute;
-    right: 0px;
-    top: 0;
-
+    right:-2px;
+    top: -2px;
+    box-shadow: 0 0 0 1px #fffc;
+    border: 1px solid #8e8f8f;
+    border-radius: 3px;
 }
 
 .topsite-form .actions .cancel:after {
@@ -301,12 +303,15 @@ menulist::after {
     box-sizing: border-box;
     content: "Save";
     display: inline-block;
-    min-height: 23px !important;
+    min-height: 21px !important;
     min-width: 88px !important;
     padding: 3px 12px !important;
     position: absolute;
-    right: 0px;
-    top: 0;
+    right:-2px;
+    top: -2px;
+    box-shadow: 0 0 0 1px #fffc;
+    border: 1px solid #8e8f8f;
+    border-radius: 3px;
     transition: opacity .3s;
 
 }
@@ -323,12 +328,15 @@ menulist::after {
     box-sizing: border-box;
     content: "Save";
     display: inline-block;
-    min-height: 23px !important;
+    min-height: 21px !important;
     min-width: 88px !important;
     padding: 3px 12px !important;
     position: absolute;
-    right: 0px;
-    top: 0;
+    right:-2px;
+    top: -2px;
+    box-shadow: 0 0 0 1px #fffc;
+    border: 1px solid #8e8f8f;
+    border-radius: 3px;
 }
 
 .topsite-form .actions .cancel:active:after {
@@ -650,3 +658,6 @@ background-repeat: none !important;
     display: none !important;
 }
 .radio-check, input[type="radio"]{appearance: auto !important}
+.addon-card-message[type="warning"]{
+    display: none !important;
+}
