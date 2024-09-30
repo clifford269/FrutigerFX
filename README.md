@@ -5,7 +5,15 @@ Aims to fully build the Skeuomorphic/Frutiger Aero beauty into the Mozilla Firef
 <ins>**Disclaimer**</ins>: 
 
  This theme was built to look best with Windows Aero Glass transparency.
- 
+
+**Features**:
+
+1. Aero user interface across all Windows versions.
+2. Aero hover effect on context menus; Windows 7/Vista scrollbars: on Windows 10+ systems as well.
+3. Better User Experience compared to vanilla Firefox or any other Firefox theme, owing to better legibility, colour and contrast.
+4. The UI is **pleasing** and **fun** to work with.
+5. The project means to build, restore and **uphold** user-centric and user-pleasing UI design practices.
+
 **Donate** here to support the project:
  
 ![new](https://github.com/user-attachments/assets/9d8e3c93-35dd-415d-a854-669c74274220)
@@ -39,7 +47,8 @@ For transparency effects:
       <supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}"/>
       <supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"/>
 ```
-
+4. Rename menus_aero_win10+.css within chrome/ to menus_aero.css and drop it in chrome/css/
+   
 _Welcome to a a whole new world of **unmatched** creativity and **wonders**..._
 
 ![5~01](https://github.com/user-attachments/assets/916ce759-03f4-400b-9a4a-07c2a76f98c0)
