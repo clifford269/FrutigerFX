@@ -14,9 +14,10 @@ Aims to fully build the Skeuomorphic/Frutiger Aero beauty into the Mozilla Firef
 4. The UI is **pleasing** and **fun** to work with.
 5. The project means to build, restore and **uphold** user-centric and user-pleasing UI design practices.
 
-This project is the work of a single individual and relies on your support. Please **Donate** here:
- 
-![new](https://github.com/user-attachments/assets/9d8e3c93-35dd-415d-a854-669c74274220)
+This project is the work of a single individual and relies on your support. Please **Donate** here: <p align="center">
+                                                                                  <img src="https://github.com/clifford269/FrutigerFX/blob/main/donate_button.png?raw=true" alt="Description" width="200"/>
+                                             </p>
+
 
        
 <ins>**Installation**</ins>:
