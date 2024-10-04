@@ -46,6 +46,7 @@ notification {
 #urlbar[breakout] #urlbar-results {
     padding: 0px !important;
     margin: 0px !important;
+
 }
 
 #urlbar[breakout] #urlbar-results .urlbarView-body-outer,

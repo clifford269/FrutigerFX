@@ -323,7 +323,7 @@ panel {
 }
 
 
-#new-window-button image, #preferences-button image, #privatebrowsing-button image, #unified-extensions-button image {
+#new-window-button image, #preferences-button image, #privatebrowsing-button image {
     width: 32px !important
 }
 
@@ -334,12 +334,12 @@ panel {
 }
 
 #unified-extensions-button{
-    padding-top:1px !important;
-    padding-bottom:1px !important;
+    margin-bottom:1px !important;
 }
 
 #unified-extensions-button image {
-    height: 32px !important;
+    height: 20px !important;
+    width: 25px !important;
 }
 
 .tabbrowser-tab[label="Settings"] .tab-label {
@@ -432,7 +432,10 @@ panel {
     background:linear-gradient(135deg, #fff5 70px, transparent 100px), linear-gradient(225deg, #fff5 70px, transparent 100px),linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%,
     #0002 41% 41.5%, #bbb2 44% 45%, #bbb2 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #0002 56% 56.5%, #bbb2 57% 63%, #0002 67% 69%, #bbb2 69.5% 70%, #0002 73.5% 74%, #bbb2 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #bbb1 90%) !important;
 }
+#unified-extensions-panel, #downloadsPanel{
+    /*transform: translateX(200px)!important;*/
 
+}
 #unified-extensions-view{
     position: relative !important;
     border-radius: 3px !important;
@@ -496,7 +499,13 @@ background-color:transparent !important;
     align-self:center !important;
     box-shadow: inset 0 0 0 1px #f4f4f4, inset 1px 1px 0 1px #aeaeae, inset -1px -1px 0 1px #ddd, inset 3px 3px 6px #ccc !important;
     border-color: #8e8f8f !important;
-
+}
+.findbar-container::before{
+    content:"Find:";
+    width:30px;
+    height: 20px;
+    color: #fff;
+    margin-top: 3px;
 }
 .findbar-textbox:focus, .findbar-textbox[status="notfound"]:focus{
     border-color: #8e8f8f !important;
@@ -506,4 +515,28 @@ background-color:transparent !important;
     background-color: #e9f7fe !important;
     box-shadow: inset 0 0 0 1px #def9fa, inset 1px 1px 0 1px #79c6f9, inset -1px -1px 0 1px #c6e9fc, inset 3px 3px 6px #b1dffd !important;
     border-color: #8e8f8f !important;
+}
+.findbar-find-status, .found-matches{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400 !important;
+    text-shadow: 1px 1px 1px #222;
+    padding:2px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    background:linear-gradient(135deg, #fff5 70px, transparent 100px),
+    linear-gradient(225deg, #fff5 70px, transparent 100px),
+    linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #bbb2 44% 45%, #bbb2 46% 47%,
+            #0002 48% 49%, #0002 50% 50.5%, #0002 56% 56.5%, #bbb2 57% 63%, #0002 67% 69%, #bbb2 69.5% 70%, #0002 73.5% 74%, #bbb2 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #bbb1 90%) 0/100vw 100vh no-repeat fixed;
+}
+.findbar-find-status:not([status="notfound"]){
+    display: none !important;
+}
+#unified-extensions-button .toolbarbutton-text, #downloads-button .toolbarbutton-text{
+display: block !important;
+    padding-left: 0 !important;
+    font-size: 1.1rem !important;
+}
+#customizableui-special-spring2, #customizableui-special-spring1{
+    opacity: 0 !important;
 }
