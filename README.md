@@ -55,4 +55,5 @@ _Welcome to a a whole new world of **unmatched** creativity and **wonders**..._
 ![1](https://github.com/user-attachments/assets/0f83acc2-ab7e-422a-bc6d-6adc726e2b1f)
 
 © Copyrighted work of clifford269
+
 Certain icon rights belong to their respective creators. 
