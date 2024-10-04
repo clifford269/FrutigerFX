@@ -53,3 +53,6 @@ For transparency effects:
 _Welcome to a a whole new world of **unmatched** creativity and **wonders**..._
 
 ![5~01](https://github.com/user-attachments/assets/916ce759-03f4-400b-9a4a-07c2a76f98c0)
+
+© Copyrighted work of clifford269
+Certain icon rights belong to their respective creators. 
