@@ -10,22 +10,19 @@
 #sidebar-close:hover .toolbarbutton-icon,
 * > .close-icon:hover{
   list-style-image: url("../images/close.png") !important;
+filter: brightness(1.2) contrast(130%);
+  cursor: pointer;
+
 }
 #TabsToolbar #closetab_fmarin_com-browser-action:hover:active .toolbarbutton-icon,
 #TabsToolbar #_fe8cab45-aaee-45f8-8765-781e0ebea300_-browser-action:hover:active .toolbarbutton-icon,
 #sidebar-close:hover:active .toolbarbutton-icon,
 * > .close-icon:hover:active {
   list-style-image: url("../images/close.png") !important;
+  filter: brightness(1.2) contrast(130%) grayscale(30%);
+
 }
 
-
-#TabsToolbar #closetab_fmarin_com-browser-action .toolbarbutton-icon,
-#TabsToolbar #_fe8cab45-aaee-45f8-8765-781e0ebea300_-browser-action .toolbarbutton-icon,
-#sidebar-close .toolbarbutton-icon,
-* > .close-icon > .toolbarbutton-icon {
-  /*width: 16px !important;*/
-  /*height: 12px !important;*/
-}
 #sidebar-close {
   background: unset !important;
 }

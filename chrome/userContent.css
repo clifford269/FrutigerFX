@@ -661,3 +661,74 @@ background-repeat: none !important;
 .addon-card-message[type="warning"]{
     display: none !important;
 }
+
+
+
+/*Old Github*/
+
+.AppHeader-localBar .js-repo-nav ul li a:hover{
+    background-color: transparent !important;
+}
+.AppHeader-localBar .js-repo-nav ul li, #js-repo-pjax-container button
+{
+    border: var(--btn-border) !important;
+    border-radius: 3px !important;
+    background: var(--btn-bg) !important;
+    box-shadow: var(--btn-box-shadow) !important;
+    color: #555 !important;
+}
+.AppHeader-localBar .js-repo-nav ul li:hover{
+    background: var(--btn-hover) !important;
+}
+.AppHeader-localBar .js-repo-nav ul li:active{
+    box-shadow: var(--btn-active-box-shadow) !important;
+}
+.AppHeader-localBar{
+    appearance: toolbox !important;
+}
+.AppHeader-globalBar{
+    background: #555;
+}
+.AppHeader-globalBar *{
+    color: #fff !important;
+    fill: #fff !important;
+}
+.AppHeader-searchButton{
+    background-color: #e9f7fe !important;
+    box-shadow: inset 0 0 0 1px #def9fa, inset 1px 1px 0 1px #79c6f9, inset -1px -1px 0 1px #c6e9fc, inset 3px 3px 6px #b1dffd !important;
+    border-color: #8e8f8f !important;
+}
+
+:is(.UnderlineNav-item.selected, .UnderlineNav-item[role="tab"][aria-selected="true"], .UnderlineNav-item[aria-current]:not([aria-current="false"]))::after{
+    background: linear-gradient(transparent 30%, orange 70%, transparent) !important;
+    height: 5px !important;
+
+}
+#qb-input-query{
+opacity: 0 !important}
+.AppHeader-searchButton{
+    fill: #0A84FF !important;
+    position: relative !important;
+}
+.AppHeader-searchButton:before{
+    content: "" !important;
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-image: url('images/search.png') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    position: absolute;
+    left: 3px;
+    top: 7px;
+}
+.AppHeader-searchButton:after{
+    content: "Find..." !important;
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    position: absolute;
+    left: 25px;
+    top: 6px;
+    color: #666 !important;
+}

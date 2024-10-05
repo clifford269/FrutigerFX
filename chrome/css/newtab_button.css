@@ -5,16 +5,17 @@
 
 }
 #TabsToolbar:not(:-moz-lwtheme) :is(.tabs-newtab-button,#tabs-newtab-button):hover {
-    background: var(--btn-bg) !important;
-    border: var(--btn-border) !important;
+    background: linear-gradient(rgba(255,255,255,0.7) 45%, rgba(255,255,255,0.3), transparent ) !important;
     border-radius: 10px !important;
-    box-shadow: var(--btn-box-shadow) !important;
+    cursor: pointer;
+    backdrop-filter: blur(2px);
+    box-shadow: inset 0 -2px 2px rgba(255,255,255,0.7);
 }
 
 #TabsToolbar:not(:-moz-lwtheme) :is(.tabs-newtab-button,#tabs-newtab-button):is(:active) {
-    background: var(--btn-active) !important;
-    border: var(--btn-border) !important;
-    box-shadow: var(--btn-active-box-shadow);
+    background: linear-gradient(rgba(255,255,255,0.7) 45%, rgba(255,255,255,0.3), transparent ) !important;
+    box-shadow: inset 0 -3px 2px rgba(255,255,255,0.8);
+
 }
 
 #TabsToolbar:not(:-moz-lwtheme) :is(.tabs-newtab-button,#tabs-newtab-button) {
@@ -33,6 +34,6 @@
 #TabsToolbar :is(.tabs-newtab-button,#tabs-newtab-button) .toolbarbutton-icon {
     padding: 0px !important;
 }
-.tabbrowser-tab[selected]+#tabbrowser-arrowscrollbox-periphery #tabs-newtab-button{
-    /*transform: translateY(4px);*/
+toolbar .toolbarbutton-1:not([disabled="true"], [checked], [open], :active):hover > .toolbarbutton-icon{
+    background: transparent !important;
 }
