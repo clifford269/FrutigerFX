@@ -93,7 +93,8 @@ border-bottom: 1px solid #fff !important;
 }
 #urlbar-container[breakout] {
     min-height: 24px !important;
-    margin-top: -2px !important;
+    margin-top: -1px !important;
+
 }
 
 #urlbar[breakout][breakout-extend] {

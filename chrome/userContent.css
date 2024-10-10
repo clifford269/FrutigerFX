@@ -89,7 +89,9 @@ html.private body {
     font-size: 1.5em !important;
     margin-left: -2em !important;
 }
-
+#errorShortDesc span{
+    display: none !important;
+}
 .neterror #errorLongDesc {
     padding-left: 2.2em !important;
 }
@@ -665,7 +667,10 @@ background-repeat: none !important;
 
 
 /*Old Github*/
-
+.AppHeader-globalBar *{
+    color: #fff !important;
+    fill: #fff !important;
+}
 .AppHeader-localBar .js-repo-nav ul li a:hover{
     background-color: transparent !important;
 }
@@ -677,23 +682,50 @@ background-repeat: none !important;
     box-shadow: var(--btn-box-shadow) !important;
     color: #555 !important;
 }
-.AppHeader-localBar .js-repo-nav ul li:hover{
+a.AppHeader-context-item{
+    border-radius: 3px !important;
+    border: var(--btn-border) !important;
+    background: var(--btn-bg) !important;
+    box-shadow: var(--btn-box-shadow) !important;
+  padding: 2px 4px !important;
+    margin: 0 4px !important;
+
+}
+.AppHeader-context-item-label{
+    color: #555 !important;
+
+}
+.AppHeader-context{
+    padding-top: 2px !important;
+    border-radius: 3px !important;
+    height: 33px !important;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.40) 45%, rgba(255, 255, 255, 0.30) 0%, rgba(207, 207, 207, 0.1)) !important;
+    backdrop-filter: blur(2px ) !important;
+    border: 1px solid rgba(255, 255, 255, 0.67) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.45) !important;
+}
+.AppHeader-localBar .js-repo-nav ul li:hover,  a.AppHeader-context-item:hover {
     background: var(--btn-hover) !important;
 }
-.AppHeader-localBar .js-repo-nav ul li:active{
+
+.AppHeader-localBar .js-repo-nav ul li:active, a.AppHeader-context-item:active {
     box-shadow: var(--btn-active-box-shadow) !important;
+
 }
 .AppHeader-localBar{
     appearance: toolbox !important;
 }
 .AppHeader-globalBar{
     background: #555;
+    padding: 4px !important;
+    padding-bottom: 2px !important;
 }
-.AppHeader-globalBar *{
-    color: #fff !important;
-    fill: #fff !important;
-}
+
 .AppHeader-searchButton{
+    background: #f6f6f6 !important;
+    border-color: #8e8f8f !important;
+    box-shadow: inset 0 0 0 1px #f4f4f4, inset 1px 1px 0 1px #aeaeae, inset -1px -1px 0 1px #ddd, inset 3px 3px 6px #ccc !important;
+}.AppHeader-searchButton:is(:hover, :active){
     background-color: #e9f7fe !important;
     box-shadow: inset 0 0 0 1px #def9fa, inset 1px 1px 0 1px #79c6f9, inset -1px -1px 0 1px #c6e9fc, inset 3px 3px 6px #b1dffd !important;
     border-color: #8e8f8f !important;
@@ -706,11 +738,11 @@ background-repeat: none !important;
 }
 #qb-input-query{
 opacity: 0 !important}
-.AppHeader-searchButton{
+.AppHeader-searchButton, #query-builder-test-leadingvisual-wrap{
     fill: #0A84FF !important;
     position: relative !important;
 }
-.AppHeader-searchButton:before{
+.AppHeader-searchButton:before, #query-builder-test-leadingvisual-wrap:before{
     content: "" !important;
     display: inline-block !important;
     width: 16px !important;
@@ -721,7 +753,12 @@ opacity: 0 !important}
     position: absolute;
     left: 3px;
     top: 7px;
-}
+
+}#query-builder-test-leadingvisual-wrap:before{
+    left: 37px;
+     top: 3px;
+
+ }
 .AppHeader-searchButton:after{
     content: "Find..." !important;
     display: inline-block !important;
@@ -731,4 +768,89 @@ opacity: 0 !important}
     left: 25px;
     top: 6px;
     color: #666 !important;
+}
+.color-shadow-large{
+    box-shadow:0 -2px 2px #fff, inset 0 0 0 1px  #fffc, 0 2px 5px 2px rgba(0, 0, 0, 0.8) !important;
+    border-radius: 3px !important;
+    background: grey !important;
+}
+.search-feedback-prompt{
+    display: none !important;
+}
+
+ul[data-testid="filter-groups"] *,.react-tree-show-tree-items *, .js-left-column-scroll-container *, #dashboard-repos-filter-left::placeholder, div[aria-labelledby="search-filters-title"], #repos-file-tree{
+    color: rgb(40, 65, 197) !important;
+}
+#dashboard-repos-filter-left{
+    border: 1px solid #8e8f8f !important;
+    outline: none !important;
+    box-shadow: none !important;
+    color: #444 !important;
+}
+.Button--primary.Button--small{
+    color: #fff !important;
+
+}
+.AppHeader-globalBar .QueryBuilder-StyledInput{
+    outline: none !important;
+    background-color: #e9f7fe !important;
+    box-shadow: inset 0 0 0 1px #def9fa, inset 1px 1px 0 1px #79c6f9, inset -1px -1px 0 1px #c6e9fc, inset 3px 3px 6px #b1dffd !important;
+}
+.AppHeader-globalBar :is(#query-builder-test, .qb-filter-value){
+    color: black !important;
+}
+.ActionListItem-label .qb-filter-value{
+    margin-left: 2px !important;
+}
+#query-builder-test-leadingvisual-wrap{
+    transform: translateX(-40px) !important;
+}
+
+.feed-left-sidebar, div[aria-labelledby="search-filters-title"], #repos-file-tree{
+    background: rgba(135, 206, 235, 0.41) !important;
+}
+
+#query-builder-test-clear-button svg path{
+    display: none !important;
+}
+#query-builder-test-clear-button svg{
+    background: url("images/error-16.png") !important;
+}
+.Popover.js-hovercard-content *{
+    color: #fffc !important;
+}
+
+
+/*Priv.au*/
+#main_results #search_view .search_box{
+    border-radius: 3px !important;
+    box-shadow: none !important;
+    height: 35px !important;
+}
+#main_results #search_view .search_box :is(#q,#send_search){
+    border-radius: 0 !important;
+    padding: 4px !important;
+
+}
+#main_results .search_box :is(#clear_search){
+    background: url("images/error-16.png") center no-repeat !important;
+display: none !important}
+#main_results .search_box :is(#send_search){
+    background: url("images/search.png") center no-repeat !important;
+    background-size: contain !important;
+    width: 20px !important;
+
+}
+#main_results .search_box #clear_search span, #main_results #send_search span{
+    display: none !important;
+}
+#search #search_header #search_logo{
+    transform: translateY(-2px);
+}
+#main_results #search_view .search_box #q{
+
+}
+#search #search_header{
+    background: linear-gradient(to bottom, rgb(231, 237, 246) 3px, rgba(231, 237, 246, 0) 156px), linear-gradient(to left, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.2)), linear-gradient(32deg, rgba(255, 255, 255, 0) 19.5%, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.1) 21.5%, rgba(255, 255, 255, 0.2) 22%, rgba(255, 255, 255, 0.2) 25.5%, rgba(255, 255, 255, 0.1) 26%, rgba(255, 255, 255, 0.1) 27.5%, rgba(255, 255, 255, 0) 28%, rgba(255, 255, 255, 0) 49.5%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 52.5%, rgba(255, 255, 255, 0.2) 53%, rgba(255, 255, 255, 0.2) 54.5%, rgba(255, 255, 255, 0.1) 55%, rgba(255, 255, 255, 0.1) 57.5%, rgba(255, 255, 255, 0) 58%, rgba(255, 255, 255, 0) 87%, rgba(255, 255, 255, 0.2) 90%), url("chrome://userchrome/content/pages/preferences/images/background-texture.png") !important;
+    background-color: rgb(204, 217, 234) !important;
 }

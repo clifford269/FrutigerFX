@@ -33,7 +33,6 @@
 
 #TabsToolbar :is(.tabs-newtab-button,#tabs-newtab-button) .toolbarbutton-icon {
     padding: 0px !important;
-}
-toolbar .toolbarbutton-1:not([disabled="true"], [checked], [open], :active):hover > .toolbarbutton-icon{
     background: transparent !important;
+
 }

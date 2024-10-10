@@ -142,7 +142,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton){
     margin-top:0 !important;
 }
 #personal-bookmarks{
-    margin-bottom: 2px !important;
     padding-left:23px !important;
 }
 #PersonalToolbar{
@@ -539,4 +538,8 @@ display: block !important;
 }
 #customizableui-special-spring2, #customizableui-special-spring1{
     opacity: 0 !important;
+}
+#urlbar-container{
+    /*transform: translateY(1px);*/
+
 }
