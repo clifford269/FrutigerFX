@@ -96,7 +96,7 @@
     color: white;
     backdrop-filter: blur(4px) !important;
     border: 1px solid #444;
-    background-color: rgba(97, 220, 43, 0.65);
+    background-color:  rgba(97, 237, 10, 0.65);
     text-shadow: 1px 1px 2px #222 !important;
     border-bottom: 1px solid #555 !important;
     transition: all 0.1s ease-in-out;
