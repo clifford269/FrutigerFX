@@ -52,7 +52,7 @@ For transparency effects:
    
 _Welcome to a a whole new world of **unmatched** creativity and **wonders**..._
 
-![1](https://github.com/user-attachments/assets/0f83acc2-ab7e-422a-bc6d-6adc726e2b1f)
+![Untitled](https://github.com/user-attachments/assets/5e7831fc-0853-4b71-8674-62a5f345aa5d)
 
 © Copyrighted work of clifford269
 
