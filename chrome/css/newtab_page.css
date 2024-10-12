@@ -24,16 +24,16 @@ a > div.title {
     margin-right: 10px !important;
 }
 body.activity-stream {
-    background: url("aerobg.jpg") center center;
-    background-size: cover;
+    background: url("aerobg.jpg")  100% 0 no-repeat;
     overflow: hidden;
 }
 
 .activity-stream #root {
-    -webkit-backdrop-filter: blur(2px) !important;
-    backdrop-filter: blur(2px) !important;
+    background: linear-gradient(to bottom right, transparent 35%, rgba(203, 255, 208, 0.5)),linear-gradient(to top right,  rgba(203, 255, 208, 0.5) 25%, transparent ), url("../images/explorer.png") 48% 2% no-repeat, url("wow.png")  48% 100% no-repeat !important;
 }
-
+.activity-stream #root .outer-wrapper{
+    /*backdrop-filter: blur(2px) !important;*/
+}
 .top-site-outer {
     border-radius: 6px !important;
     border: 1px solid transparent !important;
@@ -48,20 +48,18 @@ body.activity-stream {
 .top-site-outer:hover {
     border: 1px solid rgba(0, 0, 0, .7) !important;
     border-radius: 6px !important;
-    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, .7), inset 0 0 0 1px #fffa !important;
-    font: 9pt Segoe UI, SegoeUI, Noto Sans, sans-serif;
     position: relative !important;
     z-index: 0 !important;
     outline: none !important;
 }
 
 .top-site-outer:is(:hover, .active)::before {
-    background: linear-gradient(180deg, #ffffff66, #0000001a, #ffffff33), #4580c4 !important;
+    background: rgba(191, 247, 249, 0.62) !important;
     border-radius: 6px !important;
     box-shadow: inset 0 0 0 1px #fffd !important;
     content: "" !important;
     height: 100% !important;
-    left: 0 !important;
+    left: 1px !important;
     position: absolute !important;
     top: 0 !important;
     width: 100% !important;
@@ -74,19 +72,18 @@ body.activity-stream {
 
 
 .top-site-outer:is(:hover, .active)::after {
-    -webkit-backdrop-filter: blur(4px) !important;
     backdrop-filter: blur(4px) !important;
     border: 1px solid #fffc !important;
     border-radius: 6px !important;
     content: "" !important;
-    height: 109% !important;
+    height: 108% !important;
     left: -5px !important;
     position: absolute !important;
     top: -5px !important;
-    width: 109% !important;
+    width: 108% !important;
     z-index: -2 !important;
     background: linear-gradient(135deg, #fff5 70px, transparent 100px), linear-gradient(225deg, #fff5 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%,
-    #0002 41% 41.5%, #bbb2 44% 45%, #bbb2 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #0002 56% 56.5%, #bbb2 57% 63%, #0002 67% 69%, #bbb2 69.5% 70%, #0002 73.5% 74%, #bbb2 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #bbb1 90%) ;
+    #0002 41% 41.5%, #bbb2 44% 45%, #bbb2 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #0002 56% 56.5%, #bbb2 57% 63%, #0002 67% 69%, #bbb2 69.5% 70%, #0002 73.5% 74%, #bbb2 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #bbb1 90%), green ;
 
 }
 
@@ -104,6 +101,8 @@ body.activity-stream {
 .top-site-inner:after {
     backdrop-filter: blur(2px);
     border: 1px solid #fffc !important;
+    border-right-color: #3fcef2 !important;
+    border-bottom-color: #3fcef2 !important;
     border-radius: 6px !important;
     content: "" !important;
     height: 100% !important;
@@ -112,7 +111,7 @@ body.activity-stream {
     top: 0 !important;
     width: 100% !important;
     z-index: -1 !important;
-    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, .7), inset 0 0 0 1px #fffa !important;
+    box-shadow: 0 0 10px 2px rgba(255,255,255, .7), inset 0 0 0 1px #fffa !important;
     background:linear-gradient(135deg, #fff5 70px, transparent 100px),
     linear-gradient(225deg, #fff5 70px, transparent 100px),
     linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #bbb2 44% 45%, #bbb2 46% 47%,

@@ -14,14 +14,40 @@
 }
 
 
-#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab:is([selected],[multiselected]),
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab,
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab .tab-background {
     background: unset !important;
     border: unset !important;
 }
 
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab {
+    border-radius: 0 !important;
+}
+#tabbrowser-arrowscrollbox{
+    position: relative !important;
 
+}
+#tabbrowser-arrowscrollbox:before{
+    box-shadow: inset 0 -2px 2px #efefef !important;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    content: "";
+    bottom:0;
+    backdrop-filter: blur(2px);
+}
+#navigator-toolbox{
+    background-color: #a2cfec !important;
+    border-top: 1px solid #fefefe !important;
+    padding-top: 1px !important;
+}
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab:last-of-type{
+    border-top-right-radius: 3px !important;
+
+}#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab:first-of-type{
+    border-top-left-radius: 3px !important;
+
+}
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab {
     color: var(--classic_squared_tabs_tab_text_color) !important;
 }
@@ -34,21 +60,25 @@
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[selected]::after{
     content:"";
     width:15px;
-    height: 20px;
-    background: url("../images/arc.png");
-    background-size: cover;
-    transform: translateY(6px) translateX(-4px) ;
+    height: 21px;
+    background: url("../images/arc''.png");    background-size: cover;
+    transform: translateY(7px) translateX(-2px) ;
     border-bottom: 1px solid #555;
+    filter: grayscale(0%);
+
+
 }
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[selected]::before{
     content:"";
     width:15px;
-    height: 20px;
-    background: url("../images/arc.png");
-    background-size: cover;
-    transform: translateY(6px) translateX(4px) scaleX(-1);
+    height: 21px;
+    background: url("../images/arc''.png");    background-size: cover;
+    transform: translateY(7px) translateX(2px) scaleX(-1);
     z-index: 1;
     border-bottom: 1px solid #555;
+    filter: grayscale(0%);
+
+
 }
 
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab::after{
@@ -57,10 +87,10 @@
     height: 19px;
     background: url("../images/arc''.png");
     background-size: cover;
-    transform: translateY(7px) translateX(-3px);
+    transform: translateY(9px) translateX(-3px);
     margin-right: -3px;
     border-bottom: 1px solid #555;
-
+    filter: grayscale(55%) brightness(1.2);
 }
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab::before{
     content:"";
@@ -68,38 +98,37 @@
     height: 19px;
     background: url("../images/arc''.png");
     background-size: cover;
-    transform: translateY(7px) translateX(3px) scaleX(-1);
+    transform: translateY(9px) translateX(3px) scaleX(-1);
     z-index: 1 ;
     border-bottom: 1px solid #555;
-
-}
+    filter: grayscale(55%) brightness(1.2);}
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab .tab-content {
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 45%, rgba(181, 227, 255, 0.15) 0%, rgba(207, 207, 207, 0.22));
-    box-shadow:  0 2px 6px 0px rgba(203, 247, 255, 0.8) inset, 0 0 0 1px  #fffc inset, inset 0 -3px 2px 0 rgba(0, 242, 255, 0.67);
-    background-color: rgba(93, 183, 235, 0.6);
+    box-shadow:   0 0 0 1px  #fffc inset;
+    background-color: rgba(145, 224, 235, 0.5);
     border: 1px solid #444;
-    color: #fff;
+    color: #444;
     padding-left: 12px !important;
     padding-right: 10px !important;
     border-bottom: 1px solid #555 !important;
     font-size: 13px !important;
-    text-shadow: 1px 1px 2px #222 !important;
     backdrop-filter: blur(4px) !important;
-
+    text-shadow: 1px 1px 2px #fff;
+}
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab:not([selected]) .tab-content :is(.tab-close-button, .tab-icon-image){
+opacity: 0.7 !important;
 }
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[selected] .tab-content {
-    background-image: linear-gradient(rgba(234, 240, 248, 0.5) 45%, rgba(255, 255, 255, 0.3) 0%,
-    rgba(178, 213, 238, 0.4));
-    box-shadow: 0 -2px 4px 0px rgba(255, 255, 255, 0.6) inset,
-    inset 0 1px 2px 0px rgba(255,255,255, 0.64),
-    0 3px 1px 0px rgba(68, 187, 64, 0.7) inset, 0 0 0 1px  #fffc inset;
-    color: white;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 45%, rgba(181, 227, 255, 0.15) 0%, rgba(207, 207, 207, 0.22));
+    background-color: rgba(93, 183, 235, 1);
+    color: #fff;
+    box-shadow:
+    inset 0 1px 2px rgba(255,255,255, 0.64),
+     0 0 0 1px  #fffc inset;
     backdrop-filter: blur(4px) !important;
     border: 1px solid #444;
-    background-color:  rgba(97, 237, 10, 0.65);
-    text-shadow: 1px 1px 2px #222 !important;
     border-bottom: 1px solid #555 !important;
-    transition: all 0.1s ease-in-out;
+    text-shadow: 1px 1px 2px #444;
 }
 
 #TabsToolbar .tabbrowser-tab .tab-background, #TabsToolbar .tabbrowser-tab .tab-stack, #TabsToolbar .tabbrowser-tab, #TabsToolbar .tabbrowser-tab .tab-content
@@ -108,13 +137,19 @@
     border-bottom-right-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
 }
+#TabsToolbar .tabbrowser-tab[selected] .tab-background, #TabsToolbar .tabbrowser-tab[selected] .tab-stack, #TabsToolbar .tabbrowser-tab[selected], #TabsToolbar .tabbrowser-tab[selected] .tab-content{
+    border-radius: 14px !important;
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
 
 
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab:hover .tab-content:not([selected],[multiselected]) {
-    background-color: rgba(92, 156, 235, 0.7);
+    background-color:     rgba(93, 183, 235, 1);
+
 }
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab:not([selected]):hover:before,#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab:not([selected]):hover:after {
-    filter: grayscale(40%);
+    filter: grayscale(20%);
 }
 
 .tabbrowser-tab .tab-background:is([selected],[multiselected]) {
@@ -126,9 +161,6 @@
 .tab-background {
     margin-block: unset !important;
 }
-
-
-
 
 
 .tabbrowser-tab:not([pinned]):not([locked]) .tab-throbber,
@@ -152,7 +184,6 @@
 #TabsToolbar .tab-content[pinned] {
     padding: 0 6px !important;
 }
-
 
 
 .tabbrowser-tab {
@@ -185,3 +216,11 @@
     content: url("../images/page_aero.png") !important;
 }
 
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[selected] .tab-content{
+    height:29px !important;
+
+}
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab:not([selected]) .tab-content{
+    height:27px !important;
+    transform: translateY(2px);
+}

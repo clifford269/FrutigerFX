@@ -105,9 +105,7 @@
 }
 
 #nav-bar:not(:-moz-lwtheme) {
-    background: unset !important;
-    border: unset !important;
-    box-shadow: unset !important;
+    /*border: unset !important;*/
 }
 
 toolbar:not(#TabsToolbar, #PersonalToolbar):not(#toolbar-menubar):not(#nav-bar):not(:-moz-lwtheme) {

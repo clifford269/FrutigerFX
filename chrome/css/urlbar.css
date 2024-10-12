@@ -54,9 +54,9 @@ treechildren::-moz-tree-image(title), .urlbarView-favicon[src="chrome://global/s
     animation-name: unset !important;
 
 }
-#urlbar[breakout][breakout-extend] > #urlbar-input-container {
-box-shadow: 0 1px 2px rgba(255, 255, 255, 0.56) !important;
-border-bottom: 1px solid #fff !important;
+#urlbar[breakout][breakout-extend] > #urlbar-input-container{
+    border-bottom: 1px solid #fff !important;
+    border-radius: 10px !important;
 }
 
 #urlbar[breakout][breakout-extend] > #urlbar-input-container {
@@ -83,10 +83,10 @@ border-bottom: 1px solid #fff !important;
     border-radius: 10px !important;
 }
 
-#urlbar[breakout][breakout-extend][pageproxystate="invalid"] #urlbar-input-container {
-    border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
-}
+/*#urlbar[breakout][breakout-extend][pageproxystate="invalid"] #urlbar-input-container {*/
+/*    border-bottom-left-radius: 0 !important;*/
+/*    border-bottom-right-radius: 0 !important;*/
+/*}*/
 
 #urlbar .urlbarView-body-inner,#urlbar .urlbarView-result-menu{
     border: none !important;
@@ -130,7 +130,6 @@ border-bottom: 1px solid #fff !important;
     z-index: 0 !important;
     border-bottom-left-radius: 10px !important;
     border-bottom-right-radius: 10px !important;
-    /*border-top: none !important;*/
     background: #fff !important;
     transform: translateY(10px);
 }
@@ -172,7 +171,7 @@ border-bottom: 1px solid #fff !important;
     right: -4px ;
     position: absolute ;
     top:-2px;
-    width: 7px;
+    width: 4px;
     z-index: -9 ;
     background:linear-gradient(#e7e7e7 40%, #2cd3fe );
 
@@ -245,32 +244,27 @@ border-bottom: 1px solid #fff !important;
 
 }
 
-#urlbar[usertyping="true"][breakout][breakout-extend] #urlbar-input{
-    background-image: linear-gradient(180deg, rgba(255,255, 255, 0.1) 45%, rgba(10, 83, 118, 0.7) 0%, #0f5975),
-    linear-gradient(to left, rgba(111, 169, 177, 0.75), rgba(84, 141, 167, 0.76));
-    box-shadow:   inset 0 -2px 0 #8bbec4,  inset 0 -4px 6px 0 #8bbec4 !important;
-    background-color:  #548da7 !important;
-    color: #efefef !important;
 
-}
 #urlbar[usertyping="true"][breakout][breakout-extend] #urlbar-input-container #urlbar-input{
-    text-shadow: 1px 1px 2px #000 !important;
-    font-size: 1.2rem !important;
-    letter-spacing: 1px !important;
-    padding-bottom: 4px !important;
-    padding-top:2px !important;
-    padding-left: 5px !important;
-    margin-top: 0 !important;
+    /*padding-bottom: 2px !important;*/
+    /*padding-left: 5px !important;*/
+    color: #000 !important;
+}
+
+#urlbar[breakout][breakout-extend] #urlbar-input-container{
+box-shadow:inset 0 -34px 0 #caeeee !important;
+    z-index: 100 !important;
+    position: relative !important;
 }
 #urlbar[breakout][breakout-extend] #urlbar-go-button{
     transform: translateY(0px) scale(0.9);
 }
 #urlbar[usertyping="true"][breakout][breakout-extend] #identity-box{
-    margin-right: 1px !important;
+    /*margin-right: 1px !important;*/
 }
 #urlbar[usertyping="true"][breakout][breakout-extend] #urlbar-input-container #urlbar-input::selection{
-    color: #fff !important;
-    background: rgba(135, 206, 235, 0.6) !important;
+    color: #000 !important;
+    background: #cefcd1 !important;
 }
 .urlbarView-button.urlbarView-button-menu {
     border-radius: 3px !important;
