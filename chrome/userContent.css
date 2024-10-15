@@ -449,11 +449,6 @@ menulist::after {
     order: 2 !important;
 }
 
-@media (min-width: 866px) {
-    .edit-topsites-wrapper .modal {
-        width: 550px !important
-    }
-}
 
 #updateAllowDescription, #updateSettingsContainer, .top-sites-list .icon-pin-small, .top-site-outer .title .icon, .sidebar-footer-list #help-button, .neterror .title-text, #webAppearanceGroup {
     display: none !important;
@@ -682,7 +677,7 @@ background-repeat: none !important;
     box-shadow: var(--btn-box-shadow) !important;
     color: #555 !important;
 }
-a.AppHeader-context-item{
+a.AppHeader-context-item, .Overlay-closeButton, #filter-button-filter-repositories{
     border-radius: 3px !important;
     border: var(--btn-border) !important;
     background: var(--btn-bg) !important;
@@ -704,14 +699,15 @@ a.AppHeader-context-item{
     border: 1px solid rgba(255, 255, 255, 0.67) !important;
     border-top: 1px solid rgba(255, 255, 255, 0.45) !important;
 }
-.AppHeader-localBar .js-repo-nav ul li:hover,  a.AppHeader-context-item:hover {
+.AppHeader-localBar .js-repo-nav ul li:hover,  a.AppHeader-context-item:hover, .Overlay-closeButton:hover, #filter-button-filter-repositories:hover {
     background: var(--btn-hover) !important;
 }
 
-.AppHeader-localBar .js-repo-nav ul li:active, a.AppHeader-context-item:active {
+.AppHeader-localBar .js-repo-nav ul li:active, a.AppHeader-context-item:active, .Overlay-closeButton:active, #filter-button-filter-repositories:active {
     box-shadow: var(--btn-active-box-shadow) !important;
 
 }
+
 .AppHeader-localBar{
     appearance: toolbox !important;
 }
@@ -799,6 +795,9 @@ ul[data-testid="filter-groups"] *,.react-tree-show-tree-items *, .js-left-column
 .AppHeader-globalBar :is(#query-builder-test, .qb-filter-value){
     color: black !important;
 }
+.AppHeader-globalBar .AppHeader-logo{
+    margin-left: 0 !important;
+}
 .ActionListItem-label .qb-filter-value{
     margin-left: 2px !important;
 }
@@ -806,11 +805,11 @@ ul[data-testid="filter-groups"] *,.react-tree-show-tree-items *, .js-left-column
     transform: translateX(-40px) !important;
 }
 
-.feed-left-sidebar, div[aria-labelledby="search-filters-title"], #repos-file-tree{
+.feed-left-sidebar, div[aria-labelledby="search-filters-title"], #repos-file-tree {
     background: rgba(135, 206, 235, 0.41) !important;
 }
 
-#query-builder-test-clear-button svg path{
+#query-builder-test-clear-button svg path, .Overlay--placement-left.SidePanel .ActionListItem-visual,.Overlay--placement-left.SidePanel .octicon-mark-github{
     display: none !important;
 }
 #query-builder-test-clear-button svg{
@@ -819,7 +818,19 @@ ul[data-testid="filter-groups"] *,.react-tree-show-tree-items *, .js-left-column
 .Popover.js-hovercard-content *{
     color: #fffc !important;
 }
+ .js-issue-title{
+    color: rgb(40, 65, 197) !important;
+}
+.Overlay--placement-left.SidePanel *{
+    color: rgb(58, 122, 197) !important;
 
+}
+.Overlay--placement-left.SidePanel{
+    border-radius: 3px !important;
+    border: 1px solid #8e8f8f !important;
+    background: rgb(150, 222, 251) !important;
+
+}
 
 /*Priv.au*/
 #main_results #search_view .search_box{
@@ -841,16 +852,126 @@ display: none !important}
     width: 20px !important;
 
 }
-#main_results .search_box #clear_search span, #main_results #send_search span{
+.results_endpoint :is(.engines,footer),:is(.previous_page, .next_page) button[type="submit"] svg,.results_endpoint #backToTop,#main_results .search_box #clear_search span, #main_results #send_search span{
     display: none !important;
 }
 #search #search_header #search_logo{
     transform: translateY(-2px);
 }
-#main_results #search_view .search_box #q{
 
-}
 #search #search_header{
+    padding-top: 2px !important;
     background: linear-gradient(to bottom, rgb(231, 237, 246) 3px, rgba(231, 237, 246, 0) 156px), linear-gradient(to left, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.2)), linear-gradient(32deg, rgba(255, 255, 255, 0) 19.5%, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.1) 21.5%, rgba(255, 255, 255, 0.2) 22%, rgba(255, 255, 255, 0.2) 25.5%, rgba(255, 255, 255, 0.1) 26%, rgba(255, 255, 255, 0.1) 27.5%, rgba(255, 255, 255, 0) 28%, rgba(255, 255, 255, 0) 49.5%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 52.5%, rgba(255, 255, 255, 0.2) 53%, rgba(255, 255, 255, 0.2) 54.5%, rgba(255, 255, 255, 0.1) 55%, rgba(255, 255, 255, 0.1) 57.5%, rgba(255, 255, 255, 0) 58%, rgba(255, 255, 255, 0) 87%, rgba(255, 255, 255, 0.2) 90%), url("chrome://userchrome/content/pages/preferences/images/background-texture.png") !important;
     background-color: rgb(204, 217, 234) !important;
+    border-bottom: 1px solid #8e8f8f !important;
+}
+.results_endpoint .category_button{
+    margin: 0 !important;
+padding-top: 4px !important;
+padding-bottom:4px !important;
+border-radius: 3px !important;
+appearance: toolbarbutton !important;
+color: #1664ff !important;
+}
+#links_on_top .link_on_top_preferences span{
+    color: #1664ff !important;
+}
+#links_on_top{
+    margin-top: -25px !important;
+
+}
+.results_endpoint .category_button.selected{
+background-image: linear-gradient(rgba(255,255,255,0.4) 45%, transparent 0%, rgba(255, 255, 255, 0.65) , skyblue ) !important;
+ background-color: #5AC942 !important;
+appearance: none !important;
+    outline: var(--btn-border) !important;
+    color: #fff !important;
+    text-shadow: 1px 1px 2px #000 !important;
+    box-shadow: var(--btn-box-shadow) !important;
+}
+.results_endpoint .category_button.selected:hover .category_name{
+    color: #fff !important;
+
+}
+.results_endpoint #categories{
+    margin-left: 10px !important;
+
+}
+@media (min-width: 801px) and (max-width: 1276px) {
+    .results_endpoint #search_header{
+        padding-left: 45px !important;
+    }
+}@media (max-width: 800px){
+    .results_endpoint #categories{
+        margin-left: 45px !important;
+    }
+}
+.results_endpoint #search_logo svg, .results_endpoint .ion-icon-big{
+    display: none !important;
+}
+.results_endpoint #search_logo{
+    position: relative !important;
+}
+.results_endpoint #search_logo:before{
+    content: 'Search';
+    font: 15pt Segoe UI, SegoeUI, Noto Sans, sans-serif !important;
+    color: #fff !important;
+    left: -30px;
+    position: absolute;
+    top: 12px;
+    text-shadow: 1px 1px 2px #444 !important;
+
+}
+.results_endpoint #search_logo:after{
+    content: '';
+    right: -7px;
+    position: absolute;
+    top: 18px;
+    width: 20px;
+    height: 20px;
+    background: url("images/searchh.png") 100% 100%/cover no-repeat;
+    z-index: 100 !important;
+    transform: rotateY(-30deg) rotateZ(-10deg);
+}
+.results_endpoint .next_page button[type="submit"]:after{
+    content: '';
+    right: 2px;
+    position: absolute;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzMzMztzdG9wLW9wYWNpdHk6MSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2FhYTtzdG9wLW9wYWNpdHk6MSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGQ9Ik0xMSA2SDR2MWgxdjFoMXYxaDF2MWgxVjloMVY4aDFWN2gxVjZaIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+")!important;
+    transform: rotateZ(-90deg);
+}
+.results_endpoint .previous_page button[type="submit"]:after {
+    content: '';
+    left: 2px;
+    position: absolute;
+    top: 3.5px;
+    width: 10px;
+    height: 10px;
+    background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzMzMztzdG9wLW9wYWNpdHk6MSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2FhYTtzdG9wLW9wYWNpdHk6MSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGQ9Ik0xMSA2SDR2MWgxdjFoMXYxaDF2MWgxVjloMVY4aDFWN2gxVjZaIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+")!important;
+    transform: rotateZ(90deg);
+}
+.results_endpoint :is(.previous_page, .next_page) button[type="submit"]{
+    position: relative !important;
+    background: var(--btn-bg) !important;
+    border: var(--btn-border) !important;
+    border-radius: 3px !important;
+    box-shadow: var(--btn-box-shadow) !important;
+    box-sizing: border-box !important;
+    color: #222 !important;
+    font: 10pt Segoe UI, SegoeUI, Noto Sans, sans-serif !important;
+    min-height: 26px !important;
+    min-width: 90px !important;
+    padding: 6px 10px !important;
+    text-align: center !important;
+}
+.results_endpoint .previous_page button[type="submit"]{
+    padding-left: 30px !important;
+    width: 115px!important;
+}
+reddit-sidebar-nav, reddit-header-large{
+    overflow: clip !important;
+    background: rgba(135, 206, 235, 0.41) !important;
 }

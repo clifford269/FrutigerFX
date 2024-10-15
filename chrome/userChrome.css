@@ -29,6 +29,7 @@
 @import "css/navbar_separator.css";
 @import "css/context_icons/styles.css";
 @import "css/library.css";
+@import "css/statusbar.css";
 /*Misc*/
 :root {
     --focus-outline: none !important;
@@ -543,3 +544,4 @@ display: block !important;
     /*transform: translateY(1px);*/
 
 }
+

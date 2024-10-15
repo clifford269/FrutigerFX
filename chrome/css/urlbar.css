@@ -55,7 +55,7 @@ treechildren::-moz-tree-image(title), .urlbarView-favicon[src="chrome://global/s
 
 }
 #urlbar[breakout][breakout-extend] > #urlbar-input-container{
-    border-bottom: 1px solid #fff !important;
+    outline: 1px solid #fff !important;
     border-radius: 10px !important;
 }
 
@@ -83,10 +83,7 @@ treechildren::-moz-tree-image(title), .urlbarView-favicon[src="chrome://global/s
     border-radius: 10px !important;
 }
 
-/*#urlbar[breakout][breakout-extend][pageproxystate="invalid"] #urlbar-input-container {*/
-/*    border-bottom-left-radius: 0 !important;*/
-/*    border-bottom-right-radius: 0 !important;*/
-/*}*/
+
 
 #urlbar .urlbarView-body-inner,#urlbar .urlbarView-result-menu{
     border: none !important;
@@ -136,9 +133,9 @@ treechildren::-moz-tree-image(title), .urlbarView-favicon[src="chrome://global/s
 
 #urlbar[breakout][breakout-extend]::after{
     border: 1px solid #8e8f8f;
-    border-top-color: white;
+    border-top-color: #caeeee;
     backdrop-filter: blur(4px) ;
-    box-shadow:0 -2px 2px #fff, inset 0 0 0 1px  #fffc, 0 2px 5px 2px rgba(0, 0, 0, 0.8) ;
+    box-shadow:0 -4px 2px #d2e8f6, inset 0 0 0 1px  #fffc, 0 2px 5px 2px rgba(0, 0, 0, 0.8) ;
     border-radius: 10px;
     content: "" !important;
     height: calc(100% + 13px) ;
@@ -159,7 +156,7 @@ treechildren::-moz-tree-image(title), .urlbarView-favicon[src="chrome://global/s
      height: 51%;
      left: -4px ;
      position: absolute ;
-     top:-2px ;
+     top:0px ;
      width: 7px;
      z-index: -9 ;
     background:linear-gradient(#e7e7e7 40%, #2cd3fe 98%, transparent 99%);
@@ -168,9 +165,9 @@ treechildren::-moz-tree-image(title), .urlbarView-favicon[src="chrome://global/s
     border-top-right-radius: 10px;
     content: "" ;
     height: 51% ;
-    right: -4px ;
+    right: -5px ;
     position: absolute ;
-    top:-2px;
+    top:0px;
     width: 4px;
     z-index: -9 ;
     background:linear-gradient(#e7e7e7 40%, #2cd3fe );

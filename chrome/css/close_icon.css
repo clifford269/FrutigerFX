@@ -37,6 +37,7 @@ filter: brightness(1.2) contrast(130%);
 
 #TabsToolbar .tabbrowser-tab .tab-content .close-icon {
   background: unset !important;
+  margin-right: -6px !important;
 }
 
 .tab-close-button {

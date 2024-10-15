@@ -1,0 +1,181 @@
+#main-window[customizing] #addonbar {
+    outline: 1px dashed !important;
+    outline-offset: -2px !important;
+}
+
+
+#main-window[customizing] #addonbar::before {
+    content: "When in Customizing Mode, drag-n-drop your addons to the bar, then restart Internet Explorer for addons to fix their position." !important;
+    position: absolute !important;
+    left: 5px !important;
+    bottom: 5px !important;
+
+}
+
+#addonbar {
+    border-top: 1px solid #9f9e9f !important;
+    background-color: #bfeef1 !important;
+    -moz-window-dragging: no-drag !important;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.internet-options {
+    padding-right: 20px;
+    display: inline-flex;
+    align-items: center;
+    border-left: 1px solid #dadada !important;
+    padding-left: 4px !important;
+    border-right: 1px solid #dadada !important;
+}
+
+.internet-options::after {
+    content: "Internet";
+    padding-left: 5px;
+    padding-right: 66px;
+
+}
+
+.internet-options::before {
+    content: "";
+    background: url('../images/globe.png') no-repeat center center;
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.zoom-button::before {
+    content: "";
+    background: url('../images/zoom.png') no-repeat center center;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 4px !important;
+    top: -3px;
+}
+
+.zoom-button:after
+{
+    content: '\75';
+    color: transparent !important;
+    font-family: 'Marlett' !important;
+    background-image: url('../images/chevron-vista.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    transform: translateY(-22px) translateX(-1px);
+    padding-left: 15px !important;
+    position: relative;
+    top: 20px;
+}
+
+.zoom-button {
+    padding-top: 4px !important;
+    padding-left: 5px !important;
+}
+
+.corner-icon::before {
+    content: "";
+    background: url('../images/corner.png') no-repeat;
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    margin-right: 3px;
+    margin-top: 5px;
+}
+
+
+.separator-2,
+.separator-3,
+.separator-4,
+.separator-5,
+.separator-6,
+.separator-7{
+    content: "";
+    background: url('../images/blank.png') no-repeat center center;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    border-left: 1px solid #dadada !important;
+
+}
+
+#statuspanel,
+#statuspanel[inactive]
+{
+    position: fixed !important;
+    bottom: 3px !important;
+    left: 5px !important;
+}
+
+#statuspanel-label
+{
+    -moz-appearance: statusbarpanel !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    padding: 3px 0 !important;
+    margin-inline: 0 !important;
+    height: 22px !important;
+    width: 100% !important;
+    margin-right: 10px !important;
+    color: #000 !important;
+    position: fixed !important;
+    bottom: 3px !important;
+    left: 5px !important;
+}
+
+#statuspanel[inactive] #statuspanel-label
+{
+    display: none !important;
+}
+
+.doneText {
+    -moz-appearance: statusbarpanel !important;
+    width: 100%;
+    line-height: 9px;
+    position: fixed !important;
+    bottom: 10px !important;
+    left: 5px !important;
+
+}
+
+
+
+
+    .security-button::after {
+        content: '\75';
+        color: transparent !important;
+        font-family: 'Marlett' !important;
+        background-image: url('../images/chevron-vista.png') !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        transform: translateY(-22px) translateX(-1px);
+        padding-left: 4px !important;
+        position: relative;
+        top: 20px;
+    }
+
+    .security-separator {
+        border-right: 1px solid #dadada !important;
+    }
+
+
+
+
+customtoolbarbutton {
+    appearance: auto;
+    -moz-default-appearance: toolbarbutton;
+    margin: 0;
+    padding: 3px;
+}
+
+
+customtoolbarbutton:-moz-focusring {
+    outline: var(--default-focusring);
+    outline-offset: calc(-1 * var(--default-focusring-width) - 1px);
+}
+

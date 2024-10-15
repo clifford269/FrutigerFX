@@ -41,7 +41,7 @@ body.activity-stream {
 }
 
 .topsite-form .top-site-button span {
-    color: #222 !important;
+    color: #fff !important;
     text-decoration: none !important;
 }
 
@@ -207,5 +207,15 @@ body.activity-stream {
 @media (min-width: 866px) {
     .top-sites-list .hide-for-narrow {
         display: inline-block !important;
+    }
+    .edit-topsites-wrapper .modal {
+        width: 550px !important
+    }
+}
+@media (max-width: 866px) {
+
+    .ds-outer-wrapper-breakpoint-override main{
+        /*width: 550px !important*/
+
     }
 }

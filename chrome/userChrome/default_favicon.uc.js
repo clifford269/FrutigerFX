@@ -1,6 +1,4 @@
-
-{
-    let defaultFavicon = null;
+ let defaultFavicon = null;
 
     function onMutation(list)
     {
@@ -48,4 +46,3 @@
             }
         );
     });
-}

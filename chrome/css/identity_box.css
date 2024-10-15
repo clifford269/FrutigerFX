@@ -26,12 +26,9 @@
 #urlbar[pageproxystate="valid"] .verifiedDomain {
     background-image: linear-gradient(180deg, rgba(35, 71, 178, 0.92) 40%, rgb(0, 153, 255)) !important;
     box-shadow: 0 -1px 4px 0px rgba(255, 255, 255, 0.52) inset,
-    0 5px 4px 0px rgba(255, 255, 255, 0.6) inset;
+    0 3px 3px rgba(255, 255, 255, 0.4) inset,0 1px 6px  rgba(255, 255, 255, 0.3) inset;
     color: #e1e0e0 !important;
-    border: 1px solid #fffc;
-
     border-image: unset !important;
-    border-image-slice: unset !important;
 }
 
 #urlbar[pageproxystate="valid"] .verifiedDomain:hover {
@@ -50,7 +47,6 @@
     font-weight: bold !important;
     border-inline-end: 1px solid hsla(92, 81%, 16%, .2) !important;
     border-image: unset !important;
-    border-image-slice: unset !important;
 }
 
 #urlbar[pageproxystate="valid"] .verifiedIdentity:hover {
@@ -64,12 +60,11 @@
 }
 
 #urlbar[pageproxystate="valid"] :is(.insecureLoginForms,.mixedActiveContent,.notSecure,.notSecureText,.certErrorPage) {
-    background: linear-gradient(hsl(0, 53%, 82%), hsl(6, 35%, 88%)) !important;
+    background: linear-gradient(hsl(4, 75%, 78%), hsl(6, 35%, 88%)) !important;
     box-shadow: 0 -1px 4px 0px rgba(255, 255, 255, 0.52) inset,
     0 5px 4px 0px rgba(255, 255, 255, 0.6) inset;
     border-inline-end: 1px solid hsla(92, 81%, 16%, .2) !important;
     border-image: unset !important;
-    border-image-slice: unset !important;
 }
 
 #urlbar[pageproxystate="valid"] :is(.insecureLoginForms,.mixedActiveContent,.notSecure,.notSecureText,.certErrorPage):hover {
@@ -88,7 +83,6 @@
     box-shadow: 0 1px 0 hsla(92, 81%, 16%, .05) inset !important;
     border-inline-end: 1px solid hsla(92, 81%, 16%, .2) !important;
     border-image: unset !important;
-    border-image-slice: unset !important;
 }
 
 #urlbar[pageproxystate="valid"] :is(.weakCipher,.mixedDisplayContent,.mixedDisplayContentLoadedActiveBlocked):hover {
@@ -111,12 +105,10 @@
 #urlbar[pageproxystate="valid"] :is(.chromeUI,.extensionPage),
 #urlbar[pageproxystate="invalid"] .chromeUI {
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.60) 45%, rgba(255, 255, 255, 0.50) 0%, rgba(207, 207, 207, 0.2)) !important;
-    /*box-shadow: inset 1px 1px 0 #0003, inset -1px 1px 0 #0001 !important;*/
     box-shadow: inset 0 0 2px 0 #f2f2f2, inset 0 0 0 1px #fffc !important;
     color: rgba(0, 153, 255, 0.85) !important;
     border-inline-end: 1px solid #bebebe !important;
     border-image: unset !important;
-    border-image-slice: unset !important;
 }
 
 #urlbar:is([pageproxystate="invalid"],[pageproxystate="valid"]) :is(.unknownIdentity,.onionUnknownIdentity):not(:is(.mixedDisplayContentLoadedActiveBlocked,.notSecureText,.certErrorPage)), #urlbar[pageproxystate="invalid"] .chromeUI, #identity-box.verifiedDomain[pageproxystate="invalid"] #tab_label_in_urlbar_box #tab_label_in_urlbar {
@@ -142,9 +134,7 @@
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.70) 45%, rgba(255, 255, 255, 0.50) 0%, rgba(207, 207, 207, 0.4)) !important;
 
 }
-#urlbar[pageproxystate="invalid"] #tab_label_in_urlbar_box, .unknownIdentity #tab_label_in_urlbar_box{
-    transform: translateY(1px) !important;
-}
+
 /* other tweaks */
 #urlbar[pageproxystate="valid"] :is(.urlbar-input-box, #urlbar-display-box) {
     border-image: unset !important;
@@ -181,3 +171,8 @@
     display: none !important;
 }
 
+#identity-box{
+    border: 1px solid #fffc;
+    border-top: none !important;
+    border-bottom: none !important;
+}
