@@ -37,3 +37,44 @@ defaultPref("layout.css.backdrop-filter.enabled", true);
 defaultPref("browser.display.windows.non_native_menus", 0);
 defaultPref("widget.non-native-theme.enabled", false);
 defaultPref("full-screen-api.warning.timeout", 0);
+
+
+defaultPref("browser.newtabpage.activity-stream.feeds.telemetry", false);
+
+defaultPref("browser.newtabpage.activity-stream.telemetry", false);
+
+defaultPref("browser.ping-centre.telemetry", false);
+
+defaultPref("datareporting.healthreport.service.enabled", false);
+
+defaultPref("datareporting.healthreport.uploadEnabled", false);
+
+defaultPref("datareporting.policy.dataSubmissionEnabled", false);
+
+defaultPref("datareporting.sessions.current.clean", true);
+
+defaultPref("devtools.onboarding.telemetry.logged", false);
+
+defaultPref("toolkit.telemetry.archive.enabled", false);
+
+defaultPref("toolkit.telemetry.bhrPing.enabled", false);
+
+defaultPref("toolkit.telemetry.enabled", false);
+
+defaultPref("toolkit.telemetry.firstShutdownPing.enabled", false);
+
+defaultPref("toolkit.telemetry.hybridContent.enabled", false);
+
+defaultPref("toolkit.telemetry.prompted", 2);
+
+defaultPref("toolkit.telemetry.rejected", true);
+
+defaultPref("toolkit.telemetry.reportingpolicy.firstRun", false);
+
+defaultPref("toolkit.telemetry.shutdownPingSender.enabled", false);
+
+defaultPref("toolkit.telemetry.unified", false);
+
+defaultPref("toolkit.telemetry.unifiedIsOptIn", false);
+
+defaultPref("toolkit.telemetry.updatePing.enabled", false);
