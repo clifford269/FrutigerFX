@@ -23,7 +23,7 @@ This project is the work of a single individual and relies on your support. Plea
        
 <ins>**Installation**</ins>:
 
-1. Install Firefox 115 ESR https://ftp.mozilla.org/pub/firefox/releases/115.15.0esr/win64/en-GB/
+1. Install Firefox 115 ESR https://ftp.mozilla.org/pub/firefox/releases/115.15.0esr/win64/
 
 2. Put the 'defaults' folder and config.js file in C:\Program Files\Mozilla Firefox
 
